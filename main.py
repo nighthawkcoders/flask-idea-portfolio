@@ -20,6 +20,14 @@ def hello_rooute():
 def flask_route():
     return render_template("flask.html", projects=projects.setup())
 
+@app.route("/playground/")
+def playground_route():
+    return render_template("playground.html")
+
+@app.route("/heyheyhey/")
+def heyheyhey_route():
+    return "<h1 style='background-color:blue;color:white'>Hey Hey Hey!</h1>"
+
 if __name__ == "__main__":
     #runs the application on the repl development server
     app.run(debug=True)
