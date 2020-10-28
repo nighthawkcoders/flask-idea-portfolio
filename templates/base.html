@@ -4,7 +4,6 @@
   "projects" is python object
 -->
 {% set source = projects.get_source() %} <!-- source of project dict -->
-{% set projects = projects.get_projects() %} <!-- projects data -->
 {% set name = source["name"] %}
 {% set github = source["github"] %}
 {% set linkedin = source["linkedin"] %}
@@ -17,6 +16,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% block head %}
+    <title></title>
     {% endblock %}
 </head>
 
@@ -31,7 +31,7 @@
         <div class="navbar-nav">
             <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
             <a class="nav-link" href="/hello/">Hello Series</a>
-            <a class="nav-link" href="/flask">Flask Project</a>
+            <a class="nav-link" href="/flask/">Flask Project</a>
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </div>
     </div>
@@ -84,9 +84,10 @@
 
 {% block script %}
 <script src="https://threejs.org/build/three.js"></script>
-<script src="{{ url_for('static', filename='vanta.rings.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
 <script>
-    VANTA.RINGS({
+
+    VANTA.BIRDS({
         el: "body",
         mouseControls: true,
         touchControls: true,
@@ -94,7 +95,8 @@
         minHeight: 200.00,
         minWidth: 200.00,
         scale: 1.00,
-        scaleMobile: 1.00
+        scaleMobile: 1.00,
+        wingSpan: 40.0
     })
 </script>
 {% endblock %}

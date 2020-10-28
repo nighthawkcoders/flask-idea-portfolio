@@ -1,7 +1,16 @@
+def playdata():
+    greeting = "Hey, Hey, Hey!"
+    name = "John Mortensen"
+    dob = "October 21"
+    job = "Teacher"
+    story = "As a High School student I learned to type on a typewriter. \"Now is the time for all good men to come to the aid of their party.\" This is a phrase first proposed as a typing drill by instructor Charles E. Weller; its use is recounted in his book The Early History of the Typewriter, p. 21 (1918). Frank E. McGurrin, an expert on the early Remington typewriter, used it in demonstrating his touch typing abilities in January 1889. It has appeared in a number of typing books, often in the form \"Now is the time for all good men to come to the aid of their country. IMO, McGurrin would need to make an abridgement of this phrase today to, \"Now is the time for all good individuals to come to the aid of their country.\" A thought from my past, as we get ready to vote!"
+    info = {"greeting": greeting, "name": name, "dob": dob, "job": job, "story": story}
+    return info
+
 #Data "setup" for Projects
 #next step would be to extract project data from a database
 def setup():
-    #Person Data
+    #Source Data
     name = "Nighthawk Coding"
     github = "https://github.com/nighthawkcoders"
     linkedin = "https://www.linkedin.com/in/john-mortensen-1021/"
