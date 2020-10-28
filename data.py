@@ -7,6 +7,18 @@ def playdata():
     info = {"greeting": greeting, "name": name, "dob": dob, "job": job, "story": story}
     return info
 
+def playdata2():
+    greeting = "Hello!"
+    name = "Lora Mortensen"
+    dob = "September 23"
+    job = "Teacher"
+    story = "A fellow Herbert Hoover High graduate.  However we did not go to the same school.  How is that possible?"
+    info = {"greeting": greeting, "name": name, "dob": dob, "job": job, "story": story}
+    return info
+
+def playlist():
+    return [playdata(), playdata2()]
+
 #Data "setup" for Projects
 #next step would be to extract project data from a database
 def setup():

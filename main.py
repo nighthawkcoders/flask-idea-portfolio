@@ -25,14 +25,14 @@ def flask_route():
     return render_template("flask.html", projects=data.setup())
 
 
-@app.route("/play1/")
-def play1_route():
+@app.route("/playground/")
+def playground_route():
     return render_template("playground.html", data=data.playdata())
 
 
-@app.route("/play2/")
-def play2_route():
-    return render_template("playground.html", data=data.playdata())
+@app.route("/playlist/")
+def playlist_route():
+    return render_template("playlist.html", datalist=data.playlist())
 
 
 @app.route("/hey/")
