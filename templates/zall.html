@@ -5,20 +5,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <meta charset="UTF-8">
-    <title>{{name}} | Person </title>
+    <title>All | People </title>
 </head>
 <body>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Group Members
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">People</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/">Return to Porfolio</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="/all/">All</a>
             <a class="dropdown-item" href="/john/">John</a>
             <a class="dropdown-item" href="/lora/">Lora</a>
-            <a class="dropdown-item" href="/all/">All</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/">Back to Portfolio</a>
         </div>
     </div>
+
     {% for data in datalist: %}
         {% set greeting = data["greeting"] %}
         {% set name = data["name"] %}

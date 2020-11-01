@@ -15,15 +15,17 @@
 </head>
 
 <body style="background-color:powderblue;color:white;">
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Group Members
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">People</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/">Return to Porfolio</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="/all/">All</a>
             <a class="dropdown-item" href="/john/">John</a>
             <a class="dropdown-item" href="/lora/">Lora</a>
-            <a class="dropdown-item" href="/all/">All</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/">Back to Portfolio</a>
         </div>
     </div>
     <!-- observe usage jinja variables -->
