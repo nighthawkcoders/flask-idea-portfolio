@@ -1,4 +1,4 @@
-def playdata():
+def johndata():
     greeting = "Hey, Hey, Hey!"
     name = "John Mortensen"
     dob = "October 21"
@@ -7,7 +7,7 @@ def playdata():
     info = {"greeting": greeting, "name": name, "dob": dob, "job": job, "story": story}
     return info
 
-def playdata2():
+def loradata():
     greeting = "Hello!"
     name = "Lora Mortensen"
     dob = "September 23"
@@ -16,8 +16,8 @@ def playdata2():
     info = {"greeting": greeting, "name": name, "dob": dob, "job": job, "story": story}
     return info
 
-def playlist():
-    return [playdata(), playdata2()]
+def alldata():
+    return [johndata(), loradata()]
 
 #Data "setup" for Projects
 #next step would be to extract project data from a database

@@ -25,14 +25,19 @@ def flask_route():
     return render_template("flask.html", projects=data.setup())
 
 
-@app.route("/playground/")
-def playground_route():
-    return render_template("playground.html", data=data.playdata())
+@app.route("/john/")
+def john_route():
+    return render_template("person.html", data=data.johndata())
 
 
-@app.route("/playlist/")
-def playlist_route():
-    return render_template("playlist.html", datalist=data.playlist())
+@app.route("/lora/")
+def lora_route():
+    return render_template("person.html", data=data.loradata())
+
+
+@app.route("/all/")
+def all_route():
+    return render_template("zall.html", datalist=data.alldata())
 
 
 @app.route("/hey/")

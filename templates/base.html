@@ -10,32 +10,54 @@
 {% set twitter = source["twitter"] %}
 {% set youtube = source["youtube"] %}
 
-
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Style used to support Icons  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Basic Boot Strap Support  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Drop down navigation support -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Extender should define Title Block -->
     {% block head %}
     <title></title>
     {% endblock %}
 </head>
 
 <body>
-<!-- Navigation Bar from bootstrap -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">{{name}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="/hello/">Hello Series</a>
-            <a class="nav-link" href="/flask/">Flask Project</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <!-- Navigation Bar from bootstrap with dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">{{name}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Look for href (root) and associated names  -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/hello/">Hello Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/flask/">Flask Project</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About J&L
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/john/">John</a>
+                        <a class="dropdown-item" href="/john/">Lora</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/all/">Journal</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
 </nav>
+
 <div class="container-fluid">
     <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%;">
         <div class="col-2" style="text-align: right;">
@@ -80,6 +102,7 @@
 
     </div>
 </div>
+
 </body>
 
 {% block script %}
@@ -137,7 +160,6 @@
         color: #000000;
     }
 
-
     .btn:link,
     .btn:visited {
         text-transform: uppercase;
@@ -160,8 +182,6 @@
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
     }
-
-
 </style>
 {% endblock %}
 
