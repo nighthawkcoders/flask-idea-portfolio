@@ -9,14 +9,15 @@
 </head>
 <body>
     <div class="btn-group">
-        <button type="button" class="btn btn-primary">People</button>
+        <button type="button" class="btn btn-primary">Tasks</button>
         <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="sr-only">Toggle Dropdown</span>
         </button>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="/all/">All</a>
-            <a class="dropdown-item" href="/john/">John</a>
-            <a class="dropdown-item" href="/lora/">Lora</a>
+            <a class="dropdown-item" href="/week3/">Week 3</a>
+            <a class="dropdown-item" href="/week2/">Week 2</a>
+            <a class="dropdown-item" href="/week1/">Week 2</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/">Back to Portfolio</a>
         </div>
@@ -25,14 +26,14 @@
     {% for data in datalist: %}
         {% set greeting = data["greeting"] %}
         {% set name = data["name"] %}
-        {% set dob = data["dob"] %}
+        {% set doa = data["doa"] %}
         {% set job = data["job"] %}
-        {% set story = data["story"] %}
-        <h1>"{{greeting}} my name is <span style='color:orangered;'>{{name}}</span>"</h1>
+        {% set embed = data["embed"] %}
+        <h1>{{greeting}} <span style='color:orangered;'>{{name}} here</span></h1>
         <ol>
-            <li>"{{greeting}} my birthday is <span style='color:orangered;'>{{dob}}</span>"</li>
-            <li>"{{greeting}} my job is a <span style='color:orangered;'>{{job}}</span>"</li>
-            <li><span style='color:midnightblue;'>{{story}}</span></li>
+            <li><span style='color:orangered;'>{{doa}}</span></li>
+            <li><span style='color:orangered;'>{{job}}</span></li>
+            <li><span style='color:midnightblue;'>{{embed}}</span></li>
         </ol>
     {% endfor %}
 

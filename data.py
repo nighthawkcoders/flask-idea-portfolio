@@ -1,23 +1,32 @@
-def johndata():
+def week3data():
     greeting = "Hey, Hey, Hey!"
-    name = "John Mortensen"
-    dob = "October 21"
-    job = "Teacher"
-    story = "As a High School student I learned to type on a typewriter. \"Now is the time for all good men to come to the aid of their party.\" This is a phrase first proposed as a typing drill by instructor Charles E. Weller; its use is recounted in his book The Early History of the Typewriter, p. 21 (1918). Frank E. McGurrin, an expert on the early Remington typewriter, used it in demonstrating his touch typing abilities in January 1889. It has appeared in a number of typing books, often in the form \"Now is the time for all good men to come to the aid of their country. IMO, McGurrin would need to make an abridgement of this phrase today to, \"Now is the time for all good individuals to come to the aid of their country.\" A thought from my past, as we get ready to vote!"
-    info = {"greeting": greeting, "name": name, "dob": dob, "job": job, "story": story}
+    name = "Kaila"
+    doa = "October 30"
+    job = "Repl Runtime"
+    embed = "https://python-hello-series.jmort1021.repl.run"
+    info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
-def loradata():
-    greeting = "Hello!"
-    name = "Lora Mortensen"
-    dob = "September 23"
-    job = "Teacher"
-    story = "A fellow Herbert Hoover High graduate.  However we did not go to the same school.  How is that possible?"
-    info = {"greeting": greeting, "name": name, "dob": dob, "job": job, "story": story}
+def week2data():
+    greeting = "Hey, Hey!"
+    name = "Colin"
+    doa = "September 23"
+    job = "Padlet Review"
+    embed = "https://padlet.com/jmortensen7/csptime1_2"
+    info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
+    return info
+
+def week1data():
+    greeting = "Hey!"
+    name = "John Mortensen"
+    doa = "September 16"
+    job = "GitHub Readme"
+    embed = "http://gist-it.appspot.com/https://github.com/nighthawkcoders/javahello/blob/master/README.md"
+    info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
 def alldata():
-    return [johndata(), loradata()]
+    return [week3data(), week2data(), week1data()]
 
 #Data "setup" for Projects
 #next step would be to extract project data from a database
