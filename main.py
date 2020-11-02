@@ -49,7 +49,7 @@ def code_route():
 
 @app.route("/all/")
 def all_route():
-    return render_template("zall.html", datalist=data.alldata())
+    return render_template("taskall.html", datalist=data.alldata())
 
 
 @app.route("/hey/")

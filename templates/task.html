@@ -8,31 +8,13 @@
 {% set embed = data["embed"] %}
 {% set gist = data["gist"] %}
 
+{% extends "taskbase.html" %}
 
-<head>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+{% block head %}
     <title>{{name}} | Person </title>
-</head>
+{% endblock %}
 
-<body style="background-color:powderblue;color:white;">
-    <div class="btn-group">
-        <button type="button" class="btn btn-primary">Tasks</button>
-        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="/all/">All</a>
-            <a class="dropdown-item" href="/project/runtime">Runtime</a>
-            <a class="dropdown-item" href="/project/planning">Planning</a>
-            <a class="dropdown-item" href="/project/journal">Journal</a>
-            <a class="dropdown-item" href="/project/playground">Playground</a>
-            <a class="dropdown-item" href="/project/code">Code</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/">Back to Portfolio</a>
-        </div>
-    </div>
+{% block body %}
     <!-- observe usage jinja variables -->
     <h1>{{greeting}}</h1>
     <h2><span style='color:orangered;'>{{name}}</span></h2>
@@ -49,15 +31,7 @@
         <script src={{gist}}></script>
     </div>
     {% endif %}
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</body>
-
+{% endblock %}
 
 
 </html>
