@@ -25,6 +25,15 @@ def journal():
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
+def playground():
+    greeting = "Hi!"
+    name = "Replit"
+    doa = "September 9"
+    job = "Playground"
+    embed = "https://repl.it/@jmort1021/Python-Hello-Series?lite=true"
+    info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
+    return info
+
 def alldata():
     return [runtime(), planning(), journal()]
 
