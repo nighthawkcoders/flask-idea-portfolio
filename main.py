@@ -43,6 +43,9 @@ def journal_route():
 def playground_route():
     return render_template("task.html", data=data.playground())
 
+@app.route("/project/code")
+def code_route():
+    return render_template("task.html", data=data.code())
 
 @app.route("/all/")
 def all_route():

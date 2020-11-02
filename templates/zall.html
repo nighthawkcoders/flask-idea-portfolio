@@ -19,6 +19,7 @@
             <a class="dropdown-item" href="/project/planning">Planning</a>
             <a class="dropdown-item" href="/project/journal">Journal</a>
             <a class="dropdown-item" href="/project/playground">Playground</a>
+            <a class="dropdown-item" href="/project/code">Code</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/">Back to Portfolio</a>
         </div>
@@ -30,14 +31,23 @@
         {% set doa = data["doa"] %}
         {% set job = data["job"] %}
         {% set embed = data["embed"] %}
+        {% set gist = data["gist"] %}
+
         <h1>{{greeting}} <span style='color:orangered;'>{{job}} here</span></h1>
         <ol>
             <li><span style='color:orangered;'>{{doa}}</span></li>
             <li><span style='color:orangered;'>{{name}}</span></li>
             <li><span style='color:midnightblue;'>{{embed}}</span></li>
-            <div class="embed-responsive embed-responsive-4by3">
-                <iframe class="embed-responsive-item" src={{embed}}></iframe>
-            </div>
+            {% if 'embed' in data %}
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src={{embed}}></iframe>
+                </div>
+            {% endif %}
+            {% if 'gist' in data %}
+                <div>
+                    <script src={{gist}}></script>
+                </div>
+            {% endif %}
         </ol>
     {% endfor %}
 

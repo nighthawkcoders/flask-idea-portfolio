@@ -10,7 +10,7 @@ def runtime():
 def planning():
     greeting = "Hey, Hey!"
     name = "Padlet"
-    doa = "September 23"
+    doa = "October 23"
     job = "Project Planning"
     embed = "https://padlet.com/jmortensen7/csptime1_2"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
@@ -19,23 +19,32 @@ def planning():
 def journal():
     greeting = "Hey!"
     name = "Google Doc"
-    doa = "September 16"
-    job = "Journal"
+    doa = "October 16"
+    job = "Journal Record"
     embed = "https://docs.google.com/document/d/1Om-4ns6kmzePFvCB2WAyXArEHLUvKVWcQ7jVwswtX-0/edit"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
 def playground():
-    greeting = "Hi!"
+    greeting = "Play, Play, Play!"
     name = "Replit"
-    doa = "September 9"
+    doa = "October 9"
     job = "Playground"
     embed = "https://repl.it/@jmort1021/Python-Hello-Series?lite=true"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
+def code():
+    greeting = "Code, Code, Code!"
+    name = "Gist"
+    doa = "October 2"
+    job = "Code Sample"
+    gist = "https://gist.github.com/jm1021/cfb277c7357e02fcb4123a6c7429a5c1.js"
+    info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "gist": gist}
+    return info
+
 def alldata():
-    return [runtime(), planning(), journal(), playground()]
+    return [runtime(), planning(), journal(), playground(), code()]
 
 #Data "setup" for Projects
 #next step would be to extract project data from a database

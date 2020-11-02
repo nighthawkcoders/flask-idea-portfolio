@@ -6,6 +6,8 @@
 {% set doa = data["doa"] %}
 {% set job = data["job"] %}
 {% set embed = data["embed"] %}
+{% set gist = data["gist"] %}
+
 
 <head>
     <!-- Bootstrap CSS -->
@@ -26,6 +28,7 @@
             <a class="dropdown-item" href="/project/planning">Planning</a>
             <a class="dropdown-item" href="/project/journal">Journal</a>
             <a class="dropdown-item" href="/project/playground">Playground</a>
+            <a class="dropdown-item" href="/project/code">Code</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/">Back to Portfolio</a>
         </div>
@@ -36,9 +39,16 @@
     <h3><span style='color:orangered;'>{{doa}}</span></h3>
     <h3>My task is a <span style='color:orangered;'>{{job}}</span></h3>
     <p><span style='color:midnightblue;'>{{story}}</span></p>
+    {% if 'embed' in data %}
     <div class="embed-responsive embed-responsive-4by3">
         <iframe class="embed-responsive-item" src={{embed}}></iframe>
     </div>
+    {% endif %}
+    {% if 'gist' in data %}
+    <div>
+        <script src={{gist}}></script>
+    </div>
+    {% endif %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
