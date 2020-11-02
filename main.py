@@ -25,19 +25,19 @@ def flask_route():
     return render_template("flask.html", projects=data.setup())
 
 
-@app.route("/week1/")
-def week1_route():
-    return render_template("task.html", data=data.week1data())
+@app.route("/project/runtime")
+def runtime_route():
+    return render_template("task.html", data=data.runtime())
 
 
-@app.route("/week2/")
-def week2_route():
-    return render_template("task.html", data=data.week2data())
+@app.route("/project/planning")
+def planning_route():
+    return render_template("task.html", data=data.planning())
 
 
-@app.route("/week3/")
-def week3_route():
-    return render_template("task.html", data=data.week3data())
+@app.route("/project/journal")
+def journal_route():
+    return render_template("task.html", data=data.journal())
 
 
 @app.route("/all/")

@@ -1,32 +1,32 @@
-def week3data():
+def runtime():
     greeting = "Hey, Hey, Hey!"
-    name = "Kaila"
+    name = "Repl"
     doa = "October 30"
-    job = "Repl Runtime"
+    job = "Runtime Link"
     embed = "https://python-hello-series.jmort1021.repl.run"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
-def week2data():
+def planning():
     greeting = "Hey, Hey!"
-    name = "Colin"
+    name = "Padlet"
     doa = "September 23"
-    job = "Padlet Review"
+    job = "Project Planning"
     embed = "https://padlet.com/jmortensen7/csptime1_2"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
-def week1data():
+def journal():
     greeting = "Hey!"
-    name = "John Mortensen"
+    name = "Google Doc"
     doa = "September 16"
-    job = "GitHub Readme"
-    embed = "http://gist-it.appspot.com/https://github.com/nighthawkcoders/javahello/blob/master/README.md"
+    job = "Journal"
+    embed = "https://docs.google.com/document/d/1Om-4ns6kmzePFvCB2WAyXArEHLUvKVWcQ7jVwswtX-0/edit"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
 def alldata():
-    return [week3data(), week2data(), week1data()]
+    return [runtime(), planning(), journal()]
 
 #Data "setup" for Projects
 #next step would be to extract project data from a database

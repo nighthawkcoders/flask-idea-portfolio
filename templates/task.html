@@ -22,21 +22,21 @@
         </button>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="/all/">All</a>
-            <a class="dropdown-item" href="/week3/">Week 3</a>
-            <a class="dropdown-item" href="/week2/">Week 2</a>
-            <a class="dropdown-item" href="/week1/">Week 1</a>
+            <a class="dropdown-item" href="/project/runtime"">Runtime</a>
+            <a class="dropdown-item" href="/project/planning"">Planning</a>
+            <a class="dropdown-item" href="/project/journal"">Journal</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/">Back to Portfolio</a>
         </div>
     </div>
     <!-- observe usage jinja variables -->
     <h1>{{greeting}}</h1>
-    <h2>"<span style='color:orangered;'>{{name}}</span>"</h2>
-    <h3>"<span style='color:orangered;'>{{doa}}</span>"</h3>
-    <h3>"My task is a <span style='color:orangered;'>{{job}}</span>"</h3>
+    <h2><span style='color:orangered;'>{{name}}</span></h2>
+    <h3><span style='color:orangered;'>{{doa}}</span></h3>
+    <h3>My task is a <span style='color:orangered;'>{{job}}</span></h3>
     <p><span style='color:midnightblue;'>{{story}}</span></p>
     <div class="embed-responsive embed-responsive-4by3">
-    <iframe class="embed-responsive-item" src={{embed}}></iframe>
+        <iframe class="embed-responsive-item" src={{embed}}></iframe>
     </div>
 
     <!-- Optional JavaScript -->
