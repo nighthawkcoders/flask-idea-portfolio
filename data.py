@@ -35,7 +35,7 @@ def playground():
     return info
 
 def alldata():
-    return [runtime(), planning(), journal()]
+    return [runtime(), planning(), journal(), playground()]
 
 #Data "setup" for Projects
 #next step would be to extract project data from a database

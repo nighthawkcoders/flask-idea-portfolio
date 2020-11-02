@@ -30,11 +30,14 @@
         {% set doa = data["doa"] %}
         {% set job = data["job"] %}
         {% set embed = data["embed"] %}
-        <h1>{{greeting}} <span style='color:orangered;'>{{name}} here</span></h1>
+        <h1>{{greeting}} <span style='color:orangered;'>{{job}} here</span></h1>
         <ol>
             <li><span style='color:orangered;'>{{doa}}</span></li>
-            <li><span style='color:orangered;'>{{job}}</span></li>
+            <li><span style='color:orangered;'>{{name}}</span></li>
             <li><span style='color:midnightblue;'>{{embed}}</span></li>
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" src={{embed}}></iframe>
+            </div>
         </ol>
     {% endfor %}
 
