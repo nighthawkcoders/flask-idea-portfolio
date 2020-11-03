@@ -16,17 +16,18 @@
         {% set embed = data["embed"] %}
         {% set gist = data["gist"] %}
 
-        <h1>{{greeting}} <span style='color:orangered;'>{{job}} here</span></h1>
+        <h1>{{greeting}} <span style='color:orangered;'></span></h1>
         <ol>
-            <li><span style='color:orangered;'>{{doa}}</span></li>
-            <li><span style='color:orangered;'>{{name}}</span></li>
-            <li><span style='color:midnightblue;'>{{embed}}</span></li>
+            <li>Due date: <span style='color:midnightblue;'>{{doa}}</span></li>
+            <li>Task: <span style='color:midnightblue;'>{{name}}</span></li>
             {% if 'embed' in data %}
+                <li>{{job}} link: <span style='color:midnightblue;'>{{embed}}</span></li>
                 <div class="embed-responsive embed-responsive-4by3">
                     <iframe class="embed-responsive-item" src={{embed}}></iframe>
                 </div>
             {% endif %}
             {% if 'gist' in data %}
+                <li>{{job}} link: <span style='color:midnightblue;'>{{embed}}</span></li>
                 <div>
                     <script src={{gist}}></script>
                 </div>
