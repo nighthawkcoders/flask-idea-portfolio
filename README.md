@@ -3,8 +3,8 @@
 2. Backend: Running Server, Routes, Python data 
 3. Deploy: Self Hosting
 
-## Map of provided Code to AP CSA requirements
-[Computer Science Principlse Course Cpnten description pages 19, 20, 21](https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a)
+## Map of project to AP CSP requirements
+[Computer Science Principlse Course Cpnten description pages 19, 20, 21](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)
 
 | Unit | Percentage | Hello Series usage |
 | ------------- | ----------- | ----------- |
