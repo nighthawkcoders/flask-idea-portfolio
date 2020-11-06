@@ -43,8 +43,18 @@ def code():
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "gist": gist}
     return info
 
+def code2():
+    # Embed like Gist -- https://emgithub.com/
+    greeting = "Code, Code, Code!"
+    name = "Embed like Gist"
+    doa = "September 25"
+    job = "HTML + Jinja extends"
+    gist = "https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fflask-idea-portfolio%2Fblob%2Fmaster%2Ftemplates%2Ftask.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on"
+    info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "gist": gist}
+    return info
+
 def alldata():
-    return [runtime(), planning(), journal(), playground(), code()]
+    return [runtime(), planning(), journal(), playground(), code(), code2()]
 
 #Data "setup" for Projects
 #next step would be to extract project data from a database

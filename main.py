@@ -39,13 +39,21 @@ def planning_route():
 def journal_route():
     return render_template("task.html", data=data.journal())
 
+
 @app.route("/project/playground")
 def playground_route():
     return render_template("task.html", data=data.playground())
 
+
 @app.route("/project/code")
 def code_route():
     return render_template("task.html", data=data.code())
+
+
+@app.route("/project/code2")
+def code2_route():
+    return render_template("task.html", data=data.code2())
+
 
 @app.route("/all/")
 def all_route():
@@ -59,4 +67,4 @@ def heyheyhey_route():
 
 if __name__ == "__main__":
     # runs the application on the repl development server
-    app.run(debug=True)
+    app.run(debug=True, port="5001", host="127.0.0.1")
