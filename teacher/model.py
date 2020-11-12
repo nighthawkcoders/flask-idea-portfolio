@@ -1,3 +1,4 @@
+"""Model in MVC has responsibilty of managing data or database"""
 def runtime():
     greeting = "Hey, Hey, Hey!"
     name = "Repl"

@@ -1,3 +1,4 @@
+"""__init.py__ has responsibility of defining interfaces for blueprint"""
 from flask import Blueprint
 
 teacher_bp = Blueprint(

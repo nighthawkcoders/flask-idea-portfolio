@@ -1,12 +1,15 @@
+"""View in MVC has responsibility for interacting with user"""
+#render_templates is only job required for view
 from flask import render_template
-
+#imports defintions of teacher blueprint from __init__.py
 from teacher import teacher_bp
+#imports from model each data definition
 from .model import setup, runtime, alldata, code, code2, journal, planning, playground
 
 
 # connects default URL of server to render home.html
 @teacher_bp.route('/')
-def root_route():
+def index():
     return render_template("home.html", projects=setup())
 
 
