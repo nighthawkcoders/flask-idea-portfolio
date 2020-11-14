@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PythonWebPortfolio.iml" filepath="$PROJECT_DIR$/PythonWebPortfolio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PythonWebPortfolio.iml" filepath="$PROJECT_DIR$/.idea/PythonWebPortfolio.iml" />
     </modules>
   </component>
 </project>

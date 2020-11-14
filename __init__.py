@@ -5,6 +5,7 @@ from portfolio import portfolio_bp
 
 app = Flask(__name__)
 
-#teacher blueprint and url with greater project
+# teacher blueprint and url with greater project
+
 app.register_blueprint(teacher_bp, url_prefix='/teacher')
 app.register_blueprint(portfolio_bp, url_prefix='/portfolio')
