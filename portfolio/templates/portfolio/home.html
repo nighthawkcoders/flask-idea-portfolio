@@ -1,0 +1,157 @@
+<html>
+
+    <head>
+        <title>John Mortensen | Home </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+
+        <div id="loading"></div>
+
+
+        <div class="container-fluid page">
+
+
+            <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
+
+                <div class="col-4" style="text-align: center;" id="socials">
+                    <a href="https://github.com/jm1021" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/john-mortensen-1021/" target="_blank"><i class="fa fa-linkedin" ></i></a>
+                    <a href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                    <a href="https://twitter.com/NighthawkCoding" target="_blank"><i class="fa fa-twitter"></i></a>
+
+                </div>
+
+            </div>
+
+            <div class="row" style="padding: 10%; padding-top: 0%;">
+
+                <div class="col-8" >
+                    <h1>John Mortensen</h1>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="row" style="padding-left: 10%;">
+                <div class="col-4">
+                    <a href="https://padlet.com/jmortensen7/csp2021" target="_blank" class="btn">Project Plan</a>
+                </div>
+
+                <div class="col-4">
+                    <a href="https://github.com/nighthawkcoders/pythonhello" target="_blank" class="btn">Python Hello</a>
+                </div>
+
+                <div class="col-4">
+                    <a href="https://repl.it/@jmort1021/Python-Hello-Series" target="_blank" class="btn">Demo</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </body>
+
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
+    <script>
+
+
+
+    VANTA.BIRDS({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      wingSpan: 40.0
+    })
+    </script>
+
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            color: white;
+        }
+
+        h1{
+            font-size: 5em;
+        }
+
+
+        a { 
+            color: inherit;
+        } 
+
+
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+
+        }
+
+        .fa:hover{
+            transform: translateY(10px);
+        }
+
+
+        .fa-youtube-play:hover{
+            color: #cc0000;
+        }
+
+        .fa-twitter:hover{
+            color: #1da1f2;
+        }
+
+        .fa-github:hover{
+            color: #000000;
+        }
+
+        .fa-linkedin:hover{
+            color: #0073b1;
+        }
+
+
+
+
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: white;
+            font-size: 2.5em;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+
+
+        
+    </style>
+
+</html>
