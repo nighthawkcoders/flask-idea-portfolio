@@ -1,10 +1,8 @@
 import period2_data  # projects definitions are placed in different file
 
 # https://flask.palletsprojects.com/en/1.1.x/api/
-from flask import Flask, render_template
-
-# create a Flask instance
-app = Flask(__name__)
+from flask import render_template, url_for, redirect
+from __init__ import app
 
 
 @app.route('/')
