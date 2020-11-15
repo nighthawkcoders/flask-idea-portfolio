@@ -1,7 +1,7 @@
-import period2_data  # projects definitions are placed in different file
+import data_p1, data_p2  # projects definitions are placed in different file
 
 # https://flask.palletsprojects.com/en/1.1.x/api/
-from flask import render_template, url_for, redirect
+from flask import render_template
 from __init__ import app
 
 
@@ -12,12 +12,12 @@ def home_route():
 
 @app.route('/period1/')
 def period1_route():
-    return render_template("period1.html")
+    return render_template("period.html", period=data_p1.setup())
 
 
 @app.route('/period2/')
 def period2_route():
-    return render_template("period.html", period=period2_data.setup())
+    return render_template("period.html", period=data_p2.setup())
 
 
 @app.route('/period4/')
