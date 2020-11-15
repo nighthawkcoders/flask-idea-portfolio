@@ -1,0 +1,180 @@
+{% extends "navbar.html" %}
+
+{% block link1 %}
+
+<h3>{{ period.name }}</h3>
+<h4>{{ period.desc }}</h4>
+
+<div class="images">
+
+{% for project in period.projects %}
+
+    <div>
+        <div class="img-container">
+            <img src="{{ project.image }}">
+            <div class="overlay">
+                <div class="text">
+                    <div>Team name: {{ project.team_name }}</div>
+                    <div>
+                        <ul>
+                        {% for name in project.names %}
+                            <li>{{ name }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="{{ project.href }}"><h2>{{ project.name }}</h2></a>
+        <p>
+            {{ project.desc }}
+
+        </p>
+    </div>
+
+
+
+{% endfor %}
+
+</div>
+
+<!--<div class="images">-->
+<!--    <div>-->
+<!--        <div class="img-container">-->
+<!--            <img src="/static/img/cat1.jpg">-->
+<!--            <div class="overlay navy">-->
+<!--                <div class="text">Team Name: Member 1, Member 2, Member 3, Member 4</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <a href="http://google.com"><h2>Project 1</h2></a>-->
+<!--        <p>-->
+<!--            Description of project - This is the project. This is what it does. This is how you use it. Blah-->
+
+<!--        </p>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <div class="img-container">-->
+<!--            <img src="/static/img/cat2.png">-->
+<!--            <div class="overlay green">-->
+<!--                <div class="text">Team Name: Member 1, Member 2, Member 3, Member 4</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <a href="http://facebook.com"><h2>Project 2</h2></a>-->
+<!--        <p>-->
+<!--            Description of project - This is the project. This is what it does. This is how you use it. Blah-->
+
+<!--        </p>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <div class="img-container">-->
+<!--            <img src="/static/img/cat3.jpg">-->
+<!--            <div class="overlay navy">-->
+<!--                <div class="text">Team Name: Member 1, Member 2, Member 3, Member 4</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <a href="http://apple.com"><h2>Project 3</h2></a>-->
+<!--        <p>-->
+<!--            Description of project - This is the project. This is what it does. This is how you use it. Blah-->
+
+<!--        </p>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <div class="img-container">-->
+<!--            <img src="/static/img/cat3.jpg">-->
+<!--            <div class="overlay navy">-->
+<!--                <div class="text">Team Name: Member 1, Member 2, Member 3, Member 4</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <a href="http://apple.com"><h2>Project 3</h2></a>-->
+<!--        <p>-->
+<!--            Description of project - This is the project. This is what it does. This is how you use it. Blah-->
+
+<!--        </p>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<style>
+    .images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
+
+    .images img {
+      width: 100%;
+    }
+
+    .images>div {
+        padding: 10px;
+        flex: 0 0 50%;
+    }
+
+    h2 {
+      text-align: center;
+      color: black;
+      font-size: 40px;
+      font-family: times new roman;
+    }
+
+    .img-container {
+        position: relative;
+    }
+
+    .img-container:hover .overlay {
+        opacity: 1;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .images>div:nth-child(4n-2) .overlay,
+    .images>div:nth-child(4n-1) .overlay {
+      background-color: #12472d;
+    }
+
+    .images>div:nth-child(4n-3) .overlay,
+    .images>div:nth-child(4n) .overlay {
+      background-color: #04274c;
+    }
+
+    .cat-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .text li {
+        text-align: left;
+    }
+
+
+</style>
+
+
+
+{% endblock %}
+
+
