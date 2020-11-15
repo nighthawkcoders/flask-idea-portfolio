@@ -10,6 +10,11 @@ def home_route():
     return render_template("base1.html")
 
 
+@app.route('/period1/')
+def period1_route():
+    return render_template("period1.html")
+
+
 @app.route('/period2/')
 def period2_route():
     return render_template("period2.html")
