@@ -1,3 +1,5 @@
+"""Model in frontend/backend, model according to classic MVC guidelines"""
+
 # Project data class contain project name and links (Link class objects)
 class Project:
     # project data with name and links
