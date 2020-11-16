@@ -1,6 +1,6 @@
 """Data file for Period 2"""
-import model  # projects definitions are placed in different file
 
+import model  # projects definitions are placed in different file
 
 def setup():
     project1 = model.Project("Project 1", "http://www.google.com", "/static/img/cat1.jpg", "Team Name",
