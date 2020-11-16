@@ -54,8 +54,18 @@ def code2():
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "gist": gist}
     return info
 
+def calculatorgui():
+    greeting = "GUI Calculator"
+    name = "Display Java Swing in HTML using Replit"
+    doa = "Now!"
+    job = "JFrame in Replit"
+    embed = "https://repl.it/@mhayescs19/CalculatorJFrame?lite=true&outputonly=1"
+    info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
+    return info
+
+
 def alldata():
-    return [runtime(), planning(), journal(), playground(), code(), code2()]
+    return [runtime(), planning(), journal(), playground(), code(), code2(), calculatorgui()]
 
 #Data "setup" for Projects
 #next step would be to extract project data from a database

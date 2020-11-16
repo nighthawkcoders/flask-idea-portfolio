@@ -4,7 +4,7 @@ from flask import render_template
 #imports defintions of teacher blueprint from __init__.py
 from teacher import teacher_bp
 #imports from model each data definition
-from .model import setup, runtime, alldata, code, code2, journal, planning, playground
+from .model import setup, runtime, alldata, code, code2, journal, planning, playground, calculatorgui
 
 
 # connects default URL of server to render home.html
@@ -53,6 +53,10 @@ def code_route():
 @teacher_bp.route("/project/code2")
 def code2_route():
     return render_template("task.html", data=code2())
+
+@teacher_bp.route("/project/calculatorGUI")
+def calculatorgui_route():
+    return render_template("task.html", data=calculatorgui())
 
 
 @teacher_bp.route("/about/")
