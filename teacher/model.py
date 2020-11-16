@@ -1,6 +1,4 @@
-"""Model in MVC has responsibility of managing data or database"""
-
-
+"""Model in MVC has responsibilty of managing data or database"""
 def runtime():
     greeting = "Hey, Hey, Hey!"
     name = "Repl"
@@ -9,7 +7,6 @@ def runtime():
     embed = "https://Python-Web-Portfolio-Series.jmort1021.repl.co"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
-
 
 def planning():
     greeting = "Hey, Hey!"
@@ -20,7 +17,6 @@ def planning():
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
-
 def journal():
     greeting = "Hey!"
     name = "Google Doc"
@@ -29,7 +25,6 @@ def journal():
     embed = "https://docs.google.com/document/d/1Om-4ns6kmzePFvCB2WAyXArEHLUvKVWcQ7jVwswtX-0/edit"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
-
 
 def playground():
     greeting = "Play, Play, Play!"
@@ -40,7 +35,6 @@ def playground():
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
-
 def code():
     greeting = "Code, Code, Code!"
     name = "Gist"
@@ -49,7 +43,6 @@ def code():
     gist = "https://gist.github.com/jm1021/cfb277c7357e02fcb4123a6c7429a5c1.js"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "gist": gist}
     return info
-
 
 def code2():
     # Embed like Gist -- https://emgithub.com/
@@ -61,48 +54,52 @@ def code2():
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "gist": gist}
     return info
 
+def calculatorgui():
+    greeting = "GUI Calculator"
+    name = "Display Java Swing in HTML using Replit"
+    doa = "Now!"
+    job = "JFrame in Replit"
+    embed = "https://repl.it/@mhayescs19/CalculatorJFrame?lite=true&outputonly=1"
+    info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
+    return info
+
 
 def alldata():
-    return [runtime(), planning(), journal(), playground(), code(), code2()]
+    return [runtime(), planning(), journal(), playground(), code(), code2(), calculatorgui()]
 
-
-# Data "setup" for Projects
-# next step would be to extract project data from a database
-
-
+#Data "setup" for Projects
+#next step would be to extract project data from a database
 def setup():
-    # Source Data
+    #Source Data
     name = "Nighthawk Coding"
     github = "https://github.com/nighthawkcoders"
     linkedin = "https://www.linkedin.com/in/john-mortensen-1021/"
     youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber"
     twitter = "https://twitter.com/NighthawkCoding"
     source = {"name": name, "github": github, "linkedin": linkedin, "youtube": youtube, "twitter": twitter}
-    # Project Data
+    #Project Data
     project1 =  "Hello Series"
     projlinks1 = [
         Link("Project Plan", "http://nighthawkcoders.cf/courses/python/"),
         Link("Repl", "https://repl.it/@jmort1021/Python-Hello-Series#README.md"),
         Link("Resources", "https://padlet.com/jmortensen7/csp2021")
     ]
-    project2 = "Flask Project"
+    project2 =  "Flask Project"
     projlinks2 = [
         Link("Project Plan", "http://nighthawkcoders.cf/courses/python/"),
         Link("Repl", "https://repl.it/@jmort1021/Python-Web-Portfolio-Series?__cf_chl_jschl_tk__=cff72504752e89d50dea999ce10f859a17ecc294-1603026111-0-AdBP5FO-3nyUc_KVdPlNwvXM4MwUXy1HXHmbiJui1YBnUTPJZ8X4UBZVeYUXrnwRBJVvku9NftGYDWtp8lp4KovKX55R8S4twedzHpa2snwLwoAWaxuc4rgAa2l9J_rWqnNvUNcjJ8-p1V1RuTWV3lIy149lptozqAQdJnGj7PlcJxnu3YH22EXK-jl7bmdQmW9r_9fE1xp8J7sOFS3I1PMgmtoExcDIQSBBTnx1zQsyQGNS6wnuX72MAPnS_x3ZL1ETNRgFbVKpLsFJiR9ED1ErU54wyZYrUxEbZ_txHd7qY1T_s_lE6Ll8jYWHx-GulQ#main.py"),
         Link("Resources", "https://padlet.com/jmortensen7/csptime1_2")
     ]
-    # Project Objects
+    #Project Objects
     proj1 = Project(project1, projlinks1)
     proj2 = Project(project2, projlinks2)
-    # HTML Data
+    #HTML Data
     projects = Projects(source, [proj1, proj2])
     return projects
 
-# Link class contains button (label) and hypertext reference (href)
-
-
+#Link class contains button (label) and hypertext reference (href)
 class Link():
-    # link data with button and href (url)
+    #link data with button and href (url)
     def __init__(self, btn, href):
         self.btn = btn
         self.href = href
@@ -111,11 +108,9 @@ class Link():
     def get_href(self):
         return self.href
 
-# Project data class contain project name and links (Link class objects)
-
-
+#Project data class contain project name and links (Link class objects)
 class Project():
-    # project data with name and links
+    #project data with name and links
     def __init__(self, name, links):
         self.name = name
         self.links = links
@@ -124,17 +119,15 @@ class Project():
     def get_links(self):
         return self.links
 
-# Projects class contains person (owner) and multiple projects (Project class objects)
-
-
+#Projects class contains person (owner) and multiple projects (Project class objects)
 class Projects():
-    # HTML data with source and projects
+    #HTML data with source and projects
     def __init__(self, source, projects):
         self.source = source
         self.projects = projects
-    # source data getter
+    #source data getter
     def get_source(self):
         return self.source
-    # project data getter
+    #project data getter
     def get_projects(self):
         return self.projects
