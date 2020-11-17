@@ -14,3 +14,6 @@ app.register_blueprint(portfolio_bp, url_prefix='/portfolio')
 # PERIOD 1
 from p1_mortos import p1_mortos_bp
 app.register_blueprint(p1_mortos_bp, url_prefix='/p1/mortos')
+
+from p1_robotmania import p1_robotmania_bp
+app.register_blueprint(p1_robotmania_bp, url_prefix='/p1_robotmania')
