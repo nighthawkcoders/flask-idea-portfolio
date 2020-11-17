@@ -13,6 +13,10 @@ app.register_blueprint(teacher_bp, url_prefix='/teacher')
 from p1_mortos import p1_mortos_bp
 app.register_blueprint(p1_mortos_bp, url_prefix='/period1/mortos')
 
-
 from p1_robotmania import p1_robotmania_bp
 app.register_blueprint(p1_robotmania_bp, url_prefix='/p1_robotmania')
+
+from p1_dataminers import p1_dataminers_bp
+app.register_blueprint(p1_dataminers_bp, url_prefix='/period1/dataminers')
+
+
