@@ -7,7 +7,7 @@
 {% set job = data["job"] %}
 {% set embed = data["embed"] %}
 {% set gist = data["gist"] %}
-
+{% set youtube = data["youtube"] %}
 {% extends "taskbase.html" %}
 
 {% block head %}
@@ -32,6 +32,20 @@
         <iframe class="embed-responsive-item" src={{embed}}></iframe>
     </div>
     {% endif %}
+
+
+    {% if youtube%}
+
+        {% for video in youtube%}
+        <div style="text-align: center; margin-top: 3%;">
+            <iframe width="50%" height="500px" src="{{ video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+        {% endfor %}
+
+    {% endif %}
+
+
     {% if 'gist' in data %}
     <div>
         <script src={{gist}}></script>
