@@ -19,4 +19,9 @@ app.register_blueprint(p1_robotmania_bp, url_prefix='/p1_robotmania')
 from p1_dataminers import p1_dataminers_bp
 app.register_blueprint(p1_dataminers_bp, url_prefix='/period1/dataminers')
 
+# PERIOD 4
+
+from p4_slackbots import p4_slackbots_bp
+app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
+
 
