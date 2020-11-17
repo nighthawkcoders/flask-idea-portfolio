@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--data from a param in view.py -->
+{% set greeting = data["greeting"] %}
+{% set name = data["name"] %}
+{% set doa = data["doa"] %}
+{% set job = data["job"] %}
+{% set embed = data["embed"] %}
+{% set gist = data["gist"] %}
+
+{% extends "taskbase.html" %}
+
+{% block head %}
+    <title>{{name}} | Person </title>
+{% endblock %}
+
+{% if 'greeting' in data %}
+{% block greeting %}
+({{greeting}})
+{% endblock %}
+{% endif %}
+
+
+{% block body %}
+    <!-- observe usage jinja variables -->
+    <h2>Assignment: <span style='color:midnightblue;'>{{name}}</span></h2>
+    <h3>Due date: <span style='color:midnightblue;'>{{doa}}</span></h3>
+    <h3>Task: <span style='color:midnightblue;'>{{job}}</span></h3>
+    <p><span style='color:midnightblue;'>{{story}}</span></p>
+    {% if 'embed' in data %}
+    <div class="embed-responsive embed-responsive-4by3">
+        <iframe class="embed-responsive-item" src={{embed}}></iframe>
+    </div>
+    {% endif %}
+    {% if 'gist' in data %}
+    <div>
+        <script src={{gist}}></script>
+    </div>
+    {% endif %}
+{% endblock %}
+
+
+</html>
