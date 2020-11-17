@@ -23,9 +23,9 @@ def setup():
     project6 = model.Project("Project 6", "http://www.facebook.com", "/static/img/cat2.png", "Another Team Name",
                              ["Talented Student 3", "Talented Student 4", "Smart Student 6"],
                             "This is another fabulous project of ours")
-    project7 = model.Project("Project 7", "http://www.google.com", "/static/img/cat1.jpg", "Team Name",
-                             ["Talented Student 1", "Talented Student 2", "Smart Student 3"],
-                            "This is our fabulous project, because we are cool")
+    project7 = model.Project("Project 7", "http://www.google.com", "/static/img/cat1.jpg", "Crystal's Team",
+                             ["Crystal Widjaja", "Nivedita Rethnakar", "Ida Mobini", "Eva Gravin", "Dane Vestal"],
+                            "This is our website with minigames, our portfolio, and much more!")
     project8 = model.Project("Project 8", "http://www.facebook.com", "/static/img/cat2.png", "Another Team Name",
                              ["Talented Student 3", "Talented Student 4", "Smart Student 6"],
                             "This is another fabulous project of ours")
