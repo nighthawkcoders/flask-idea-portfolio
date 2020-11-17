@@ -11,7 +11,8 @@ def setup():
     
     p1_robotmania = model.Project("Robot Mania", url_for('p1_robotmania_bp.index'), "/static/img/p1_robotmania.png", "Robot Mania",
                              ["Nakul Nandhakumar", "Sanvi Pal", "Sara Beniwal", "Vihan Jayaraman", "Yasaswi Singamneni"],
-                             "The main focus of our project wa to make a bunch of fun minigames. There are some other activities that will show up on the menu but the highlights are battleship, connectfour, and hangman")
+                             "The main focus of our project was to make a bunch of fun minigames. There are some other activities "
+                             "that will show up on the menu but the highlights are battleship, connect-four, and hangman.")
     
     projects = [p1_robotmania]
     period = model.Period("Period 1", "Computer Science A", projects)
