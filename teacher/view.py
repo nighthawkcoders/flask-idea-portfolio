@@ -1,4 +1,4 @@
-"""View in MVC has responsibility for interacting with user"""
+"""View in MVC has responsibility for interacting with user Karam"""
 # render_templates is only job required for view
 from flask import render_template
 # imports defintions of teacher blueprint from __init__.py
