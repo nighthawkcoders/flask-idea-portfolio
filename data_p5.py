@@ -15,6 +15,11 @@ def setup():
                                  "Jien (Max) Wang"],
                                 "This website is used for everything calculus and to spread our information about it")
 
-    projects = [p5_calculus, EXAMPLE]
+    p5_gorillas = model.Project("p5_gorillas", "http://70.95.189.45:5000/",
+                                "/static/img/p5_gorillas", "Gorillas",
+                                ["Pedro de Medeiros", "Jagroop Vij", "Arul Salaniwal", "Manuel Villa-Hernandez", "Colin Tran"],
+                                "Here you find the repositories for all our projects; our journals, where we document coding progress; and Individual pages with personal information and our coding experiences. Explore!!")
+
+    projects = [p5_calculus, p5_gorillas, EXAMPLE]
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period
