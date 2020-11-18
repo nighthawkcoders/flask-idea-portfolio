@@ -3,6 +3,9 @@
 2. Backend: Running Server, Python data (model)
 3. Deploy: Self Hosting
 
+# Integrating Project into Main Web
+https://docs.google.com/document/d/1adPITkdZLK3O8nTxls-_Gj5VzOz3r7SGt1zv3uLFpSY/edit
+
 ## Map of project to AP CSP requirements
 [Computer Science Principlse Course Cpnten description pages 19, 20, 21](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)
 
