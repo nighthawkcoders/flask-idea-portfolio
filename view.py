@@ -1,4 +1,4 @@
-"""View/Control in frontend/backend, view & control according to classic MVC guidelines"""
+"""View/Control in frontend/backend, view & control according to classic MVC guidelines """
 
 from flask import render_template
 
