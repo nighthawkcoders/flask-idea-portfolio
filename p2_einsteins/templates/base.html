@@ -32,29 +32,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="{{url_for('.home_route')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/fundamentals/">Python Fundamentals Project</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="https://repl.it/@AZPragTeam/ThisIsItBois">Hello Series Project</a>
+                    <a class="nav-link" href="{{url_for('.fundamental_route')}}">Python Fundamentals Project</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/calculator/">Calculator Project</a>
+                    <a class="nav-link" href="{{url_for('.calculator_route')}}">Calculator Project</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/journal/">Our Journals</a>
+                    <a class="nav-link" href="{{url_for('.journal_route')}}">Our Journals</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Dropdown</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/ayman/">Ayman</a>
-                            <a class="dropdown-item" href="/pragadeesh/">Pragadeesh</a>
-                            <a class="dropdown-item" href="/brandon/">Brandon</a>
+                            <a class="dropdown-item" href="{{url_for('.ayman_route')}}">Ayman</a>
+                            <a class="dropdown-item" href="{{url_for('.pragadeesh_route')}}">Pragadeesh</a>
+                            <a class="dropdown-item" href="{{url_for('.brandon_route')}}">Brandon</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/ali/">Ali</a>
-                            <a class="dropdown-item" href="/navodit/">Navodit</a>
+                            <a class="dropdown-item" href="{{url_for('.ali_route')}}">Ali</a>
+                            <a class="dropdown-item" href="{{url_for('.navodit_route')}}">Navodit</a>
                         </div>
                 </li>
             </ul>
@@ -105,7 +102,7 @@
 
   {% block script %}
       <script src="https://threejs.org/build/three.js"></script>
-      <script src="{{ url_for('static', filename='vanta.waves.min.js') }}"></script>
+      <script src="{{ url_for('p2_einsteins_bp.static', filename='vanta.waves.min.js') }}"></script>
       <script>
         VANTA.WAVES({
           el: "body",
