@@ -218,6 +218,7 @@ def rsaDecrypt():
 
 
 # rsa info
-@cyphercrypto_bp.route('/rsa/about')
+@cyphercrypto_bp.route('/about-rsa')
 def rsaAbout():
     return render_template("rsaAbout.html")
+
