@@ -8,6 +8,11 @@ def setup():
     EXAMPLE = model.Project("Project Name", "http://www.google.com", "/static/img/cat1.jpg", "Team Name",
                             ["Talented Student 1", "Talented Student 2", "Smart Student 3", "Team Member 4",
                              "Amazing Member 5"], "This is our fabulous project, because we are cool (description)")
-    projects = [EXAMPLE]
+    p5_calculus = model.Project("p5_calculus", "https://github.com/AkhileshLG/flaskportfolio-1", "/static/img/p5_calculus.jpg", "calculus",
+                            ["Karam Alshaikh", "Akhilesh Genneri", "Akshit Prathipati", "Noya Hafiz",
+                             "Jien (Max) Wang"], "This website is used for everything calculus and to spread our information about it")
+
+
+    projects = [EXAMPLE,p5_calculus]
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period
