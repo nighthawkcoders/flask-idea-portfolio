@@ -19,24 +19,23 @@ def home():
     #model is passed as a parameter
     return render_template("home.html")#home has to be under templates
 
-@p5_chessGame_bp.route("/project/chessJs")#for the dragable chess file
+@p5_chessGame_bp.route("/project/chessJs/")#for the dragable chess file
 def chessJS():
   return render_template("chessJs.html")
 
-@p5_chessGame_bp.route("/project/chessPush")#for the print chess board from dictonaries
+@p5_chessGame_bp.route("/project/chessPush/")#for the print chess board from dictonaries
 def chessPush():
     return render_template("chessPush.html", displayBoard=board)
 
-"""@p5_chessGame_bp.route("/project/index")#for the dragable chess file
+"""@p5_chessGame_bp.route("/project/index/")#for the dragable chess file
 def index():
     return render_template("index.html", display="")"""
 
-@p5_chessGame_bp.route("/project/index")#for the dragable chess file
+@p5_chessGame_bp.route("/project/index/")#for the dragable chess file
 def index():
-    return render_template("nameBack.html")
+    return render_template("chessEmbed.html")
 
-
-@p5_chessGame_bp.route("/project/add", methods=['GET','POST'],)#for the dragable chess file
+@p5_chessGame_bp.route("/project/add/", methods=['GET','POST'],)#for the dragable chess file
 def addition():
     if request.method == 'POST':
         form = request.form
@@ -48,7 +47,7 @@ def addition():
     return redirect("/index")
 
 
-@p5_chessGame_bp.route("/project/yourName", methods=['GET','POST'],)#for the dragable chess file
+@p5_chessGame_bp.route("/project/yourName/", methods=['GET','POST'],)#for the dragable chess file
 def yourName():
     if request.method == 'POST':
         form = request.form
@@ -57,9 +56,15 @@ def yourName():
     return redirect("/nameBack")
 
 
-@p5_chessGame_bp.route("/project/journals")#for storing all the links to the webpage
+@p5_chessGame_bp.route("/project/journals/")#for storing all the links to the webpage
 def journals():
   return render_template("journals.html")#,repl="repl of website", website ="link to personal website")#allows to define the text that is hyperlinked on the the personal journals
+
+@p5_chessGame_bp.route("/project/chessEmbed/")
+def chessEmbed():
+    return render_template("chessEmbed.html")
+
+
 """
 #--------------------------------------------------- here is where the chess with POST starts
 @p5_chessGame_bp.route("/project/chessMenu/") # this gets the user to the chess board

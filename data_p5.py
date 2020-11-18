@@ -31,7 +31,7 @@ def setup():
                                  ["Allen Xu", "Marc Humeau", "Jacob Nguyen", "Dadyar Khalili Samani", "Jason Francisco"],
                                  "A website that reviews wonderful places located in San Diego")
 
-    projects = [p5_calculus, p5_gorillas, p5_monkeymen,p5_chessGame, EXAMPLE]
+    projects = [p5_calculus, p5_gorillas, p5_monkeymen ,p5_chessGame, EXAMPLE]
 
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period
