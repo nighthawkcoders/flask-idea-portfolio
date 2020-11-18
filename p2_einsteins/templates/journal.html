@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{name}} | Journals </title>
+{% endblock %}
+
+{% block title %}
+<h1>Our Journals</h1>
+<h3>Ayman Kazi, Pragadeesh Raj, Brandon Truong's Journal</h3>
+<iframe height="500px" width="100%" align="left" src= {{Journal1}} scrolling="yes" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<h3>Ali Saad & Navodit Maheshwari's Journal</h3>
+<iframe height="500px" width="100%" align="right" src= {{Journal2}} scrolling="yes" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+{% endblock %}
+
+
