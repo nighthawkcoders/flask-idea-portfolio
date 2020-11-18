@@ -29,3 +29,6 @@ app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
 # Period 5
 from p4_hangman import p4_hangman_bp
 app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
+
+from p5_monkeymen import p5_monkeymen_bp
+app.register_blueprint(p5_monkeymen_bp, url_prefix='/p5_monkeymen')
