@@ -1,0 +1,165 @@
+
+<!-- this is the template that allows for the user to  -->
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!--even style is green, odd styles is white -->
+    <style>
+        .even {
+        background-color: #4CAF50;
+        border: none;
+        height: 25px;
+        width: 25px;
+        }
+
+        .odd {
+        background-color: #d6d3ba;
+        border: none;
+        height: 25px;
+        width: 25px;
+        }
+
+        .even_black {
+        background-color: #4CAF50;
+        border: none;
+        color: black;
+        }
+        .odd_black {
+        background-color: #d6d3ba;
+        border: none;
+        color: black;
+        }
+        .even_white {
+        background-color: #4CAF50;
+        border: none;
+        color: black;
+        }
+        .odd_black {
+        background-color: #d6d3ba;
+        border: none;
+        color: black;
+        }
+
+        .selected{
+        background-color: #FFFF00;
+        border: none;
+        }
+        .white {
+        color: black;
+        }
+        .black {
+        color: black;
+        }
+
+        #turn__table {
+
+            width: 175px;
+            height: 180px;
+            overflow: auto;
+        }
+        .turn__number {
+        text-align: center;
+        }
+        .turn__values {
+        text-align: center;
+        }
+        .center__table{
+            position: relative;
+            margin: auto;
+            top: 50px;
+        }
+        #header-fixed {
+            position: fixed;
+            top: 0px; display:none;
+            background-color:white;
+        }
+
+    </style>
+</head>
+<body onLoad="scrollDiv_init()">
+<!-- this is the working version -->
+<table class="center__table">
+    <tr>
+        <th>
+            <form method="post" id="chessInput"> <!-- this is another post tag to allow for user interaction -->
+                <table>
+                    {%for row in allBoard%}
+                    <tr><!-- if row == board 5 -->
+                        {% if loop.index is divisibleby 2 %}
+                        {% for header,unicode in row.items() %} <!-- if the row is even, 8,6,4,2 -->
+                        {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
+                        <!-- this is replacing with white space -->
+                        <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
+                        {%else%}
+                        <th><input class = "{{ loop.cycle('even', 'odd') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
+                        {% endif %}
+                        {% endfor %}
+                        {% else %}
+                        {% for header,unicode  in row.items() %}   <!-- if the row is odd, 7,5,3,1 -->
+                        {% if unicode == "emptySpace" %}<!-- if there is emtySpace as the value of the dictonary -->
+                        <!-- this is replacing with white space -->
+                        <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value=&nbsp;&nbsp;&nbsp;&nbsp; inputName="firstButton" formaction={{header}} /></th>
+                        {%else%}
+                        <th><input  class = "{{ loop.cycle('odd', 'even') }}" type ="submit" value={{unicode}} inputName="firstButton" formaction={{header}} /></th>
+                        {% endif %}
+                        {% endfor %}
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </form>
+        </th>
+        <th>
+            <table>
+                <tr>
+                    <th>move #</th>
+                    <th class="turn__values">&nbsp;&nbsp;&nbsp;&nbsp;values</th>
+                </tr>
+            </table>
+            <div id="turn__table">
+                <table>
+                    {% for row in movelist %}
+                    <tr>
+                        <th class="turn__number">&nbsp;&nbsp;&nbsp;&nbsp;{{ loop.index }}</th>
+                        <th class= "{{ loop.cycle('white', 'black') }}" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{row}}</th>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <td>Previously Selected Cell: {{ displayClicked }}</td><!-- this line is to communicate hints to the player -->
+        <td>Message to the player: {{message}}</td> <!-- this line is to communicate weather if the move was valid to the player -->
+    </tr>
+    <tr>
+        <td>
+            <a class="nav-link code" style="color:red; margin:auto; text-align: center;" href="/project/chessMenu/" >Back to Menu</a>
+        </td>
+    </tr>
+</table>
+
+<h1>{{ displayRoutes }}</h1> <!-- this line is for debuggin -->
+
+<img src="{{ displayImage }}"> <!-- this is to display the win image -->
+
+
+<script language="javascript">
+
+//this is what allows the tabel to continously update
+function scrollDiv_init() {
+    DivElmnt = document.getElementById('turn__table');
+      instant_scroll()
+}
+
+function instant_scroll(){
+  DivElmnt.scrollTop = DivElmnt.scrollHeight
+}
+</script>
+
+</body>
+
+</html>
+

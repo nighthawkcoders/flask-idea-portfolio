@@ -19,4 +19,3 @@ class Period:
         self.name = name
         self.desc = desc
         self.projects = projects
-

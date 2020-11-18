@@ -26,6 +26,9 @@ app.register_blueprint(cyphercrypto_bp, url_prefix='/p2_cyphercrypto')
 from p4_slackbots import p4_slackbots_bp
 app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
 
-# Period 5
 from p4_hangman import p4_hangman_bp
 app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
+
+# Period 5
+from p5_chessGame import p5_chessGame_bp
+app.register_blueprint(p5_chessGame_bp, url_prefix='/p5_chessGame')

@@ -15,6 +15,12 @@ def setup():
                                  "Jien (Max) Wang"],
                                 "This website is used for everything calculus and to spread our information about it")
 
-    projects = [p5_calculus, EXAMPLE]
+    p5_chessGame = model.Project("Chess Game", url_for('p5_chessGame_bp.index'),
+                                "/static/img/p5chessGame.JPG", "Chess Game",
+                                ["Colin Szeto", "Devam Shrivastava", "Shekar Krishnamoorthy", "Kyle Myint",
+                                 "David Kim"],
+                                "Vist Chess Game to play through our chess game!")
+
+    projects = [p5_calculus, p5_chessGame, EXAMPLE]
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period
