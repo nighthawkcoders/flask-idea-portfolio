@@ -20,5 +20,5 @@ def setup():
                                "This project is kind of funky, because I am a computer nerd")
 
     projects = [p4_slackbots, p4_hangman, EXAMPLE]
-    period = model.Period("Period 4", "Some really smart people study apcsp here", projects)
+    period = model.Period("Period 4", "AP Principles of Computer Science - Python", projects)
     return period
