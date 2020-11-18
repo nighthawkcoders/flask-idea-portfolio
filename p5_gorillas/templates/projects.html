@@ -1,0 +1,198 @@
+<html>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Gorillas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-link">
+                    <a class="nav-link" href="http://70.95.189.45:5000/"> Home </a>
+                </li>
+                <li class="nav-link active">
+                    <a class="nav-link" href="/projects"> Projects </a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href="/journals"> Journals </a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href="/pedro"> Pedro Repo </a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href="/roop"> Roop Repo </a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href="/arul"> Arul Repo </a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href="/manuel"> Manuel Repo </a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-link" href="/colin"> Colin Repo </a>
+                </li>
+                <!--
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+
+                </li>
+                -->
+            </ul>
+        </div>
+    </nav>
+
+    <head>
+
+        <title> Pedro, Roop, Colin, Manuel, Arul | Projects </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+
+    <body>
+
+        <div class="container-fluid">
+
+            <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
+
+                <div class="col-3" style="text-align: left;">
+                    <!--
+                    <a href="github" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="linkedin" target="_blank"><i class="fa fa-linkedin" ></i></a>
+                    <a href="https://youtube.com/channel/UCiUOsPkjUdlxywd-E7GTicw" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                    <a href="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                    -->
+                    <h5>Pedro, Roop, Colin, Manuel, Arul</h5>
+                </div>
+            </div>
+
+            <!--
+            <div class="row justify-content-center">
+
+                <h1>The Groop</h1>
+
+            </div>
+            -->
+
+            <div class="product" style="margin-top: 2%;">
+                <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
+                    <div class="col-8" >
+                        <h1>Projects</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-left: 10%; margin-bottom: 15%">
+                <div class="col-4">
+                    <a href="https://docs.google.com/document/d/16C-jplZo7MnuTXzWabPOHMUYzwajv9OjvTR47Zf347o" target="_blank" class="btn">Website Project Plan</a>
+                </div>
+            </div>
+
+            <div class="product" style="margin-top: 2%; margin-bottom: 7%">
+                <div class="row justify-content-center" style="margin-top: 2vw;">
+                    <div class="col-11">
+                        <iframe frameborder="0" width="100%" height="500px" src="https://docs.google.com/document/d/16C-jplZo7MnuTXzWabPOHMUYzwajv9OjvTR47Zf347o"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 2%; margin-bottom: 7%">
+                <div class="col-4">
+                    <a href="https://github.com/LordRoop/P5_Gorillas-Portfolio" target="_blank" class="btn">Project Code</a>
+                </div>
+                <div class="col-4">
+                    <a href="https://repl.it/@JSinghSD/CS-P-Tic-Tac-Toe-Groop#README.md" target="_blank" class="btn">Tic tac Toe Code</a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="{{ url_for('static', filename='vanta.net.min.js') }}"></script>
+    <script>
+    VANTA.NET({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 1500.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x154c59,
+      size: 2.00,
+      backgroundColor: 0x0
+})
+</script>
+
+    <style>
+    html, body {
+        margin: 0;
+        height: 100%;
+        color: white;
+    }
+
+    h1{
+        font-size: 5em;
+    }
+
+
+    .fa{
+        font-size: 3em;
+        letter-spacing: 1em;
+        transition: all .2s;
+        color: white;
+    }
+
+    .fa:hover{
+        transform: translateY(10px);
+    }
+
+    .fa-youtube-play:hover{
+        color: #cc0000;
+    }
+
+    .fa-twitter:hover{
+        color: #1da1f2;
+    }
+
+    .fa-github:hover{
+        color: #000000;
+    }
+
+
+    .btn:link,
+    .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: absolute;
+        color: white;
+        font-size: 2.5em;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    }
+
+
+    </style>
+</html>
