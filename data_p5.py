@@ -15,15 +15,13 @@ def setup():
                                  "Jien (Max) Wang"],
                                 "This website is used for everything calculus and to spread our information about it")
 
-<<<<<<< HEAD
+
     p5_chessGame = model.Project("Chess Game", url_for('p5_chessGame_bp.index'),
                                 "/static/img/p5chessGame.JPG", "Chess Game",
                                 ["Colin Szeto", "Devam Shrivastava", "Shekar Krishnamoorthy", "Kyle Myint",
                                  "David Kim"],
                                 "Vist Chess Game to play through our chess game!")
 
-    projects = [p5_calculus, p5_chessGame, EXAMPLE]
-=======
     p5_gorillas = model.Project("Gorillas", "http://70.95.189.45:5000/",
                                 "/static/img/p5_gorillas.png", "Gorillas",
                                 ["Pedro de Medeiros", "Jagroop Vij", "Arul Salaniwal", "Manuel Villa-Hernandez", "Colin Tran"],
@@ -33,7 +31,7 @@ def setup():
                                  ["Allen Xu", "Marc Humeau", "Jacob Nguyen", "Dadyar Khalili Samani", "Jason Francisco"],
                                  "A website that reviews wonderful places located in San Diego")
 
-    projects = [p5_calculus, p5_gorillas, p5_monkeymen, EXAMPLE]
->>>>>>> 67d37fe133c64cf63f38f4740a2d63c8e83c9e7f
+    projects = [p5_calculus, p5_gorillas, p5_monkeymen,p5_chessGame, EXAMPLE]
+
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period

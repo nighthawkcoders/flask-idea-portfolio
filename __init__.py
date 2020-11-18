@@ -29,11 +29,14 @@ app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
 from p4_hangman import p4_hangman_bp
 app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
 
-<<<<<<< HEAD
 # Period 5
 from p5_chessGame import p5_chessGame_bp
 app.register_blueprint(p5_chessGame_bp, url_prefix='/p5_chessGame')
-=======
+
 from p5_monkeymen import p5_monkeymen_bp
 app.register_blueprint(p5_monkeymen_bp, url_prefix='/p5_monkeymen')
->>>>>>> 67d37fe133c64cf63f38f4740a2d63c8e83c9e7f
+
+from p5_calculus import p5_calculus_bp
+app.register_blueprint(p5_calculus_bp, url_prefix='/p5_chessGame')
+
+
