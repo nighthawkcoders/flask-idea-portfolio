@@ -80,7 +80,7 @@
     <p><input class="textbox1" name="bin1" required> </p>
 
     <!-- shows buttons, gives them functions -->
-    <p><button class = "button button1" formaction = "/bin_encrypt">Encrypt</button><button class = "button button2" formaction = "/bin_decrypt">Decrypt</button></p>
+    <p><button class = "button button1" formaction = {{url_for('cyphercrypto_bp.encryption')}}>Encrypt</button><button class = "button button2" formaction = {{url_for('cyphercrypto_bp.decryption')}}>Decrypt</button></p>
 
     <p>The result is: </p>
 
