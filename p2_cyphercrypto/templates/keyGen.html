@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Cipher Crypto RSA</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('cyphercrypto_bp.static', filename = 'style.css') }}">
     <style>
         body {
             background-image: url(https://www.teahub.io/photos/full/316-3163737_neon-city-wallpaper-4k.jpg);
@@ -85,8 +85,8 @@
 </head>
 <body>
 
-<!-- loads base.html template -->
-{% extends "base.html" %}
+<!-- loads cypherbase.html template -->
+{% extends "cypherbase.html" %}
 
 <!-- rsa page content -->
 {% block content %}

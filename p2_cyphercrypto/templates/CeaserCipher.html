@@ -3,11 +3,11 @@
     <head>
     <meta charset="UTF=8">
     <title>Caesar Cipher</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('cyphercrypto_bp.static', filename='style.css') }}">
     </head>
     <body style="background-color:aqua;">
-    <!-- brings in navbar from base.html -->
-    {% extends "base.html" %}
+    <!-- brings in navbar from cypherbase.html -->
+    {% extends "cypherbase.html" %}
 
     <!-- incorporates the links in the navbar -->
     {% block content %}
@@ -115,7 +115,7 @@ h {
         <p><input class="textbox2" name="s" required> </p>
         <!-- shows buttons, gives them functions -->
         <br/>
-        <p><button class = "button button1" formaction = "/CeaserCipher_encrypt">Encrypt</button><button class = "button button2" formaction = "/CeaserCipher_decrypt">Decrypt</button></p>
+        <p><button class = "button button1" formaction = {{url_for('.CeaserCipher_encrypt')}}>Encrypt</button><button class = "button button2" formaction = "/CeaserCipher_decrypt">Decrypt</button></p>
         <br/>
         <p>The result is: </p>
         <!-- output -->

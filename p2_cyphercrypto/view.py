@@ -28,7 +28,7 @@ def Binary_to_Text(binary):
 
 # home
 @cyphercrypto_bp.route('/')
-def home():
+def index():
     return render_template("homepage.html")
 
 

@@ -5,7 +5,7 @@ from flask import url_for
 
 
 def setup():
-    project1 = model.Project("CypherCrypto", "http://www.google.com", "/static/img/cat1.jpg", "Cryptomaniacs",
+    project1 = model.Project("CypherCrypto", url_for('cyphercrypto_bp.index'), "/static/img/bgdeer.jpg", "Cryptomaniacs",
                              ["Nihar Marar", "Tyler Cloutier", "Dylan Roman", "Anthony Giustiniano", "Cherry Ding"],
                             "We use Ciphers and encrypt/decrypt messages.")
     project2 = model.Project("Project 2", "http://www.facebook.com", "/static/img/cat2.png", "Another Team Name",
