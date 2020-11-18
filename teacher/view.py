@@ -7,19 +7,19 @@ from teacher import teacher_bp
 from .model import setup, runtime, alldata, code, code2, journal, planning, playground, calculatorgui
 
 
-# connects default URL of server to render home.html
+# connects default URL of server to render home2.html
 @teacher_bp.route('/')
 def index():
     return render_template("home.html", projects=setup())
 
 
-# connects /hello path of server to render hello.html
+# connects /hello path of server to render hello2.html
 @teacher_bp.route('/hello/')
 def hello_route():
     return render_template("hello.html", projects=setup())
 
 
-# connects /flask path of server to render flask.html
+# connects /flask path of server to render flask2.html
 @teacher_bp.route('/flask/')
 def flask_route():
     return render_template("flask.html", projects=setup())

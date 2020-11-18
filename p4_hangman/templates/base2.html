@@ -1,0 +1,141 @@
+<!doctype html>
+
+<!--
+  Setting up variable used in template
+  "projects" is python object
+-->
+{% set source = projects.get_source() %} <!-- source of project dict -->
+{% set projects = projects.get_projects() %} <!-- projects data -->
+{% set name = source["name"] %}
+{% set title = source["title"] %}
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.navbar-collapse.collapse.in {
+            display: block!important;
+        }
+
+		#hero-header {
+			background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/09/Halloween-background-wallpaper-hd.jpg");
+			height: 100vh;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+		}
+
+		.hero-text {
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+		}
+
+		.navbar-custom {
+			background-color: lightgreen;
+		}
+		/* Modify brand and text color */
+
+		.navbar-custom .navbar-brand,
+		.navbar-custom .navbar-text {
+			color: #EAE2B7;
+		}
+
+    </style>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body style="background-color:#090809;">
+<!-- Navigation Bar from bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"> Back to DNHS Computer Science Principles</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/p4_hangman">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{url_for('p4_hangman_bp.hello2_route')}}>Hello Series</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{url_for('p4_hangman_bp.flask2_route')}}>Flask Project</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{url_for('p4_hangman_bp.about2_route')}}>About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{url_for('p4_hangman_bp.signup_route')}}>Music</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div>
+    <!-- Names: haven't decided if we like these in the design yet
+    <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%; padding: 2%;">
+      <div class="col-2" style="text-align: right; color: white">
+        {% block info %}
+         notice jinja style variables used in href's
+        <h5>{{name}}</h5>
+      {% endblock %}
+    </div>
+  </div> -->
+
+    {% block header %}
+    {% endblock %}
+
+    <div class="product" style="margin-top: 2%;">
+        {% block style %}
+        {% endblock %}
+
+        {% block title %}
+        {% endblock %}
+
+    </div>
+</div>
+<!--
+<div class="row" style="padding-left: 10%;">
+  <div class="col-4">
+    {% block link1 %}
+    {% endblock %}
+  </div>
+  <div class="col-4">
+    {% block link2 %}
+    {% endblock %}
+  </div>
+  <div class="col-4">
+    {% block link3 %}
+    {% endblock %}
+  </div>
+</div>
+-->
+
+{% block projectplan %}
+{% endblock %}
+{% block repl %}
+{% endblock %}
+{% block journal %}
+{% endblock %}
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

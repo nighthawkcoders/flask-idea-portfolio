@@ -1,0 +1,105 @@
+{% extends "base2.html" %}
+
+{% block head %}
+<title>{{name}} | Flask </title>
+{% endblock %}
+
+{% block title %}
+<div style="background-color:#F77F00;border-bottom:3px solid white;color:white;width:100%; margin: 0px auto 100px auto;
+            text-align:center; padding:20px;">
+    <h1>Flask Project</h1>
+</div>
+{% endblock %}
+
+
+{% block projectplan %}
+<div class="screen">
+
+    <div class="row justify-content-center">
+
+        <div class="col-10" style="text-align: center; color: white;">
+            <h2>Project Plan</h2>
+        </div>
+
+    </div>
+
+    <div class="Documents">
+        <div class="row justify-content-center">
+
+            <div class="col-4">
+                <a href="https://docs.google.com/document/d/1IbB0bGAwiSk8j68Wcs0m1TMWh8LOb2xa7dvgEmebQjc/edit"></a>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center" style="margin-top: 2vw;">
+
+            <div class="col-8" style="background-color:white">
+                <iframe frameborder="0" width="100%" height="500px" src="https://docs.google.com/document/d/e/2PACX-1vSqnPLF3hDStlnC-jsLyroK3YEvSgm3wov8Hk8X7i0i038Q__ZenuZQW0nBdKuPu2nhTTCEOHa6TOwl/pub?embedded=true"></iframe>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}
+
+{% block repl %}
+`<div id="repos" class="screen">
+
+    <div class="row justify-content-center">
+        <div class="col-10" style="text-align: center; color: white;">
+            <h2>Repl</h2>
+        </div>
+    </div>
+
+    <div class="repositories">
+        <div class="row justify-content-center">
+
+            <div class="col-4">
+                <a href="https://github.com/NoahPidding/Projectexploring"></a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="margin-top: 2vw;">
+            <div class="col-8">
+                <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@charliezhu1/Projectexploring?lite=true"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}
+
+{% block journal %}
+<div id="docs" class="screen">
+
+    <div class="row justify-content-center">
+        <div class="col-10" style="text-align: center; color: white;">
+            <h2>Journals</h2>
+        </div>
+    </div>
+
+    <div class="Documents">
+        <div class="row justify-content-center">
+
+            <div class="col-4">
+                <a href="https://docs.google.com/document/d/1fioQivtuh1K1jUl7TWyhOu3eaMYt7DtLRx1GFxRu-Xw/edit?usp=sharing"></a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="margin-top: 2vw;">
+            <div class="col-8">
+                <iframe frameborder="0" width="100%" height="500px" src="https://docs.google.com/document/d/e/2PACX-1vTA_x7zp-6HqGH-Da87rrbZJwltM0HgzVzAmCqehGe05Dk2_6-Wziu2Huv9RntKMN9k87FFEjU3DWhB/pub?embedded=true"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}

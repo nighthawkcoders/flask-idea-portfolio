@@ -1,0 +1,86 @@
+{% extends "base2.html" %}
+
+{% block head %}
+<title> Music </title>
+<style>
+    #hero-header {
+        background-image: url("https://cdn3.pitchfork.com/longform/683/Year_In_Streaming_v2.jpg");
+    }
+
+    .table {
+    display: grid;
+    padding:30px 100px;
+    color:white;
+    column-gap:35px;
+    grid-row-gap:35px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+         "vid1 desc1"
+         "vid2 desc2"
+         "vid3 desc3"
+         "vid4 desc4"
+    }
+
+  </style>
+{% endblock %}
+
+{% block header %}
+<div id="hero-header" style="height:50vh">
+    <div class="hero-text">
+        <h1 style="font-size:50px">Music Encyclopedia</h1>
+        <p>Your one-stop shop for all things music</p>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="width:100%; background-color:#F77F00;border-radius:0px;
+          border:none;">
+        Select Music Type
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:100vw">
+        <a class="dropdown-item" href={{url_for('p4_hangman_bp.pop_route')}}>Pop</a>
+        <a class="dropdown-item" href={{url_for('p4_hangman_bp.rock_route')}}>Rock</a>
+        <a class="dropdown-item" href={{url_for('p4_hangman_bp.jazz_route')}}>Jazz</a>
+    </div>
+</div>
+
+
+
+<div style="background-color:white;padding:2%;">
+    <div style="color:black; text-align:center;">
+        <h1 style="font-size: 200 px; font-family:Courier New; ">{% block musictype %}{% endblock %}</h1>
+    </div>
+</div>
+
+<div class="table">
+    <div style="grid-area:vid1">
+        {% block vid1 %}{% endblock %}
+    </div>
+    <div style="grid-area:desc1; padding-right:100px;">
+        {% block desc1 %}{% endblock %}
+    </div>
+    <div style="grid-area:vid2">
+        {% block vid2 %}{% endblock %}
+    </div>
+    <div style="grid-area:desc2; padding-right:100px;">
+        {% block desc2 %}{% endblock %}
+    </div>
+    <div style="grid-area:vid3">
+        {% block vid3 %}{% endblock %}
+    </div>
+    <div style="grid-area:desc3; padding-right:100px;">
+        {% block desc3 %}{% endblock %}
+    </div>
+    <div style="grid-area:vid4">
+        {% block vid4 %}{% endblock %}
+    </div>
+    <div style="grid-area:desc4; padding-right:100px;">
+        {% block desc4 %}{% endblock %}
+    </div>
+</div>
+
+
+
+{% endblock %}

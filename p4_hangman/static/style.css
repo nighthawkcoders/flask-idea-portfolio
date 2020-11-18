@@ -1,0 +1,118 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#041e2b), color-stop(41%, #407886), color-stop(69%, #d4dbdb), color-stop(69%, black), to(black));
+  background: linear-gradient(to bottom, #041e2b 0%, #407886 41%, #d4dbdb 69%, black 69%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#041e2b', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+#foreground {
+  height: 600px;
+  position: absolute;
+  margin-top: -200px;
+  overflow-y: hidden;
+}
+
+
+span {
+  letterspacing: 200px;
+}
+
+.moon {
+  left: 25%;
+  position: absolute;
+  top: 100px;
+}
+
+.horseman {
+  width: 184px;
+  height: 123px;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/horse-hallow5.svg");
+  -webkit-animation: horsemove 0.7s steps(15) infinite;
+          animation: horsemove 0.7s steps(15) infinite;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 300px;
+}
+
+.pumpkin {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 300px;
+}
+
+.ground {
+  width: 151%;
+  height: 697px;
+  position: absolute;
+  background-size: 800px 716px;
+  left: 0;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.front {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowfront4.svg") repeat-x;
+  background-size: 1000px 871px;
+  top: -100px;
+  -webkit-animation: bk 20s -5s linear infinite;
+          animation: bk 20s -5s linear infinite;
+}
+
+.frontmid {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowmidfront2.svg") repeat-x;
+  background-size: 1000px 871px;
+  top: -100px;
+  -webkit-animation: bk 50s -5s linear infinite;
+          animation: bk 50s -5s linear infinite;
+}
+
+.mid {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowmid2.svg") repeat-x;
+  background-size: 1000px 871px;
+  top: -100px;
+  -webkit-animation: bk 100s -5s linear infinite;
+          animation: bk 100s -5s linear infinite;
+}
+
+.back {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/hallowback2.svg") repeat-x;
+  background-size: 1000px 871px;
+  top: -100px;
+  -webkit-animation: bk 100s -5s linear infinite;
+          animation: bk 100s -5s linear infinite;
+}
+
+@-webkit-keyframes horsemove {
+  100% {
+    background-position: 0 -1848px;
+  }
+}
+
+@keyframes horsemove {
+  100% {
+    background-position: 0 -1848px;
+  }
+}
+@-webkit-keyframes bk {
+  100% {
+    background-position: -200% 0;
+  }
+}
+@keyframes bk {
+  100% {
+    background-position: -200% 0;
+  }
+}
