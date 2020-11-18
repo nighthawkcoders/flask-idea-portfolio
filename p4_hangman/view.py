@@ -31,7 +31,7 @@ def flask2_route():
 
 @p4_hangman_bp.route('/about2/')
 def about2_route():
-    return render_template("about2.html", datalist2=playlist())
+    return render_template("about2.html", datalist2=playlist(), projects=setup())
 
 # Create a sign up page
 

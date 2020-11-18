@@ -15,7 +15,7 @@ def setup():
                                  "This project is a merch website that we created for our Youtube channels, GodlyGoats and "
                                  "Albertpani Compani. We have a lot of merch you can buy and other information.")
 
-    p4_hangman = model.Project("Hangman", url_for('p4_hangman_bp.index'), "/static/img/p4hangman.png", "P4 Hangman",
+    p4_hangman = model.Project("Music Website", url_for('p4_hangman_bp.index'), "/static/img/p4hangman.png", "P4 Hangman",
                                ["Charlie", "Rohan", "Rivan", "Sarah", "Noah"],
                                "This project is kind of funky, because I am a computer nerd")
 
