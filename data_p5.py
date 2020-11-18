@@ -8,7 +8,7 @@ def setup():
     EXAMPLE = model.Project("Project Name", "http://www.google.com", "/static/img/cat1.jpg", "Team Name",
                             ["Talented Student 1", "Talented Student 2", "Smart Student 3", "Team Member 4",
                              "Amazing Member 5"], "This is our fabulous project, because we are cool (description)")
-    p5_calculus = model.Project("p5_calculus", "https://github.com/AkhileshLG/flaskportfolio-1", "/static/img/p5_calculus.jpg", "calculus",
+    p5_calculus = model.Project("p5_calculus", "https://github.com/AkhileshLG/flaskportfolio-1", "/static/img/AkaTeamCalculus.png", "calculus",
                             ["Karam Alshaikh", "Akhilesh Genneri", "Akshit Prathipati", "Noya Hafiz",
                              "Jien (Max) Wang"], "This website is used for everything calculus and to spread our information about it")
 
