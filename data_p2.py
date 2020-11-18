@@ -19,5 +19,5 @@ def setup():
                               "This is our website with minigames, our portfolio, and much more!")
 
     projects = [cyphercrypto, minigames, EXAMPLE]
-    period = model.Period("Period 2", "Some really smart people study here", projects)
+    period = model.Period("Period 2", "AP Principles of Computer Science - Python", projects)
     return period

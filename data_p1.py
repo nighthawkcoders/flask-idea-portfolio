@@ -25,5 +25,5 @@ def setup():
                              "Our project was an exploration of different coding topics and concepts that's displayed through " +
                              "a variety of minigames. Try some of them out!")
     projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos]
-    period = model.Period("Period 1", "Computer Science A", projects)
+    period = model.Period("Period 1", "Computer Science A - Java", projects)
     return period

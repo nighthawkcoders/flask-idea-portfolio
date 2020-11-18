@@ -25,5 +25,5 @@ def setup():
                                  "A website that reviews wonderful places located in San Diego")
 
     projects = [p5_calculus, p5_gorillas, p5_monkeymen, EXAMPLE]
-    period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
+    period = model.Period("Period 5", "AP Principles of Computer Science - Python", projects)
     return period
