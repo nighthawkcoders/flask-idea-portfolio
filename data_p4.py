@@ -5,9 +5,9 @@ from flask import url_for
 
 
 def setup():
-    EXAMPLE = model.Project("Example", url_for('teacher_bp.index'), "/static/img/teacher.png", "Team Teacher",
+    """EXAMPLE = model.Project("Example", url_for('teacher_bp.index'), "/static/img/teacher.png", "Team Teacher",
                             ["John Mortensen", "Classroom of 40"],
-                            "Visit a VANTA birds experience and see how it is made.")
+                            "Visit a VANTA birds experience and see how it is made.")"""
 
     p4_slackbots = model.Project("Merch Website", "http://76.176.109.127:6969/", "/static/img/p4_slackbots.PNG",
                                  "P4Slackbots",
@@ -19,6 +19,6 @@ def setup():
                                ["Charlie Zhu", "Rohan Nallapati", "Rivan Nayak", "Sarah Xie", "Noah Pidding"],
                                "This website includes a portfolio of our projects we worked on this trimester as well as a music section including three different genres of music with multiple examples and descriptions of each.")
 
-    projects = [p4_slackbots, p4_hangman, EXAMPLE]
+    projects = [p4_slackbots, p4_hangman]
     period = model.Period("Period 4", "AP Principles of Computer Science - Python", projects)
     return period
