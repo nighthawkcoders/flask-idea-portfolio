@@ -9,15 +9,16 @@ from .model import groupdata
 
 from p4_slackbots import p4_slackbots_bp
 
-@p4_slackbots_bp.route("/landing")
+#@p4_slackbots_bp.route("/landing")
+#def landing():
+#	return render_template("landing.html")
+
 @p4_slackbots_bp.route("/")
-
-def landing():
-	return render_template("landing.html")
-
-@p4_slackbots_bp.route("/home")
-def home():
+def index():
 	return render_template("apcoxgg.html")
+
+#@p4_slackbots_bp.route("/home")
+
 
 @p4_slackbots_bp.route("/slackbots")
 def slackbots():

@@ -9,7 +9,7 @@ def setup():
     #                        ["Talented Student 1", "Talented Student 2", "Smart Student 3", "Team Member 4",
     #                          "Amazing Member 5"], "This is our fabulous project, because we are cool (description)")
 
-    p4_slackbots = model.Project("Merch Website", url_for('p4_slackbots_bp.landing'), "/static/img/p4_slackbots.PNG", "P4Slackbots",
+    p4_slackbots = model.Project("Merch Website", url_for('p4_slackbots_bp.index'), "/static/img/p4_slackbots.PNG", "P4Slackbots",
                                   ["Abhijay Deevi", "Kevin Do", "Travis Medley", "Paul Bokelman", "Gavin Theriault"],
                                   "This project is a merch website that we created for our Youtube channels, GodlyGoats and "
                                   "Albertpani Compani. We have a lot of merch you can buy and other information.")
