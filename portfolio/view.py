@@ -3,4 +3,4 @@ from portfolio import portfolio_bp
 
 @portfolio_bp.route('/')
 def home():
-    return render_template("portfolio/home2.html")
+    return render_template("portfolio/home.html")

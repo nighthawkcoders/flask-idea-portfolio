@@ -5,10 +5,7 @@ from flask import url_for
 
 
 def setup():
-    p4_hangman = model.Project("Hangman", url_for('p4_hangman_bp.index'), "/static/img/p4hangman.png", "P4 Hangman",
-                               ["Charlie", "Rohan", "Rivan", "Sarah", "Noah"],
-                               "This project is kind of funky, because I am a computer nerd")
-    projects = [p4_hangman]
-    period = model.Period("Period 4", "Hangman", projects)
+    p4_proj1 = []
+    projects = [p4_proj1]
+    period = model.Period("Period 4", "Some really smart people study apcsp here", projects)
     return period
-
