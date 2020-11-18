@@ -19,6 +19,8 @@ app.register_blueprint(p1_robotmania_bp, url_prefix='/p1_robotmania')
 from p1_dataminers import p1_dataminers_bp
 app.register_blueprint(p1_dataminers_bp, url_prefix='/period1/dataminers')
 
+from p1_ilikeyacodeg import p1_ilikeyacodeg_bp
+app.register_blueprint(p1_ilikeyacodeg_bp, url_prefix='/period1/ilikeyacodeg')
 # PERIOD 2
 from p2_cyphercrypto import cyphercrypto_bp
 app.register_blueprint(cyphercrypto_bp, url_prefix='/p2_cyphercrypto')
