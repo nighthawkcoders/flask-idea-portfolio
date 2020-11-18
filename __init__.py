@@ -3,8 +3,8 @@ from flask import Flask
 app = Flask(__name__)
 
 # Period 1
-from teacher import teacher_bp
-app.register_blueprint(teacher_bp, url_prefix='/teacher')
+#from teacher import teacher_bp
+#app.register_blueprint(teacher_bp, url_prefix='/teacher')
 
 from p1_dataminers import p1_dataminers_bp
 app.register_blueprint(p1_dataminers_bp, url_prefix='/p1_dataminers')
@@ -21,6 +21,9 @@ app.register_blueprint(p1_robotmania_bp, url_prefix='/p1_robotmania')
 # Period 2
 from p2_cyphercrypto import cyphercrypto_bp
 app.register_blueprint(cyphercrypto_bp, url_prefix='/p2_cyphercrypto')
+
+from p2_einsteins import p2_einsteins_bp
+app.register_blueprint(p2_einsteins_bp, url_prefix='/p2_einsteins')
 
 # Period 4
 from p4_slackbots import p4_slackbots_bp

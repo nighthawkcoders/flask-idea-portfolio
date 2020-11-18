@@ -5,9 +5,9 @@ from flask import url_for
 
 
 def setup():
-    EXAMPLE = model.Project("Example", url_for('teacher_bp.index'), "/static/img/teacher.png", "Team Teacher",
+    '''EXAMPLE = model.Project("Example", url_for('teacher_bp.index'), "/static/img/teacher.png", "Team Teacher",
                             ["John Mortensen", "Classroom of 40"],
-                            "Visit a VANTA birds experience and see how it is made.")
+                            "Visit a VANTA birds experience and see how it is made.")'''
 
     cyphercrypto = model.Project("CypherCrypto", url_for('cyphercrypto_bp.index'), "/static/img/bgdeer.jpg",
                                  "Cryptomaniacs",
@@ -18,6 +18,11 @@ def setup():
                               ["Crystal Widjaja", "Nivedita Rethnakar", "Ida Mobini", "Eva Gravin", "Dane Vestal"],
                               "This is our website with minigames, our portfolio, and much more!")
 
-    projects = [cyphercrypto, minigames, EXAMPLE]
+    p2_einsteins = model.Project("Project Page", url_for('p2_einsteins_bp.home_route'), "/static/img/p2_einsteins.png", "Einsteins",
+                              ["Pragadeesh Raj", "Ayman Kazi", "Brandon Truong", "Navodit Maheshwari", "Ali Saad"],
+                              "Welcome to the world of ASCII games, intuitive text-based calculators, journal, reflections, individual showcases, and so much more!")
+
+    projects = [cyphercrypto, minigames, p2_einsteins]
     period = model.Period("Period 2", "AP Principles of Computer Science - Python", projects)
     return period
+
