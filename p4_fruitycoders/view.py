@@ -1,12 +1,11 @@
-from p4_fruitycoders import p4_fruitycoders_bp
 from flask import Flask, render_template,redirect,url_for
-import data
+from p4_fruitycoders import p4_fruitycoders_bp
 
-p4_fruitycoders_bp = Flask(__name__)
+app = Flask(__name__)
 
 @p4_fruitycoders_bp.route('/')
 def home_route():
-    return render_template("home.html", title = data.setup())
+    return render_template("home.html")
 
 @p4_fruitycoders_bp.route('/history/')
 def hello_route():
