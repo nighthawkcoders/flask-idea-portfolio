@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "taskbase.html" %}
+
+{% block head %}
+    <title>All | People </title>
+{% endblock %}
+
+{% block body %}
+    {% for data in datalist: %}
+        {% set greeting = data["greeting"] %}
+        {% set name = data["name"] %}
+        {% set doa = data["doa"] %}
+        {% set job = data["job"] %}
+        {% set embed = data["embed"] %}
+        {% set gist = data["gist"] %}
+
+        <h1>{{greeting}} <span style='color:orangered;'></span></h1>
+        <ol>
+            <li>Due date: <span style='color:midnightblue;'>{{doa}}</span></li>
+            <li>Task: <span style='color:midnightblue;'>{{name}}</span></li>
+            {% if 'embed' in data %}
+                <li>{{job}} link: <span style='color:midnightblue;'>{{embed}}</span></li>
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive-item" src={{embed}}></iframe>
+                </div>
+            {% endif %}
+            {% if 'gist' in data %}
+                <li>{{job}} link: <span style='color:midnightblue;'>{{gist}}</span></li>
+                <div>
+                    <script src={{gist}}></script>
+                </div>
+            {% endif %}
+
+        </ol>
+
+    {% endfor %}
+{% endblock %}
+
+</html>
