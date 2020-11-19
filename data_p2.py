@@ -25,7 +25,7 @@ def setup():
 
     p2_rappers = model.Project("About Everything", 'http://107.200.91.165:5000/', "/static/img/p2_rapname.jpg","Rapper",
                                ["Sophie Bulkin", "Carter Quartararo", "Aditi Akella","Isai Rajaraman", "Mustafa Sharaf"],
-                               "desc")
+                               "This is our out of this world website which will tell you about a multitude of things such as our group and Del Norte!")
     projects = [cyphercrypto, minigames, p2_einsteins,p2_rappers]
     period = model.Period("Period 2", "AP Principles of Computer Science - Python", projects)
     return period
