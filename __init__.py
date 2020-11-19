@@ -42,4 +42,5 @@ app.register_blueprint(p5_monkeymen_bp, url_prefix='/p5_monkeymen')
 from p5_calculus import p5_calculus_bp
 app.register_blueprint(p5_calculus_bp, url_prefix='/p5_chessGame')
 
-
+from p5_multimedia import p5_multimedia_bp
+app.register_blueprint(p5_multimedia_bp, url_prefix='/p5_multimedia')
