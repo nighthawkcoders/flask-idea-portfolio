@@ -29,10 +29,10 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{url_for('.home_route')}}">Home</a>
+                    <a class="nav-link" href="{{url_for('.home_route')}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('.fundamental_route')}}">Python Fundamentals Project</a>
@@ -43,16 +43,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for('.journal_route')}}">Our Journals</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{url_for('.ayman_route')}}">Ayman</a>
-                            <a class="dropdown-item" href="{{url_for('.pragadeesh_route')}}">Pragadeesh</a>
-                            <a class="dropdown-item" href="{{url_for('.brandon_route')}}">Brandon</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{url_for('.ali_route')}}">Ali</a>
-                            <a class="dropdown-item" href="{{url_for('.navodit_route')}}">Navodit</a>
-                        </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('.ayman_route')}}">Ayman</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('.pragadeesh_route')}}">Pragadeesh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('.brandon_route')}}">Brandon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('.ali_route')}}">Ali</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('.navodit_route')}}">Navodit</a>
                 </li>
             </ul>
         </div>
@@ -123,7 +127,7 @@
       html, body {
           margin: 0;
           height: 175%;
-          color: white;
+          color: black;
       }
 
       h1{

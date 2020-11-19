@@ -21,8 +21,15 @@ def setup():
     p2_einsteins = model.Project("Project Page", url_for('p2_einsteins_bp.home_route'), "/static/img/p2_einsteins.png", "Einsteins",
                               ["Pragadeesh Raj", "Ayman Kazi", "Brandon Truong", "Navodit Maheshwari", "Ali Saad"],
                               "Welcome to the world of ASCII games, intuitive text-based calculators, journal, reflections, individual showcases, and so much more!")
+    p2_anime = model.Project("Plants", "http://76.176.59.209/", "/static/img/p2_anime.gif", "Anime",
+                                 ["Andrew Zhang", "Bradley Bartelt", "Shreya Vesant", "Diane Tang", "Nikolas Gee"],
+                                 "This website shows all kinds of plants and their maintnance tips")
 
-    projects = [cyphercrypto, minigames, p2_einsteins]
+
+    p2_rappers = model.Project("About Everything", 'http://107.200.91.165:5000/', "/static/img/p2_rapname.jpg","Rapper",
+                               ["Sophie Bulkin", "Carter Quartararo", "Aditi Akella","Isai Rajaraman", "Mustafa Sharaf"],
+                               "This is our out of this world website which will tell you about a multitude of things such as our group and Del Norte!")
+    projects = [cyphercrypto, minigames, p2_einsteins,p2_rappers, p2_anime]
     period = model.Period("Period 2", "AP Principles of Computer Science - Python", projects)
     return period
 

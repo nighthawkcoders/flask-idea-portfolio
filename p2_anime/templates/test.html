@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="../static/test.css">
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+
+<h1 style="text-align:center">Amazing Plants!</h1>
+
+<div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="../static/red_wood.png" style="width:1150px;height:800px;">
+</div>
+
+<div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="../static/Rafflesia_arnoldi.jpg" style="width:1150px;height:800px;">
+</div>
+
+<div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="../static/Socotra_dragon_tree.png" style="width:1150px;height:800px;">
+</div>
+
+<div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="../static/Welwitschia.jpg" style="width:1150px;height:800px;">
+</div>
+
+<div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="../static/Eucalyptus_deglupta-trees.webp" style="width:1150px;height:800px;">
+</div>
+
+<div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="../static/Giant_water_lily.webp" style="width:1150px;height:800px;">
+</div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="../static/red_wood.png" style="width:190px;height:100px;" onclick="currentSlide(1)" alt="Red Wood Tree">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../static/Rafflesia_arnoldi.jpg" style="width:190px;height:100px;" onclick="currentSlide(2)" alt="Rafflesia Arnoldi">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../static/Socotra_dragon_tree.png" style="width:190px;height:100px;" onclick="currentSlide(3)" alt="Socotra Dragon Tree">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../static/Welwitschia.jpg" style="width:190px;height:100px;" onclick="currentSlide(4)" alt="Welwitschia">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../static/Eucalyptus_deglupta-trees.webp" style="width:190px;height:100px;" onclick="currentSlide(5)" alt="Ecalyptus Deglupta">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../static/Giant_water_lily.webp" style="width:190px;height:100px;" onclick="currentSlide(6)" alt="Giant Water Lily">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<script src="https://threejs.org/build/three.js"></script>
+<script src="{{ url_for('static', filename='vanta.dots.min.js') }}"></script>
+
+
+
+{% endblock %}
+
+</html>
+

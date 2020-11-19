@@ -1,0 +1,63 @@
+<!doctype html>
+
+<!--
+  Setting up variable used in template
+  "projects" is python object 
+-->
+{% set source = projects.get_source() %} <!-- source of project dict -->
+{% set projects = projects.get_projects() %} <!-- projects data -->
+{% set name = source["name"] %}
+{% set title = source["title"] %}
+
+
+<html>
+  <head>
+    <meta charset="utf-g" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" 
+    href="textlight.css">
+
+    {% block head %}
+    {% endblock %}
+  </head>
+  {% block color %}
+  <body style="background-color:white;">
+  {% endblock %}
+    <!-- Navigation Bar from bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">{{title}}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="/"> <-- </a>
+            <a class="nav-link active" href={{url_for('.index')}}>Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href={{url_for('.hello_route')}}>Beaches</a>
+          <a class="nav-link" href={{url_for('.flask_route')}}>Parks</a>
+          <a class="nav-link" href={{url_for('.playlist_route')}}>Restaurants</a>
+          <a class="nav-link" href={{url_for('.video_route')}}>Videos</a>
+        </div>
+      </div>
+    </nav>
+           
+
+      
+      {% block style %}
+      <div class="product" style="margin-top: 2%;">
+        <div style="background-color:white;padding:2%;">
+		    <div style="color:black; text-align:center;">
+          <h1>
+          {% block text %}
+          Text Sample
+          {% endblock %}
+          </h1>
+        </div>
+      </div>
+      {% endblock %}
+
+    </div>
+  </body>
+
+</html>

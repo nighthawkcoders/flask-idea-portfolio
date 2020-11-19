@@ -1,0 +1,78 @@
+{% extends "p5_monkeymen/base.html" %}
+
+{%block head %}
+<style>
+  ::-webkit-scrollbar{
+    display: none
+  }
+  #hero-header {
+    background-image: url("https://cdn.discordapp.com/attachments/593331093130838016/776919961611272252/unknown.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  #locations {
+    background-image: url("https://cdn.wallpapersafari.com/41/4/DJ0b3h.jpg");
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 50px;
+  }
+  .btn1 {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--primary-color);
+    color: #f9989f;
+    border-radius: 5px;
+    border: solid #f9989f 1px;
+    margin-top: 25px;
+    opacity: 0.4;
+    }
+  .map1 {
+    position: relative;
+    right: 650px;
+    top:95px
+  }
+  .map2 {
+    position: relative;
+    bottom: 395px;
+  }
+  .map3{
+    position: relative;
+    bottom: 890px;
+    left: 650px;
+  }
+</style>
+{% endblock %}
+
+{% block text %}
+<div id="hero-header">
+Popular Beaches
+  <div id="hero-text">
+    <iframe width='50%' height='900px' frameborder='0' widget='false' src='https://docs.google.com/document/d/e/2PACX-1vRvmIRawRNULbO31EyYQ0Y-jezNllKwtNuuMokLxJVxhRAk4h9tczJw4WQXvBxRlAepq9gM_Be6c26Q/pub?embedded=true'></iframe>
+
+  </div>
+</div>
+
+<div id="locations">
+  <h3> Map Locations </h3>
+  <div class="map1">
+    <h5> Torrey Pines </h5>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6697.155662552673!2d-117.2651167375906!3d32.93575050157528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc060403e5bad5%3A0xa0e3dd9c3789638c!2sTorrey%20Pines%20State%20Beach!5e0!3m2!1sen!2sus!4v1605303703356!5m2!1sen!2sus" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+  <div class="map2">
+    <h5> La Jolla </h5>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7301376452897!2d-117.25849728740145!3d32.856206722168785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0152f304cdc9%3A0xf86a9dbe70028681!2sLa%20Jolla%20Shores%20Beach!5e0!3m2!1sen!2sus!4v1605303883107!5m2!1sen!2sus" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+  <div class="map3">
+    <h5> Sunset Cliffs </h5>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13425.790207456355!2d-117.25974121037578!3d32.72730474718938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80deabdbf6f46c7f%3A0x94ba644ac8ca4387!2sSunset%20Cliffs%20Beach!5e0!3m2!1sen!2sus!4v1605303943709!5m2!1sen!2sus" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+
+</div>
+{% endblock %}

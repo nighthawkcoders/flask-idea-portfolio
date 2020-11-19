@@ -1,0 +1,68 @@
+{% extends "p5_monkeymen/base.html" %}
+
+{%block head %}
+<style>
+  ::-webkit-scrollbar{
+    display: none
+  }
+  #hero-header {
+    background-image: url("https://cdn.discordapp.com/attachments/593331093130838016/778033142749069332/unknown.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  #locations {
+    background-image: url("https://sanleandronext.com/wp-content/uploads/2019/08/85C-Bakery-4.jpg");
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 50px;
+  }
+  .btn1 {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--primary-color);
+    color: #f9989f;
+    border-radius: 5px;
+    border: solid #f9989f 1px;
+    margin-top: 25px;
+    opacity: 0.4;
+    }
+  .map1 {
+    position: relative;
+    right: 350px;
+    top:95px
+  }
+  .map2 {
+    position: relative;
+    bottom: 395px;
+    left: 350px;
+  }
+
+</style>
+{% endblock %}
+
+{% block text %}
+<div id="hero-header">
+Popular Restaurants
+  <div id="hero-text">
+  <iframe style="overflow-y:hidden;" frameborder="0" width="50%" height="900px" src="https://docs.google.com/document/d/e/2PACX-1vTIaty-HsxdLNWsRKa_FQrCrbjbHf6DuSA8r0oydJl7csu0z7dFMTi7nIbNONOtZ86iOdMmkiK0hb9o/pub?embedded=true"></iframe>
+  </div>
+</div>
+
+<div id="locations">
+  <h3 style="background-color:rgba(255, 255, 255, 0.6)"> Map Locations </h3>
+  <div class="map1">
+    <h5 style="background-color:rgba(255, 255, 255, 0.6)"> En Fuego Cantina and Grill </h5>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1183.600135511973!2d-117.26576180696559!3d32.95822356807756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc08b4f6cc90a1%3A0x52f314ea5383cde7!2sEn%20Fuego%20Cantina%20%26%20Grill!5e0!3m2!1sen!2sus!4v1605567460569!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+  <div class="map2">
+    <h5 style="background-color:rgba(255, 255, 255, 0.2)"> 85 Degree Bakery </h5>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5635.920830715811!2d-117.2128847587022!3d32.86805276219413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0711a8ac5a47%3A0x6589bba4afc2de4c!2s85C%20Bakery%20Cafe%20-%20San%20Diego%20(University%20Town%20Center)!5e0!3m2!1sen!2sus!4v1605567402775!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="450" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+</div>
+{% endblock %}
