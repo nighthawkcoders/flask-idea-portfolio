@@ -30,8 +30,10 @@ def setup():
     p5_monkeymen = model.Project("San Diego Travel Website", "http://www.google.com", "/static/img/p5_monkeymen.JPG", "Monkey Men",
                                  ["Allen Xu", "Marc Humeau", "Jacob Nguyen", "Dadyar Khalili Samani", "Jason Francisco"],
                                  "A website that reviews wonderful places located in San Diego")
+    """
     p5_multimedia = model.Project("Multimedia", url_for("p5_multimedia_bp.index"), '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
-    projects = [p5_calculus, p5_gorillas, p5_monkeymen ,p5_chessGame ,p5_multimedia]
+    """
+    projects = [p5_calculus, p5_gorillas, p5_monkeymen ,p5_chessGame]
 
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period
