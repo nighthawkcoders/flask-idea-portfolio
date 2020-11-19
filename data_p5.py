@@ -17,7 +17,7 @@ def setup():
 
 
     p5_chessGame = model.Project("Chess Game", url_for('p5_chessGame_bp.index'),
-                                "/static/img/p5chessGame.JPG", "Chess Game",
+                                "/static/img/p5chessGame.jpg", "Chess Game",
                                 ["Colin Szeto", "Devam Shrivastava", "Shekar Krishnamoorthy", "Kyle Myint",
                                  "David Kim"],
                                 "Vist Chess Game to play through our chess game!")
@@ -27,7 +27,7 @@ def setup():
                                 ["Pedro de Medeiros", "Jagroop Vij", "Arul Salaniwal", "Manuel Villa-Hernandez", "Colin Tran"],
                                 "Here you find the repositories for all our projects; our journals, where we document coding progress; and Individual pages with personal information and our coding experiences. Explore!!")
 
-    p5_monkeymen = model.Project("San Diego Travel Website", "http://www.google.com", "/static/img/p5_monkeymen.JPG", "Monkey Men",
+    p5_monkeymen = model.Project("San Diego Travel Website", "http://www.google.com", "/static/img/p5_monkeymen.jpg", "Monkey Men",
                                  ["Allen Xu", "Marc Humeau", "Jacob Nguyen", "Dadyar Khalili Samani", "Jason Francisco"],
                                  "A website that reviews wonderful places located in San Diego")
     """
