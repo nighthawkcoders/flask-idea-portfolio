@@ -32,11 +32,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-link" href="/beach">Beaches</a>
-          <a class="nav-link" href="/park">Parks</a>
-          <a class="nav-link" href="/restaurant">Restaurants</a>
-          <a class="nav-link" href="/videos">Videos</a>
+          <a class="nav-link active" href="/">Back to DNHS CS Projects
+            <a class="nav-link active" href={{url_for('.index')}}>Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href={{url_for('.hello_route')}}>Beaches</a>
+          <a class="nav-link" href={{url_for('.flask_route')}}>Parks</a>
+          <a class="nav-link" href={{url_for('.playlist_route')}}>Restaurants</a>
+          <a class="nav-link" href={{url_for('.video_route')}}>Videos</a>
         </div>
       </div>
     </nav>
