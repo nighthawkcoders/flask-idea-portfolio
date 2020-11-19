@@ -5,9 +5,9 @@ from flask import url_for
 
 
 def setup():
-    EXAMPLE = model.Project("Example", url_for('teacher_bp.index'), "/static/img/teacher.png", "Team Teacher",
+    '''EXAMPLE = model.Project("Example", url_for('teacher_bp.index'), "/static/img/teacher.png", "Team Teacher",
                             ["John Mortensen", "Classroom of 40"],
-                            "Visit a VANTA birds experience and see how it is made.")
+                            "Visit a VANTA birds experience and see how it is made.")'''
 
     cyphercrypto = model.Project("CypherCrypto", url_for('cyphercrypto_bp.index'), "/static/img/bgdeer.jpg",
                                  "Cryptomaniacs",
@@ -18,6 +18,15 @@ def setup():
                               ["Crystal Widjaja", "Nivedita Rethnakar", "Ida Mobini", "Eva Gravin", "Dane Vestal"],
                               "This is our website with minigames, our portfolio, and much more!")
 
-    projects = [cyphercrypto, minigames, EXAMPLE]
+    p2_einsteins = model.Project("Project Page", url_for('p2_einsteins_bp.home_route'), "/static/img/p2_einsteins.png", "Einsteins",
+                              ["Pragadeesh Raj", "Ayman Kazi", "Brandon Truong", "Navodit Maheshwari", "Ali Saad"],
+                              "Welcome to the world of ASCII games, intuitive text-based calculators, journal, reflections, individual showcases, and so much more!")
+
+
+    p2_rappers = model.Project("About Everything", 'http://107.200.91.165:5000/', "/static/img/p2_rapname.jpg","Rapper",
+                               ["Sophie Bulkin", "Carter Quartararo", "Aditi Akella","Isai Rajaraman", "Mustafa Sharaf"],
+                               "This is our out of this world website which will tell you about a multitude of things such as our group and Del Norte!")
+    projects = [cyphercrypto, minigames, p2_einsteins,p2_rappers]
     period = model.Period("Period 2", "AP Principles of Computer Science - Python", projects)
     return period
+
