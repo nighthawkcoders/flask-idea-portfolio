@@ -20,7 +20,7 @@ def setup():
     p1_ilikeyacodeg = model.Project("I Like Ya Code G", url_for('p1_ilikeyacodeg_bp.index'), "/static/img/p1_I-like-ya-code-g.png", "I Like Ya Code G",
                                     ["Dhruv Kanetkar", "Tanay Shah", "Gautam Gupta", "Dhruv Sengupta"], "This is our Calculator Suite that allows the user to calculate a variety of things. "
                                                                                                         "It can do basic scientific calculation, convert units and binary values, sovle derivatives, and solve physics kinematic problems")
-<<<<<<< HEAD
+
     p1_mortos = model.Project("MortOS", url_for('p1_mortos_bp.index'), "/static/img/p1-mortos-examplepic.PNG", "MortOS",
                              ["Nathaniel Cherian", "Benjamin Herrick", "Jett Kim", "Brendan Trinh", "Anthony Vo"],
                              "Our project was an exploration of different coding topics and concepts that's displayed through " +
@@ -31,8 +31,5 @@ def setup():
                              "Check out some of these classic games that are a nice break from the fast paced and stressful modern games.")
     projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos, p1_grocerystoresim]
     period = model.Period("Period 1", "Computer Science A - Java", projects)
-=======
-    projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg]
-    period = model.Period("Period 1", "Computer Science A", projects)
->>>>>>> 0f6e12fc2ac5e4dbfe7057b68ca4f67db98cd870
+
     return period
