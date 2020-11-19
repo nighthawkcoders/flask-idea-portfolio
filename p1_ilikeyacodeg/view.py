@@ -4,6 +4,6 @@ from .model import runtime
 
 @p1_ilikeyacodeg_bp.route('/')
 def index():
-    return render_template("ilike.html", data=runtime())
+    return render_template("task.html", data=runtime())
 
 
