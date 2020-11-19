@@ -10,19 +10,19 @@ from .model import setup, runtime, alldata, code, code2, journal, planning, play
 # connects default URL of server to render home2.html
 @teacher_bp.route('/')
 def index():
-    return render_template("home.html", projects=setup())
+    return render_template("home.html", data=setup())
 
 
 # connects /hello path of server to render hello2.html
 @teacher_bp.route('/hello/')
 def hello_route():
-    return render_template("hello.html", projects=setup())
+    return render_template("hello.html", data=setup())
 
 
 # connects /flask path of server to render flask2.html
 @teacher_bp.route('/flask/')
 def flask_route():
-    return render_template("flask.html", projects=setup())
+    return render_template("flask.html", data=setup())
 
 
 @teacher_bp.route("/project/runtime/")

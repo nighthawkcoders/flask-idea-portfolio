@@ -25,12 +25,18 @@ app.register_blueprint(cyphercrypto_bp, url_prefix='/p2_cyphercrypto')
 from p2_einsteins import p2_einsteins_bp
 app.register_blueprint(p2_einsteins_bp, url_prefix='/p2_einsteins')
 
+from p2_rappers import p2_rappers_bp
+app.register_blueprint(p2_rappers_bp, url_prefix='/p2_rappers')
+
 # Period 4
 from p4_slackbots import p4_slackbots_bp
 app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
 
 from p4_hangman import p4_hangman_bp
 app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
+
+from p4_fruitycoders import p4_fruitycoders_bp
+app.register_blueprint(p4_fruitycoders, url_prefix='/p4_fruitycoders')
 
 # Period 5
 from p5_chessGame import p5_chessGame_bp
