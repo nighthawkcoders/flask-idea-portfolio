@@ -16,7 +16,7 @@ def setup():
                             ["James Hunt", "Mackenzie Aboy", "Lucas Kaimer", "Sam Koenig",
                              "Kira Liao"], "This webpage is all about countries around the world. Look through each of the pages to learn fun facts, see COVID-19 stats, and play our rendition of Geoguessr.")
 
-
+    p5_multimedia = model.Project("p5_multimedia", "http://rubinfamily.dyndns.org:5000/", "/static/img/p5_multimedia.png", "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, share youtube findings, and share your spotify playlists on this multimedia site!")
     projects = [EXAMPLE,p5_calculus,p5_supercool]
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period
