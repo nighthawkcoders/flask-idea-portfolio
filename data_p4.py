@@ -9,7 +9,7 @@ def setup():
                             ["John Mortensen", "Classroom of 40"],
                             "Visit a VANTA birds experience and see how it is made.")"""
 
-    p4_slackbots = model.Project("Merch Website", "http://76.176.109.127:6969/", "/static/img/p4_slackbots.PNG",
+    p4_slackbots = model.Project("Merch Website", "http://76.176.109.127:6969/", "/static/img/p4_slackbots.png",
                                  "P4Slackbots",
                                  ["Abhijay Deevi", "Kevin Do", "Travis Medley", "Paul Bokelman", "Gavin Theriault"],
                                  "This project is a merch website that we created for our Youtube channels, GodlyGoats and "
