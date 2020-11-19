@@ -11,7 +11,7 @@ from .model import setup, runtime, alldata, code, code2, journal, planning, play
 
 @teacher_bp.route('/')
 def index():
-    return render_template("teacher/home.html", data=setup())
+    return render_template("teacher/plan.html", data=setup())
 
 
 # connects /hello path of server to render hello2.html

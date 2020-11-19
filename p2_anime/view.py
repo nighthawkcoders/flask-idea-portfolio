@@ -48,7 +48,7 @@ class RegisterForm(FlaskForm):
 
 @p2_anime_bp.route('/')
 def home_route():
-    return render_template("home.html", projects=model.setup())
+    return render_template("plan.html", projects=model.setup())
 
 @p2_anime_bp.route('/lowmaint/')
 def hello_route():

@@ -17,7 +17,7 @@ app = Flask(__name__)
 def home():
     #function uses Flask import (Jinga) to render HTML
     #model is passed as a parameter
-    return render_template("home.html")#home has to be under templates
+    return render_template("plan.html")#home has to be under templates
 
 @p5_chessGame_bp.route("/project/chessJs/")#for the dragable chess file
 def chessJS():

@@ -14,7 +14,7 @@ def setup():
                                  ["Nihar Marar", "Tyler Cloutier", "Dylan Roman", "Anthony Giustiniano", "Cherry Ding"],
                                  "We use Ciphers and encrypt/decrypt messages.")
 
-    minigames = model.Project("Website Portfolio", "http://www.google.com", "/static/img/arcade.png", "Crystal's Team",
+    minigames = model.Project("Website Portfolio", url_for("p2_triviagame_bp.index"), "/static/img/arcade.png", "Crystal's Team",
                               ["Crystal Widjaja", "Nivedita Rethnakar", "Ida Mobini", "Eva Gravin", "Dane Vestal"],
                               "This is our website with minigames, our portfolio, and much more!")
 

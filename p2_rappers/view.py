@@ -10,7 +10,7 @@ app = Flask(__name__)
 @p2_rappers_bp.route('/')
 def index():
     # Flask import uses Jinga to render HTML
-    return render_template("home.html")
+    return render_template("plan.html")
 
 
 @p2_rappers_bp.route('/aboutus/')

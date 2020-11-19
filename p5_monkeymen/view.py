@@ -5,10 +5,10 @@ from flask import  render_template
 
 from p5_monkeymen import p5_monkeymen_bp
 
-#connects default URL of server to render home.html
+#connects default URL of server to render plan.html
 @p5_monkeymen_bp.route('/')
 def index():
-  return render_template("p5_monkeymen/home.html", projects = model.setup())
+  return render_template("p5_monkeymen/plan.html", projects = model.setup())
 
 #connects /hello path of server to render hello.html
 @p5_monkeymen_bp.route('/beach/')

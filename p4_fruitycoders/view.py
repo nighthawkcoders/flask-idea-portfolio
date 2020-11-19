@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @p4_fruitycoders_bp.route('/')
 def home_route():
-    return render_template("home.html")
+    return render_template("plan.html")
 
 
 @p4_fruitycoders_bp.route('/history/')

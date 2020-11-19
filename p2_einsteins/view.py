@@ -9,7 +9,7 @@ from p2_einsteins import p2_einsteins_bp
 
 @p2_einsteins_bp.route('/')  # decorates the url with a route
 def home_route():
-    return render_template("home.html", projects=model.setup())
+    return render_template("plan.html", projects=model.setup())
 
 
 @p2_einsteins_bp.route('/fundamentals/')

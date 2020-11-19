@@ -8,7 +8,7 @@ from p5_gorillas import p5_gorillas_bp
 
 @p5_gorillas_bp.route('/')
 def home():
-    return render_template("home.html", projects=model.setup(), data=model.runtime())
+    return render_template("plan.html", projects=model.setup(), data=model.runtime())
 
 
 @p5_gorillas_bp.route('/projects')
