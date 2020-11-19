@@ -1,4 +1,4 @@
-from p2_einsteins import model  # imports projects data from projects.py
+from p2_einsteins import model  # imports projects data from model.py
 
 from flask import Flask, render_template  # imports the render template
 
