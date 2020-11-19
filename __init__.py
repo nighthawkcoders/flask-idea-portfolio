@@ -3,9 +3,6 @@ from flask import Flask
 app = Flask(__name__)
 
 # Period 1
-#from teacher import teacher_bp
-#app.register_blueprint(teacher_bp, url_prefix='/teacher')
-
 from p1_dataminers import p1_dataminers_bp
 app.register_blueprint(p1_dataminers_bp, url_prefix='/p1_dataminers')
 
@@ -48,3 +45,6 @@ app.register_blueprint(p5_monkeymen_bp, url_prefix='/p5_monkeymen')
 from p5_calculus import p5_calculus_bp
 app.register_blueprint(p5_calculus_bp, url_prefix='/p5_chessGame')
 
+# Teacher Sample
+from teacher import teacher_bp
+app.register_blueprint(teacher_bp, url_prefix='/teacher')
