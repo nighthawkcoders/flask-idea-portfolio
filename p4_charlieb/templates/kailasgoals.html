@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Kaila's Goals{% endblock %}
+{% block content %}
+    <h1>Kaila's Goals!</h1>
+    <p class="font-weight-normal">Self-grading: 4/5</p>
+    <p class="font-weight-light">I was able to successfully make a repl.it playground working as a game, which is a main component in our project. However, I lost one point because I waited a long time to leard now to use IntelliJ and Github, although in the end I was able to complete that task.</p>
+    <p class="font-weight-normal">Scrum Master Grading: </p>
+    <p class="font-weight-light">1 - Become more familiar with Github and IntelliJ</p>
+    <p class="font-weight-lighter">Kaila was able to learn to transfer the project from Repl.it to Github, then from Github to IntelliJ. She also learned how to update the file with commits</p>
+    <image src="{{ url_for('static', filename='images/screenshotfour.png')}}">
+    <image src="{{ url_for('static', filename='images/screenshotthree.png')}}">
+        <p class="font-weight-light">2 - Open a seperate window within the website</p>
+        <p class="font-weight-lighter">Kaila was able to learn to open a different window through bootstrap, first using a youtube video then with a repl.it playground</p>
+        <image src="{{ url_for('static', filename='images/screenshottwo.png')}}">
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" src="https://Project-2-Quiz-Playground.kailamanangan.repl.run"></iframe>
+            </div>
+{% endblock %}

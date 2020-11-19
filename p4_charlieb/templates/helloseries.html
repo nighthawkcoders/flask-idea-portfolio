@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Hello Series Project Plan{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h1 class= "text-center">Repl.it</h1>
+    <iframe height="550px" width="100%" src="https://repl.it/@eshuansauce/P4CharlieB-Project-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <h1 class= "text-center">Project Plan</h1>
+    <iframe height="550px" width="70%" src="https://docs.google.com/document/d/1nSpZ5THr6hYN3fJzc-lcVkmAe-fxS_i8UNSNMuvVDaQ/edit?usp=sharing" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <h1 class= "text-center">Playgrounds</h1>
+    <div>
+    <button type="button" class="btn btn-outline-dark" value="Input Button" onclick="relocate_helloplaygroundone()">
+        <script>
+  function relocate_helloplaygroundone()
+  {
+    location.href = "https://repl.it/@eshuansauce/Area-Perimeter-Playground#main.py";
+  }
+</script>Eshaan's Area and Perimeter playground</button>
+        <button type="button" class="btn btn-outline-dark" value="Input Button" onclick="relocate_helloplaygroundtwo()">
+
+            <script>
+  function relocate_helloplaygroundtwo()
+  {
+    location.href = "https://repl.it/@CalvinNi1/playground#circles.py";
+  }
+</script>Calvin's Circles playgrounds</button>
+
+        <button type="button" class="btn btn-outline-dark" value="Input Button" onclick="relocate_helloplaygroundthree()">
+
+            <script>
+  function relocate_helloplaygroundthree()
+  {
+    location.href = "https://repl.it/@brentarcinue/Perimeter#main.py";
+  }
+</script>Brent's Perimeter Playground</button>
+
+        <button type="button" class="btn btn-outline-dark" value="Input Button" onclick="relocate_helloplaygroundfour()">
+
+            <script>
+  function relocate_helloplaygroundfour()
+  {
+    location.href = "https://repl.it/@CalvinNi1/playground#2darray.py";
+  }
+</script>Calvin's Random Number Generator Playground</button>
+
+        <button type="button" class="btn btn-outline-dark" value="Input Button" onclick="relocate_helloplaygroundfive()">
+
+            <script>
+  function relocate_helloplaygroundfive()
+  {
+    location.href = "https://repl.it/@eshuansauce/List-Playground#main.py";
+  }
+</script>Eshaan's Dinner Game Playground</button>
+    </div>
+</div>
+{% endblock %}

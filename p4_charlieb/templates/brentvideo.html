@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Brent's Video and Artifacts{% endblock %}
+{% block content %}
+<h3>Brent's Video and Artifacts</h3>
+<div class="media">
+    <a href="/pacman">
+        <img src="{{ url_for('static', filename='images/pacman.png')}}" width="64" height="64" class="mr-3">
+    </a>
+    <div class="media-body">
+        <h5 class="mt-0">Pacman</h5>
+        Run an animation of pacman eating a ghost!
+    </div>
+    <p></p>
+    <div class="embed-responsive embed-responsive-4by3">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/x-pny_nxXgs" allowfullscreen></iframe>
+    </div>
+    {% endblock %}

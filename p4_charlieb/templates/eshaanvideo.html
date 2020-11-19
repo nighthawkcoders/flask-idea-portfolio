@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Eshaan's Video and Artifacts{% endblock %}
+{% block content %}
+<h3>Eshaan's Video and Artifacts</h3>
+<div class="media">
+    <a href="/pong">
+        <img src="{{ url_for('static', filename='images/pong.png')}}" width="64" height="64" class="mr-3">
+    </a>
+    <div class="media-body">
+        <h5 class="mt-0">Pong</h5>
+        Play a classic game from the 70's!
+    </div>
+    <p></p>
+    <div class="embed-responsive embed-responsive-4by3">
+        <iframe class="embed-responsive-item" src="https://youtube.com/embed/aDepys6K7iM" allowfullscreen></iframe>
+    </div>
+    {% endblock %}

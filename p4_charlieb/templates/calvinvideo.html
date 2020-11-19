@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Calvin's Video and Artifacts{% endblock %}
+{% block content %}
+<h3>Calvin's Video and Artifacts and stuffs</h3>
+<div class="media">
+    <a href="/trivia">
+        <img src="{{ url_for('static', filename='images/battleship.png')}}" width="64" height="64" class="mr-3">
+    </a>
+    <div class="media-body">
+        <h5 class="mt-0">Battleship</h5>
+        Play a computer science based battleship game!
+    </div>
+    <p></p>
+    <div class="embed-responsive embed-responsive-4by3">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/4fe41dc7ccf14892b21da6739a308ff1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+    </div>
+    {% endblock %}

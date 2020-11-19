@@ -3,6 +3,9 @@ from flask import Flask
 app = Flask(__name__)
 
 # Period 1
+#from teacher import teacher_bp
+#app.register_blueprint(teacher_bp, url_prefix='/teacher')
+
 from p1_dataminers import p1_dataminers_bp
 app.register_blueprint(p1_dataminers_bp, url_prefix='/p1_dataminers')
 
@@ -25,8 +28,6 @@ app.register_blueprint(p2_einsteins_bp, url_prefix='/p2_einsteins')
 from p2_rappers import p2_rappers_bp
 app.register_blueprint(p2_rappers_bp, url_prefix='/p2_rappers')
 
-from p2_anime import p2_anime_bp
-app.register_blueprint(p2_anime_bp, url_prefix='/p2_amine')
 # Period 4
 from p4_slackbots import p4_slackbots_bp
 app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
@@ -36,6 +37,9 @@ app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
 
 from p4_fruitycoders import p4_fruitycoders_bp
 app.register_blueprint(p4_fruitycoders_bp, url_prefix='/p4_fruitycoders')
+
+from p4_charlieb import p4_charlieb_bp
+app.register_blueprint(p4_charlieb_bp, url_prefix='/p4_charlieb')
 
 # Period 5
 from p5_chessGame import p5_chessGame_bp
@@ -47,8 +51,5 @@ app.register_blueprint(p5_monkeymen_bp, url_prefix='/p5_monkeymen')
 from p5_calculus import p5_calculus_bp
 app.register_blueprint(p5_calculus_bp, url_prefix='/p5_chessGame')
 
-
-
-# Teacher Sample
-from teacher import teacher_bp
-app.register_blueprint(teacher_bp, url_prefix='/teacher')
+from p5_gorillas import p5_gorillas_bp
+app.register_blueprint(p5_gorillas_bp, url_prefix='/p5_gorillas')
