@@ -8,6 +8,7 @@ from p1_robotmania import p1_robotmania_bp
 from p2_cyphercrypto import cyphercrypto_bp
 from p4_slackbots import p4_slackbots_bp
 from p4_hangman import p4_hangman_bp
+from p5_supercool import p5_supercool_bp
 app = Flask(__name__)
 
 app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
