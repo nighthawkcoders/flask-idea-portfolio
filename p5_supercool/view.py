@@ -1,5 +1,6 @@
 from flask import Flask, redirect, url_for, render_template
 import Data, scraping
+from p5_supercool import p5_supercool_bp
 app = Flask(__name__)
 
 @p5_supercool_bp.route("/landing")
@@ -70,7 +71,3 @@ def india():
     return render_template("history-india.html")
 
 #===================================================================================
-
-
-if __name__ == "__main__":
-    app.run(debug=True, host="127.0.0.1", port="5001")
