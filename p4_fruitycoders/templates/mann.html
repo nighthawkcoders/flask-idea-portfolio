@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    <title>fruity photos</title>
+
+    <style type="text/css">
+
+* { margin:0;padding:0;box-sizing:border-box; }
+
+@-webkit-keyframes fadein {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-moz-keyframes fadein {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadein {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+a {text-decoration:none;color:#333;transition:0.15s ease-in;}
+a:hover {color:#aaa;}
+b,strong {color:#333;}
+
+body {
+  background:#fff;
+  font-family:'Georgia',serif;
+  font-size:12px;
+  line-height:175%;
+  font-weight:300;
+  color:#767676;
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  animation: fadein 1s;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+}
+
+section {
+  margin-top:50px;
+  margin-bottom:300px;;
+  margin-right: 300px;
+  margin-left:400px;
+  width:500px;
+  height:10px;
+}
+
+h1,h2 {
+  font-weight:400;
+  color:#333;
+  margin-bottom:5px;
+}
+
+h1 { font-size:20px; }
+h2 { font-size:16px; }
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 10
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 150px;
+}
+
+.dropdown-content a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+</style>
+</head>
+<body>
+
+<section>
+    <header>
+        <h1>Steve McCurry</h1>
+
+        documentary photographer | pennsylvania | (1950)
+
+        <nav>
+            <a href="/">home</a> .
+            <a href="/history">history</a> .
+            <a href="/biographies">biographies</a> .
+            <div class="dropdown">
+                gallery .
+                <div class="dropdown-content">
+                    <a href="/wong">Russel Wong</a>
+                    <a href="/shabazz">Jamel Shabazz</a>
+                    <a href="/adams">Ansel Adams</a>
+                    <a href="/pretty">Adam Pretty</a>
+                    <a href="/leibovitz">Annie Leibovitz</a>
+                    <a href="/mccurry">Steve McCurry</a>
+                    <a href="/bourke">Margaret Bourke-White</a>
+                    <a href="/goldin">Nan Goldin</a>
+                    <a href="/newman">Arnold Newman</a>
+                    <a href="/mann">Sally Mann</a>
+                </div>
+            </div>
+            <a href="/aboutus">about us</a> .
+            <a href="https://github.com/fruitycoders/photography">project repo</a>
+        </nav>
+
+        <br>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="https://publicdelivery.b-cdn.net/wp-content/uploads/2019/12/Sally-Mann-Candy-Cigarette-1989-from-Immediate-Family-1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="https://cdn.theatlantic.com/thumbor/kAVo_2YP8u6PDTFCQeQ7b9bGLL8=/0x945:1835x1901/960x500/media/img/2015/06/image027/original.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/ajc/EZOL6S2ETQVSRPNLII5AHLNQWU.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Untitled_by_Sally_Mann_from_%22At_Twelve%22.jpg/220px-Untitled_by_Sally_Mann_from_%22At_Twelve%22.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="https://gagosian.com/media/images/artists/sally-mann/8CxMSz8okN5H_585x329.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+    </header>
+
+    <script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+</script>
+
+</section>
+</body>
+</html>
