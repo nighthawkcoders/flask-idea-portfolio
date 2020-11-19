@@ -1,63 +1,61 @@
+from p4_fruitycoders import p4_fruitycoders_bp
 from flask import Flask, render_template,redirect,url_for
 import data
 
-app = Flask(__name__)
+p4_fruitycoders_bp = Flask(__name__)
 
-@app.route('/')
+@p4_fruitycoders_bp.route('/')
 def home_route():
     return render_template("home.html", title = data.setup())
 
-@app.route('/history/')
+@p4_fruitycoders_bp.route('/history/')
 def hello_route():
     return render_template("history.html")
 
-@app.route('/biographies/')
+@p4_fruitycoders_bp.route('/biographies/')
 def biographies_route():
     return render_template("biographies.html")
 
-@app.route('/aboutus/')
+@p4_fruitycoders_bp.route('/aboutus/')
 def aboutus_route():
     return render_template("aboutus.html")
 
-@app.route('/adams/')
+@p4_fruitycoders_bp.route('/adams/')
 def adams_route():
     return render_template("adams.html")
 
-@app.route('/bourke/')
+@p4_fruitycoders_bp.route('/bourke/')
 def bourke_route():
     return render_template("bourke.html")
 
-@app.route('/goldin/')
+@p4_fruitycoders_bp.route('/goldin/')
 def goldin_route():
     return render_template("goldin.html")
 
-@app.route('/leibovitz/')
+@p4_fruitycoders_bp.route('/leibovitz/')
 def leibovitz_route():
     return render_template("leibovitz.html")
 
-@app.route('/mann/')
+@p4_fruitycoders_bp.route('/mann/')
 def mann_route():
     return render_template("mann.html")
 
-@app.route('/mccurry/')
+@p4_fruitycoders_bp.route('/mccurry/')
 def mccurry_route():
     return render_template("mccurry.html")
 
-@app.route('/newman/')
+@p4_fruitycoders_bp.route('/newman/')
 def newman_route():
     return render_template("newman.html")
 
-@app.route('/pretty/')
+@p4_fruitycoders_bp.route('/pretty/')
 def pretty_route():
     return render_template("pretty.html")
 
-@app.route('/shabazz/')
+@p4_fruitycoders_bp.route('/shabazz/')
 def shabazz_route():
     return render_template("shabazz.html")
 
-@app.route('/wong/')
+@p4_fruitycoders_bp.route('/wong/')
 def wong_route():
     return render_template("wong.html")
-
-if __name__ == "__main__":
-    app.run(debug = True, port=9090)
