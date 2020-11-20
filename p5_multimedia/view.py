@@ -9,7 +9,7 @@ popular= []
 
 #connects default URL to a function
 @p5_multimedia_bp.route('/', methods=['GET','POST'])
-def home():
+def index():
   if(request.method == 'POST'):
     form = request.form
     product = form['product']  
