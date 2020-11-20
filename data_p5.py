@@ -17,10 +17,10 @@ def setup():
 
 
     p5_chessGame = model.Project("Chess Game", "https://www.youtube.com/channel/UC59JU4vWL8l0eQrixwds_3A",
-                                "/static/img/p5chessGame.jpg", "Chess Game",
-                                ["Colin Szeto", "Devam Shrivastava", "Shekar Krishnamoorthy", "Kyle Myint",
-                                 "David Kim"],
-                                "Vist Chess Game to play through our chess game!")
+                                 "/static/img/p5chessGame.jpg", "Chess Game",
+                                 ["Colin Szeto", "Devam Shrivastava", "Shekar Krishnamoorthy", "Kyle Myint",
+                                  "David Kim"],
+                                 "Vist Chess Game to play through our chess game!")
 
     p5_gorillas = model.Project("Gorillas", "http://70.95.189.45:5000/",
                                 "/static/img/p5_gorillas.png", "Gorillas",
@@ -34,7 +34,7 @@ def setup():
     """
     p5_multimedia = model.Project("Multimedia", url_for("p5_multimedia_bp.index"), '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
     """
-    projects = [p5_calculus, p5_gorillas ,p5_chessGame, EXAMPLE] # p5_monkeymen
+    projects = [p5_calculus, p5_gorillas ,p5_chessGame, EXAMPLE] # p5_monkeymen  p5_multimedia
 
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period
