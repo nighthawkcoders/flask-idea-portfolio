@@ -1,0 +1,44 @@
+<html>
+{% include 'nav.html' %}
+<head>
+  <title>{{name}} | Project Plan </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href='/static/home.css' />
+</head>
+
+
+
+{% block title %}
+<h1 style="color: white">Project Plan</h1>
+{% endblock %}
+
+<!-- embed Google Doc and Padlet straight into webpage -->
+<body>
+<div class="googledoc-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://docs.google.com/document/d/1LHVV9tkq1ZkMl9PL1fb1XakB3tWm9ZTHp14jibV9-nA/edit?usp=sharing" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:100vh;display:block;padding:0;margin:0"></iframe></p><div style="padding:8px;text-align:right;margin:0;"><a href="https://docs.google.com/document/d/1LHVV9tkq1ZkMl9PL1fb1XakB3tWm9ZTHp14jibV9-nA/edit?usp=sharing" style="padding:0;margin:0;border:none;display:block;line-height:1;height:16px" target="_blank"></a></div></div>
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/evag55486/qjg36xic1x5oelpg" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:100vh;display:block;padding:0;margin:0"></iframe></p><div style="padding:8px;text-align:right;margin:0;"><a href="https://padlet.com/evag55486/qjg36xic1x5oelpg" style="padding:0;margin:0;border:none;display:block;line-height:1;height:16px" target="_blank"></a></div></div>
+</body>
+
+<script src="https://threejs.org/build/three.js"></script>
+<script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
+<script>
+    VANTA.BIRDS({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 1200.00,
+      minWidth: 200.00,
+      scale: 1.50,
+      scaleMobile: 1.00
+    })
+</script>
+</html>
+
+<body>
+  <p style="background-color:#C06C84">
+</body>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

@@ -8,7 +8,7 @@ app = Flask(__name__)
 @p5_calculus_bp.route('/')
 def home():
     # Flask import uses Jinga to render HTML
-    return render_template("home.html")
+    return render_template("plan.html")
 
 
 # connect to videos page
