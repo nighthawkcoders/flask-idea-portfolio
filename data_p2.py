@@ -15,12 +15,12 @@ def setup():
                                  ["Nihar Marar", "Tyler Cloutier", "Dylan Roman", "Anthony Giustiniano", "Cherry Ding"],
                                  "We use Ciphers and encrypt/decrypt messages.")
 
-    p2_triviagame = model.Project("Website Portfolio", url_for("p2_triviagame_bp.index"), "/static/img/cat2.png",
+    p2_triviagame = model.Project("Website Portfolio", url_for("p2_triviagame_bp.index"), "/static/img/arcade.PNG",
                                   "Crystal's Team",
                                   ["Crystal Widjaja", "Nivedita Rethnakar", "Ida Mobini", "Eva Gravin", "Dane Vestal"],
                                   "This is our website with minigames, our portfolio, and much more!")
 
-    p2_einsteins = model.Project("Project Page", url_for('p2_einsteins_bp.home_route'), "/static/img/cat3.jpg",
+    p2_einsteins = model.Project("Project Page", url_for('p2_einsteins_bp.home_route'), "/static/img/p2_einsteins.png",
                                  "Einsteins",
                                  ["Pragadeesh Raj", "Ayman Kazi", "Brandon Truong", "Navodit Maheshwari", "Ali Saad"],
                                  "Welcome to the world of ASCII games, intuitive text-based calculators, journal, "
@@ -30,11 +30,11 @@ def setup():
                              ["Noah Ahooja", "Nolan D'Esopo", "Troy Tinkel", "", ""],
                              "Welcome to our arcade!")
 
-    p2_anime = model.Project("Plants", "http://76.176.59.209/", "/static/img/cat1.jpg", "Anime",
+    p2_anime = model.Project("Plants", "http://76.176.59.209/", "/static/img/p2_anime.gif", "Anime",
                              ["Andrew Zhang", "Bradley Bartelt", "Shreya Vesant", "Diane Tang", "Nikolas Gee"],
                              "This website shows all kinds of plants and their maintnance tips")
 
-    p2_rappers = model.Project("About Everything", 'http://107.200.91.165:5000/', "/static/img/cat3.jpg",
+    p2_rappers = model.Project("About Everything", 'http://107.200.91.165:5000/', "/static/img/p2_rapname.jpg",
                                "Rapper",
                                ["Sophie Bulkin", "Carter Quartararo", "Aditi Akella", "Isai Rajaraman",
                                 "Mustafa Sharaf"],
