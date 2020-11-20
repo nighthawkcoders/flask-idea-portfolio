@@ -22,7 +22,7 @@ from p1_hexpass import p1_hexpass_bp
 app.register_blueprint(p1_hexpass_bp, url_prefix='/p1_hexpass')
 
 from p1_asciimenu import p1_asciimenu_bp
-app.register_blueprint(p1_asciimenu_bp, url_prefix='/p1_hexpass')
+app.register_blueprint(p1_asciimenu_bp, url_prefix='/p1_asciimenu')
 
 # Period 2
 from p2_cyphercrypto import cyphercrypto_bp
