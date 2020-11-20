@@ -3,8 +3,6 @@ from p2_triviagame import model
 from p2_triviagame import model2
 from flask import Flask, render_template
 
-app = Flask(__name__)
-
 # @app.route maps specific URL to specific function-- in this case, rendering the associated html files
 @p2_triviagame_bp.route('/')
 def index():
