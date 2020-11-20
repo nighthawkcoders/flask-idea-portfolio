@@ -8,17 +8,17 @@ def index():
     return render_template("p4_fruitycoders/home.html")
 
 
-@p4_fruitycoders_bp.route('/history/')
+@p4_fruitycoders_bp.route('/p4_fruitycoders/history/')
 def history_route():
     return render_template("p4_fruitycoders/history.html")
 
 
-@p4_fruitycoders_bp.route('/biographies/')
+@p4_fruitycoders_bp.route('/p4_fruitycoders/biographies/')
 def biographies_route():
     return render_template("p4_fruitycoders/biographies.html")
 
 
-@p4_fruitycoders_bp.route('/aboutus/')
+@p4_fruitycoders_bp.route('/p4_fruitycoders/aboutus/')
 def aboutus_route():
     return render_template("p4_fruitycoders/aboutus.html")
 
