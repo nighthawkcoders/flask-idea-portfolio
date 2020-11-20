@@ -24,6 +24,11 @@ def setup():
                              ["Nathaniel Cherian", "Benjamin Herrick", "Jett Kim", "Brendan Trinh", "Anthony Vo"],
                              "Our project was an exploration of different coding topics and concepts that's displayed through " +
                              "a variety of minigames. Try some of them out!")
-    projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos]
+
+    p1_asciimenu = model.Project("ASCII Menu", url_for('p1_asciimenu_bp.index'), "/static/img/natm.png", "ASCII Menu",
+                                  ["Neil Sahai", "Eyaad Mir", "Andrew Pu", "Alex Titov", "Sean Rollins"],
+                                  "This project has many different games in a single program which can be played to earn money to buy functions in the store for the calculator or to deposit and withdraw in an ATM!")
+
+    projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos, p1_asciimenu]
     period = model.Period("Period 1", "Computer Science A - Java", projects)
     return period
