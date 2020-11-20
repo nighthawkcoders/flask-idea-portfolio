@@ -31,12 +31,12 @@ def setup():
                                     "and biographies of several famous photographers, such as Ansel Adams and Annie "
                                     "Leibovitz.")
 
-    p4_coderjoes = model.Project("CoderJoes Store", url_for('p4_coderjoes_bp.index'), "/static/img/p4_coderjoes.png",
+    """p4_coderjoes = model.Project("CoderJoes Store", url_for('p4_coderjoes_bp.index'), "/static/img/p4_coderjoes.png",
                                  "P4 Guessers",
                                  ["Lola Bulkin", "Grace Le", "Ryan Moghaddas", "William Cherres", "Brayden Basinger"],
                                  "CoderJoes is a virtual store where you can find recipes, ideas, and descriptions, "
-                                 "as well as a group portfolio of our work over the trimester.")
+                                 "as well as a group portfolio of our work over the trimester.")"""
 
-    projects = [p4_slackbots, p4_hangman, p4_fruitycoders, p4_coderjoes]
+    projects = [p4_slackbots, p4_hangman, p4_fruitycoders]#, p4_coderjoes
     period = model.Period("Period 4", "AP Principles of Computer Science - Python", projects)
     return period

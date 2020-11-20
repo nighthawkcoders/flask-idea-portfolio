@@ -8,63 +8,55 @@ from .model import setup, runtime, alldata, code, code2, journal, planning, play
 
 
 # connects default URL of server to render home2.html
+
 @teacher_bp.route('/')
 def index():
-    return render_template("home.html", projects=setup())
+    return render_template("teacher/home.html", data=setup())
 
 
 # connects /hello path of server to render hello2.html
 @teacher_bp.route('/hello/')
 def hello_route():
-    return render_template("hello.html", projects=setup())
+    return render_template("teacher/hello.html", data=setup())
 
 
 # connects /flask path of server to render flask2.html
 @teacher_bp.route('/flask/')
 def flask_route():
-    return render_template("flask.html", projects=setup())
+    return render_template("teacher/flask.html", data=setup())
 
 
 @teacher_bp.route("/project/runtime/")
-def runtime_route():
-    return render_template("task.html", data=runtime())
+def about_route():
+    return render_template("teacher/task.html", data=runtime())
 
 
 @teacher_bp.route("/project/planning/")
 def planning_route():
-    return render_template("task.html", data=planning())
+    return render_template("teacher/task.html", data=planning())
 
 
 @teacher_bp.route("/project/journal/")
 def journal_route():
-    return render_template("task.html", data=journal())
+    return render_template("teacher/task.html", data=journal())
 
 
 @teacher_bp.route("/project/playground/")
 def playground_route():
-    return render_template("task.html", data=playground())
+    return render_template("teacher/task.html", data=playground())
 
 
 @teacher_bp.route("/project/code/")
 def code_route():
-    return render_template("task.html", data=code())
+    return render_template("teacher/task.html", data=code())
 
 
 @teacher_bp.route("/project/code2/")
 def code2_route():
-    return render_template("task.html", data=code2())
+    return render_template("/teacher/task.html", data=code2())
 
 
 @teacher_bp.route("/project/calculatorgui/")
 def calculatorgui_route():
-    return render_template("task.html", data=calculatorgui())
+    return render_template("teacher/task.html", data=calculatorgui())
 
-
-@teacher_bp.route("/about/")
-def about_route():
-    return render_template("taskall.html", datalist=alldata())
-
-
-@teacher_bp.route("/maps/")
-def maps_route():
-    return render_template("maps.html")

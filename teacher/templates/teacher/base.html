@@ -5,7 +5,7 @@
   Setting up variable used in template
   "projects" is python object
 -->
-{% set source = projects.get_source() %} <!-- source of project dict -->
+{% set source = data.get_source() %} <!-- source of project dict -->
 {% set name = source["name"] %}
 {% set github = source["github"] %}
 {% set linkedin = source["linkedin"] %}
