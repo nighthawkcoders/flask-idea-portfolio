@@ -2,7 +2,7 @@
 
 def p1robotmania():
     greeting = "P1 Robot Mania"
-    name = "Display Java Swing in HTML using Replit"
+    name = "Display CalculatorGUI in Replit"
     doa = "Now!"
     job = "JFrame in Replit"
     embed = "https://repl.it/@NakulNandhakuma/CalculatorSwing?lite=true&outputonly=1"
