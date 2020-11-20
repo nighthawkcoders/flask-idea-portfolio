@@ -19,6 +19,10 @@ def index():
 def slackbots():
 	return render_template("p4_slackbots/about.html", groupdatalist=groupdata())
 
+@p4_slackbots_bp.route('/products/')
+def products():
+	return render_template("p4_slackbots/products.html")
+
 @p4_slackbots_bp.route('/kevin/')
 def kevin():
 	return render_template("p4_slackbots/indivabout.html", data=kevin())
@@ -63,9 +67,7 @@ def GGFireworks():
 def GGSuperstar():
 	return render_template("p4_slackbots/gg-superstar.html")
 
-@p4_slackbots_bp.route('/Products/')
-def Products():
-	return render_template("p4_slackbots/products.html")
+
 
 @p4_slackbots_bp.route('/Cart/')
 def Cart():
