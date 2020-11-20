@@ -5,6 +5,6 @@ from .model import runtime
 
 @p1_grocerystoresim_bp.route('/')
 def index():
-    return render_template("grocery.html", data=runtime())
+    return render_template("groceryrun.html", data=runtime())
 
 
