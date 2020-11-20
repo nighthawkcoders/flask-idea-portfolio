@@ -1,0 +1,45 @@
+{% set embed = data["embed"] %}
+{% set greeting = data["greeting"] %}
+{% set name = data["name"] %}
+{% set doa = data["doa"] %}
+{% set job = data["job"] %}
+{% set embed = data["embed"] %}
+{% set gist = data["gist"] %}
+
+
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Super Mario</h1>
+    <p class="important">
+      The History of Super Mario
+    </p>
+
+    <p class="important">
+      The Super Mario games follow Mario's adventures, typically in the fictional Mushroom Kingdom with Mario as the player character. He is often joined by his brother, Luigi, and occasionally by other members of the Mario cast. As in platform video games, the player runs and jumps across platforms and atop enemies in themed levels. The games have simple plots, typically with Mario rescuing the kidnapped Princess Peach from the primary antagonist, Bowser. The first game in the series, Super Mario Bros., released for the Nintendo Entertainment System (NES) in 1985, established gameplay concepts and elements prevalent in nearly every Super Mario game released since. These include a multitude of power-ups and items that give Mario special powers such as fireball-throwing and size-changing into both giant and miniature sizes.[2] (Wikipedia)
+    </p>
+    <h1>How to Play</h1>
+    <p class="important">
+      Using the controller, use different buttons to make mario run,jump, and use powerups. Make it to the end and jump on the flag, or defeat the boss.
+    </p>
+    <h1>How many Super Mario games are there</h1>
+    <p class="important">
+      There are currently 21 Super Mario games in total, the original being created and launched in 1985.
+    </p>
+
+    <p class="important">
+      <img src=http://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/virtual_console_nintendo_3ds_7/SI_3DSVC_SuperMarioBros_image1280w.jpg alt="W3Schools.com" style="width:640px;height:353px;" align="right">
+    </p>
+
+    <div class="embed-responsive embed-responsive-4by3">
+        <iframe class="embed-responsive-item" src={{embed}} style="width:640px;height:500px;"></iframe>
+    </div>
+
+{% endblock %}
+
