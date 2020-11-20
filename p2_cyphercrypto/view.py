@@ -158,7 +158,7 @@ def rsaEncrypt():
         # get keys
         pubKey1 = int(request.form["iKey1"])
         pubKey2 = int(request.form["iKey2"])
-        # get encrypted and make into useable output
+        # get encrypted and make into usable output
         encrypted = modelrsa.rsa(message, pubKey1, pubKey2)
         encrypted = encrypted[0]
         encrypted = ''.join(encrypted)
