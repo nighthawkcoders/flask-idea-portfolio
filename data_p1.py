@@ -28,7 +28,7 @@ def setup():
                              ["Kevin Hu", "Sean Tran", "Aditya Surapaneni", "Siddhant Ranka", "Jacob Rozenkrants"],
                              "Tired of modern flashy video games and want a blast to the past? " +
                              "Check out some of these classic games that are a nice break from the fast paced and stressful modern games.")
-    p1_hexpass = model.Project("HexPass", url_for('p1_hexpass_bp.index'), "/static/img/vectorShape.png", "Hexpass",
+    p1_hexpass = model.Project("HexPass", url_for('p1_hexpass_bp.index'), "/static/img/p1_vectorshape.png", "Hexpass",
                               ["Aidan Rosen", "Andrew Hale", "Andrew Joseph", "Alex Hu", "Atharva Kudrimoti"], 
                                "This project is a combination of a password manager, vector calculator and graphing calculator")
     
