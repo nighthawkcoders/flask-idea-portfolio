@@ -37,6 +37,20 @@
     <script src={{gist}}></script>
 </div>
 {% endif %}
+
+
+{% if youtube %}
+
+    {% for video in youtube%}
+    <div style="text-align: center; margin-top: 3%;">
+        <iframe width="50%" height="500px" src="{{ video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+    {% endfor %}
+
+{% endif %}
+
+
 {% endblock %}
 
 

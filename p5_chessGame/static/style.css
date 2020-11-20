@@ -96,3 +96,23 @@ col-4 {
   float: left;
   position: absolute;
 }
+
+#headerOne {
+
+  top: 10px;
+  padding: 80px ;
+  text-align: center;
+  color: #b32400;
+
+}
+
+.in_progress{
+    right-margin: auto;
+    left-margin: auto
+    top: 50%;
+    float: left;
+    position: absolute;
+    opacity: 0.5;
+    text-align: center;
+    color: #b32400;
+}
