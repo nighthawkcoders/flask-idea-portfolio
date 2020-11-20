@@ -17,11 +17,11 @@
         <h1 style="font-size:4em;"><i class="fa fa-lock"></i>&nbsp;&nbsp;Secure Checkout</h1>
         <p class="Paragraph">*not actually secure, don't put real information</p>
         <p style="font-size:2em" class="Paragraph">
-            <img src="/p4_slackbots/static/images/cc/visa.svg" width=50px>
-            <img src="/p4_slackbots/static/images/cc/mastercard.svg" width=50px>
-            <img src="/p4_slackbots/static/images/cc/amex.svg" width=50px>
-            <img src="/p4_slackbots/static/images/cc/discover.svg" width=50px>
-            <img src="/p4_slackbots/static/images/cc/unknown.svg" width=50px>
+            <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/visa.svg') }}" width=50px>
+            <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/mastercard.svg') }}" width=50px>
+            <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/amex.svg') }}" width=50px>
+            <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/discover.svg') }}" width=50px>
+            <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/unknown.svg') }}" width=50px>
         </p>
     </div>
 </center>
@@ -87,11 +87,11 @@
             </div>
         <h1 class="Titles" style="color:white;font-size:2em">4. Secure Payment</h1>
             <p style="font-size:2em" class="Paragraph">
-                <img src="/p4_slackbots/static/images/cc/visa.svg" width=30px>
-                <img src="/p4_slackbots/static/images/cc/mastercard.svg" width=30px>
-                <img src="/p4_slackbots/static/images/cc/amex.svg" width=30px>
-                <img src="/p4_slackbots/static/images/cc/discover.svg" width=30px>
-                <img src="/p4_slackbots/static/images/cc/unknown.svg" width=30px>
+                <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/visa.svg') }}" width=30px>
+                <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/mastercard.svg') }}" width=30px>
+                <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/amex.svg') }}" width=30px>
+                <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/discover.svg') }}" width=30px>
+                <img src="{{ url_for('p4_slackbots_bp.static', filename='/images/cc/unknown.svg') }}" width=30px>
             </p>
             <p><input size="50" type="text" name="cardnumber" placeholder="card number" data-val-required="Card Number is required." required></p>
             <p>

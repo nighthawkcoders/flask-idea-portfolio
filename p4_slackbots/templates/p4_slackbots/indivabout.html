@@ -9,7 +9,7 @@
 {% set video = data["video"] %}
 {% set summary = data["summary"] %}
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('p4_slackbots_bp.static', filename='css/styles.css')}}" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <style>
@@ -22,7 +22,7 @@
     <center>
 
         <div class="dropShadow"> <!-- banner -->
-            <img style="margin-top:100px;min-width:100%;width:100%;height:auto"src="{{url_for('static', filename='/p4_slackbots/static/images/apcoxggbannercrop.jpg')}}" alt="channel art" width=relative>
+            <img style="margin-top:100px;min-width:100%;width:100%;height:auto"src="{{url_for('p4_slackbots_bp.static', filename='/p4_slackbots/static/images/apcoxggbannercrop.jpg')}}" alt="channel art" width=relative>
         </div>
 
     </center>
