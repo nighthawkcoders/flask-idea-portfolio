@@ -41,6 +41,9 @@ app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
 from p4_hangman import p4_hangman_bp
 app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
 
+from p4_fruitycoders import p4_fruitycoders_bp
+app.register_blueprint(p4_fruitycoders_bp, url_prefix='/p4_fruitycoders')
+
 from p4_coderjoes import p4_coderjoes_bp
 app.register_blueprint(p4_coderjoes_bp, url_prefix='/p4_coderjoes')
 
