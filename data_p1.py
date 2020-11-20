@@ -28,7 +28,14 @@ def setup():
                              ["Kevin Hu", "Sean Tran", "Aditya Surapaneni", "Siddhant Ranka", "Jacob Rozenkrants"],
                              "Tired of modern flashy video games and want a blast to the past? " +
                              "Check out some of these classic games that are a nice break from the fast paced and stressful modern games.")
-    projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos, p1_grocerystoresim]
+    
+    p1_asciiimenu = model.Project("CSA Portfolio", url_for('p1_asciimenu_bp.index'), "/static/img/natm.PNG", "CSA Portfolio",
+                                       ["Neil Sahai", "Eyaad Mir", "Andrew Pu", "Alex Titov", "Sean Rollins"],
+                                       "Play some games and get money to buy Calculator Functions" +
+                                       "Try out some of these engaging games and remember to save some money in the ATM!")
+    
+    
+    projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos, p1_grocerystoresim, p1_asciimenu]
     period = model.Period("Period 1", "Computer Science A - Java", projects)
 
     return period
