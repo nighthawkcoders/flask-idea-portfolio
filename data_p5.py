@@ -9,36 +9,32 @@ def setup():
                             ["John Mortensen", "Classroom of 40"],
                             "Visit a VANTA birds experience and see how it is made.")
 
-    p5_calculus = model.Project("Calculus", "http://http://76.88.9.120/",
+    p5_calculus = model.Project("p5_calculus", "https://github.com/AkhileshLG/flaskportfolio-1",
                                 "/static/img/AkaTeamCalculus.png", "calculus",
                                 ["Karam Alshaikh", "Akhilesh Genneri", "Akshit Prathipati", "Noya Hafiz",
                                  "Jien (Max) Wang"],
                                 "This website is used for everything calculus and to spread our information about it")
 
 
-    p5_chessGame = model.Project("Chess Game", url_for('p5_chessGame_bp.index'),
-                                "/static/img/p5chessGame.jpg", "Chess Game",
-                                ["Colin Szeto", "Devam Shrivastava", "Shekar Krishnamoorthy", "Kyle Myint",
-                                 "David Kim"],
-                                "Vist Chess Game to play through our chess game!")
+    p5_chessGame = model.Project("Chess Game", "https://www.youtube.com/channel/UC59JU4vWL8l0eQrixwds_3A",
+                                 "/static/img/p5chessGame.jpg", "Chess Game",
+                                 ["Colin Szeto", "Devam Shrivastava", "Shekar Krishnamoorthy", "Kyle Myint",
+                                  "David Kim"],
+                                 "Vist Chess Game to play through our chess game!")
 
     p5_gorillas = model.Project("Gorillas", "http://70.95.189.45:5000/",
                                 "/static/img/p5_gorillas.png", "Gorillas",
                                 ["Pedro de Medeiros", "Jagroop Vij", "Arul Salaniwal", "Manuel Villa-Hernandez", "Colin Tran"],
                                 "Here you find the repositories for all our projects; our journals, where we document coding progress; and Individual pages with personal information and our coding experiences. Explore!!")
 
-    p5_monkeymen = model.Project("San Diego Travel Website", url_for('p5_monkeymen_bp.index'), "/static/img/p5_monkeymen.jpg", "Monkey Men",
+    """p5_monkeymen = model.Project("San Diego Travel Website", url_for('p5_monkeymen_bp.index'), "/static/img/p5_monkeymen.jpg", "Monkey Men",
                                  ["Allen Xu", "Marc Humeau", "Jacob Nguyen", "Dadyar Khalili Samani", "Jason Francisco"],
-                                 "A website that reviews wonderful places located in San Diego")
+                                 "A website that reviews wonderful places located in San Diego")"""
 
-    p5_alethianews = model.Project("Alethia News Website", url_for('p5_alethianews_bp.index'), "/static/img/alethianewsjpeg.JPG", "Alethia News",
-                                   ["Anthony Wilson", "Ryan Shay"],
-                                   "A news website that provides facts with no bias to allow society to develop their "
-                                   "own based opinions.")
-  
-    p5_multimedia = model.Project("Multimedia", url_for("p5_multimedia_bp.index"), '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
-  
-    projects = [p5_calculus, p5_gorillas, p5_monkeymen ,p5_chessGame, EXAMPLE, p5_multimedia, p5_alethianews]
+   
+    p5_multimedia = model.Project("Multimedia", "http://rubinfamily.dyndns.org:5000/", '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
+   
+    projects = [p5_calculus, p5_gorillas ,p5_chessGame, EXAMPLE, p5_multimedia] # p5_monkeymen  p5_multimedia
 
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period

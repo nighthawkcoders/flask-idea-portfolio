@@ -1,5 +1,5 @@
 from flask import render_template
-from p1_ilikeyacodeg import p1_ilikeyacodeg_bp
+from p1_asciimenu import p1_asciimenu_bp
 from .model import runtime
 
 

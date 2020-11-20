@@ -98,7 +98,3 @@ def popularitems():
   popular = a.split("\n")
   return render_template("popularitem.html", projects=projects.setup(), popular=popular)
 
-
-if __name__ == "__main__":
-    #runs the application on the repl development server
-    app.run(debug=True)
