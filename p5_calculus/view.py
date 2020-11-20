@@ -17,7 +17,7 @@ def video():
 
 # connects to calculator page
 @p5_calculus_bp.route('/calculator')
-def calulator():
+def calculator():
     return render_template("p5_calculus/calculator.html")
 
 

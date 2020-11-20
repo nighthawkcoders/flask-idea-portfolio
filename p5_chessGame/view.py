@@ -14,10 +14,10 @@ app = Flask(__name__)
 
 #connects default URL of server to a python function
 @p5_chessGame_bp.route('/')
-def home():
+def index():
     #function uses Flask import (Jinga) to render HTML
     #model is passed as a parameter
-    return render_template("p5_chessGame/home.html")#home has to be under templates
+    return render_template("p5_chessGame/home.html",github="github", website ="link website")#home has to be under templates
 
 @p5_chessGame_bp.route("/project/chessJs/")#for the dragable chess file
 def chessJS():
@@ -30,11 +30,11 @@ def chessPush():
 """@p5_chessGame_bp.route("/project/index/")#for the dragable chess file
 def index():
     return render_template("p5_chessGame/index.html", display="")"""
-
+"""
 @p5_chessGame_bp.route("/project/index/")#for the dragable chess file
 def index():
     return render_template("p5_chessGame/chessEmbed.html")
-
+"""
 @p5_chessGame_bp.route("/project/embedChess/")
 def chess_embed():
     return render_template("p5_chessGame/chessEmbed.html")

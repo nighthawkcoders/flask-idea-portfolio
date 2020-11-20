@@ -2,23 +2,19 @@
 
 {%block content %}
 
+
 <head>
-	<title>Chess Dragable Tiles </title>
+    <title>Chess Dragable Tiles </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
     <link rel="stylesheet" href="/static/style.css">
 
     <style>
-    .center{
-      margin-left: auto;
-      margin-right: auto;
-    }
     .content {
-      max-width: 500px;
+      max-width: 800px;
       margin: auto;
     }
-
 
     .cell {
       float: left;
@@ -39,14 +35,30 @@
     }
 
     .in_progress{
-    position: fixed;
+    position: absolute;
     opacity: 0.6;
     text-align: center;
     color: #b32400;
     font-size: 400%;
-    transform: rotate(45deg);
-    top: 300px;
+    transform: rotate(20deg);
     pointer-events: none;
+    top:37%;
+    }
+
+    .center_on_page{
+        /* centering the whole div in the middle of the page*/
+        max-width: 500px;
+        margin: auto;
+      }
+
+  .moving_down{
+    position: fixed;
+    top: 50px;
+  }
+
+    body {
+    color: black;
+    height: 100%;
 
     }
 
@@ -54,244 +66,249 @@
 </head>
 
 <body>
+<div class="center_on_page">
+    <h1 >Welcome to Chess in Tiles</h1>
+    <p1 >click and drag each piece to play chess</p1>
+    <p>&nbsp;</p>
 
-	<h1 class = "center">Welcome to Chess in Tiles</h1>
-  <p1 class = "center">click and drag each piece to the correct square!</p1>
-  
+</div><!--this it the div contianing the isntructions game-->
+<div class="center_on_page">
+    <table class="chess-board">
+        <h1 class="in_progress">IN DEVELOPMENT</h1>
+        <tbody>
+        <tr>
+            <th class ="rank">8</th><!--space for ranks-->
+            <td class="light"><!--a8 black rook-->
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_a8(event)" id="a8">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-rook" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/50px-Chess_rdt45.svg.png" alt = "black rook">
+                </div>
+            </td>
+            <!-- b8black bishop -->
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_b8(event)" id="b8">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-knight" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/50px-Chess_ndt45.svg.png" alt = "black knight">
+                </div>
+            </td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c8(event)" id="c8">
+                <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-bishop" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/50px-Chess_bdt45.svg.png" alt = "black bishop">
+            </div>
+            </td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d8(event)" id="d8">
+                <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-queen" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/50px-Chess_qdt45.svg.png" alt = "black queen">
+            </div>
+            </td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e8(event)" id="e8">
+                <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-king" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/50px-Chess_kdt45.svg.png" alt = "black king">
+            </div>
+            </td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f8(event)" id="f8">
+                <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-bishop-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/50px-Chess_bdt45.svg.png" alt = "black bishop">
+            </div>
+            </td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g8(event)" id="g8">
+                <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-kinght-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/50px-Chess_ndt45.svg.png" alt = "black knight">
+            </div>
+            </td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h8(event)" id="h8">
+                <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-rook-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/50px-Chess_rdt45.svg.png" alt = "black rook">
+            </div>
+            </td>
+        </tr>
+        <tr><!--rank 7 -->
+            <th class ="rank">7</th>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_a7(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-1" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_b7(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_c7(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-3" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_d7(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-4" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_e7(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-5" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_f7(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-7" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_f7(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-8" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_h7(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-9" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th class ="rank">6</th>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_a6(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_b6(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c6(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d6(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e6(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f6(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g6(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h6(event)"></div></td>
+        </tr>
+        <tr>
+            <th class ="rank">5</th>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_a5(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_b5(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c5(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d5(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e5(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f5(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g5(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h5(event)"></div></td>
+        </tr>
+        <tr>
+            <th class ="rank">4</th>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_a4(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_b4(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c4(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d4(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e4(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f4(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g4(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h4(event)"></div></td>
+        </tr>
+        <tr>
+            <th class ="rank">3</th>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_a3(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_b3(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c3(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d3(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e3(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f3(event)"></div></td>
+            <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g3(event)"></div></td>
+            <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h3(event)"></div></td>
+        </tr>
+        <tr>
+            <th class ="rank">2</th>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_a2(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-1" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_b2(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_c2(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-3" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_d2(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-4" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_e2(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-5" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_f2(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-6" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_g2(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-7" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_h2(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-8" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th class ="rank">1</th>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_a1(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-rook" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/50px-Chess_rlt45.svg.png" alt = "white rook">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_b1(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-knight" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/50px-Chess_nlt45.svg.png" alt = "white knight">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_c1(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-bishop" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/50px-Chess_blt45.svg.png" alt = "white bishop">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_d1(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-queen" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/50px-Chess_qlt45.svg.png" alt = "white queen">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_e1(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-king" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/50px-Chess_klt45.svg.png" alt = "white king">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_f1(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-bishop-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/50px-Chess_blt45.svg.png" alt = "white bishop">
+                </div>
+            </td>
+            <td class="dark">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_g1(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-knight-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/50px-Chess_nlt45.svg.png" alt = "white knight">
+                </div>
+            </td>
+            <td class="light">
+                <div class="cell" ondrop="drop(event)" ondragover="allowDrop_h1(event)">
+                    <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-rook-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/50px-Chess_rlt45.svg.png" alt = "white rook">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <th class ="file">a</th>
+            <th class ="file">b</th>
+            <th class ="file">c</th>
+            <th class ="file">d</th>
+            <th class ="file">e</th>
+            <th class ="file">f</th>
+            <th class ="file">g</th>
+            <th class ="file">h</th>
+        </tr>
+        </tbody>
+    </table>
 
-  <table class="chess-board">
-    <tbody>
-    <h1 class="in_progress">IN DEVELOPMENT</h1>
-      <tr>
-          <th class ="rank">8</th><!--space for ranks-->
-          <td class="light"><!--a8 black rook-->
-            <div class="cell" ondrop="drop(event)" ondragover="allowDrop_a8(event)" id="a8">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-rook" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/50px-Chess_rdt45.svg.png" alt = "black rook">
-            </div>
-          </td>
-          <!-- b8black bishop -->
-          <td class="dark">
-            <div class="cell" ondrop="drop(event)" ondragover="allowDrop_b8(event)" id="b8">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-knight" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/50px-Chess_ndt45.svg.png" alt = "black knight">
-            </div>
-          </td>
-          <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c8(event)" id="c8">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-bishop" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/50px-Chess_bdt45.svg.png" alt = "black bishop">
-            </div>
-          </td>
-          <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d8(event)" id="d8">
-            <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-queen" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/50px-Chess_qdt45.svg.png" alt = "black queen">
-            </div>
-          </td>
-          <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e8(event)" id="e8">
-            <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-king" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/50px-Chess_kdt45.svg.png" alt = "black king">
-            </div>
-          </td>
-          <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f8(event)" id="f8">
-            <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-bishop-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/50px-Chess_bdt45.svg.png" alt = "black bishop">
-            </div>
-          </td>
-          <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g8(event)" id="g8">
-            <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-kinght-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/50px-Chess_ndt45.svg.png" alt = "black knight">
-            </div>
-          </td>
-          <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h8(event)" id="h8">
-            <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-rook-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/50px-Chess_rdt45.svg.png" alt = "black rook">
-            </div>
-          </td>
-      </tr>
-      <tr><!--rank 7 -->
-        <th class ="rank">7</th>
-        <td class="dark">
-            <div class="cell" ondrop="drop(event)" ondragover="allowDrop_a7(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-1" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
-            </div>
-          </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_b7(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_c7(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-3" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
-            </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_d7(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-4" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_e7(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-5" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
-            </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_f7(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-7" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_f7(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-8" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
-            </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_h7(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="black-pawn-9" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/50px-Chess_pdt45.svg.png" alt = "black pawn">
-            </div>
-        </td>
-      </tr>
-      <tr>
-        <th class ="rank">6</th>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_a6(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_b6(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c6(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d6(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e6(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f6(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g6(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h6(event)"></div></td>
-      </tr>
-      <tr>
-        <th class ="rank">5</th>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_a5(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_b5(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c5(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d5(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e5(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f5(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g5(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h5(event)"></div></td>
-      </tr>
-      <tr>
-        <th class ="rank">4</th>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_a4(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_b4(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c4(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d4(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e4(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f4(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g4(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h4(event)"></div></td>
-      </tr>
-      <tr>
-        <th class ="rank">3</th>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_a3(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_b3(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_c3(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_d3(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_e3(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_f3(event)"></div></td>
-        <td class="dark"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_g3(event)"></div></td>
-        <td class="light"><div class="cell" ondrop="drop(event)" ondragover="allowDrop_h3(event)"></div></td>
-      </tr>
-      <tr>
-        <th class ="rank">2</th>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_a2(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-1" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_b2(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
-            </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_c2(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-3" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_d2(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-4" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
-            </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_e2(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-5" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_f2(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-6" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
-            </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_g2(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-7" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_h2(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-pawn-8" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/50px-Chess_plt45.svg.png" alt = "white pawn">
-            </div>
-        </td>
-      </tr>
-      <tr>
-        <th class ="rank">1</th>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_a1(event)">
-            <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-rook" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/50px-Chess_rlt45.svg.png" alt = "white rook">
-          </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_b1(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-knight" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/50px-Chess_nlt45.svg.png" alt = "white knight">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_c1(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-bishop" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/50px-Chess_blt45.svg.png" alt = "white bishop">
-            </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_d1(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-queen" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/50px-Chess_qlt45.svg.png" alt = "white queen">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_e1(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-king" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/50px-Chess_klt45.svg.png" alt = "white king">
-            </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_f1(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-bishop-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/50px-Chess_blt45.svg.png" alt = "white bishop">
-            </div>
-        </td>
-        <td class="dark">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_g1(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-knight-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/50px-Chess_nlt45.svg.png" alt = "white knight">
-            </div>
-        </td>
-        <td class="light">
-          <div class="cell" ondrop="drop(event)" ondragover="allowDrop_h1(event)">
-              <img ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="white-rook-2" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/50px-Chess_rlt45.svg.png" alt = "white rook">
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <th></th>
-        <th class ="file">a</th>
-        <th class ="file">b</th>
-        <th class ="file">c</th>
-        <th class ="file">d</th>
-        <th class ="file">e</th>
-        <th class ="file">f</th>
-        <th class ="file">g</th>
-        <th class ="file">h</th>
-    </tr>
-</tbody>
+    <p id="demo"></p>
+    <p id="piece-id"></p>
+    <p id="cell-id"></p>
+    <p id="move"></p>
+</div><!--this it the div contianing the chess game-->
 
 
-<p id="demo"></p>
-<p id="piece-id"></p>
-<p id="cell-id"></p>
-<p id="move"></p>
-<input class="button" type ="submit" formaction="/add" value="Submit Move" />
+<!--<input class="button" type ="submit" formaction="/add" value="Submit Move" />-->
 
 <script>
 function printCell(event){
