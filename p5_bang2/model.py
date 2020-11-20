@@ -1,17 +1,17 @@
 """Model in MVC has responsibilty of managing data or database"""
 
-def p1robotmania():
-    greeting = "P1 Robot Mania"
-    name = "Display CalculatorGUI in Replit"
-    doa = "Now!"
-    job = "JFrame in Replit"
-    embed = "https://repl.it/@NakulNandhakuma/CalculatorSwing?lite=true&outputonly=1"
+def p5_bang2():
+    greeting = "P5 Bang2.0"
+    name = "Repl.it Snake Game"
+    doa = "November 19"
+    job = "Play"
+    embed = "https://repl.it/@ValerieMiliteev/SnakeProj#README.md"
     info = {"greeting": greeting, "name": name, "doa": doa, "job": job, "embed": embed}
     return info
 
 
 def alldata():
-    return [p1robotmania()]
+    return [p5_bang2()]
 
 
 # Data "setup" for Projects
