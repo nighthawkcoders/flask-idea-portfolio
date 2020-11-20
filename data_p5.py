@@ -17,7 +17,7 @@ def setup():
                                 "This website is used for everything calculus and to spread our information about it")
 
 
-    p5_chessGame = model.Project("Chess Game", "https://www.youtube.com/channel/UC59JU4vWL8l0eQrixwds_3A",
+    p5_chessGame = model.Project("Chess Game", url_for('p5_chessGame_bp.home'),
                                  "/static/img/p5chessGame.jpg", "Chess Game",
                                  ["Colin Szeto", "Devam Shrivastava", "Shekar Krishnamoorthy", "Kyle Myint",
                                   "David Kim"],
