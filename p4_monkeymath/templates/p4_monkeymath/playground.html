@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "base.html" %}
+{% extends "p4_monkeymath/base.html" %}
 {% block head %}
     {{ super() }}
     <style type="text/css">
@@ -9,12 +9,12 @@
 {% block content %}
 <body>
     {% for data in datalist: %}
-        {% set embed = data["embed"] %}
-        {% set greeting = data["greeting"] %}
-        {% set name = data["name"] %}
-        {% set dob = data["dob"] %}
-        {% set job = data["job"] %}
-        {% set story = data["story"] %}
+        {% set embed = model["embed"] %}
+        {% set greeting = model["greeting"] %}
+        {% set name = model["name"] %}
+        {% set dob = model["dob"] %}
+        {% set job = model["job"] %}
+        {% set story = model["story"] %}
         <ol>
         <H1>"{{greeting}} my name is <span style='color:orangered;'>{{name}}</span>"</H1>
         <li>"{{greeting}} my birthday is <span style='color:orangered;'>{{dob}}</span>"</li>
