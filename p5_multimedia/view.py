@@ -1,7 +1,7 @@
 import projects
 from flask import Flask, render_template, url_for, request, redirect, flash, render_template_string
 #from flask_sqlalchemy import SQLAlchemy
-
+from p5_multimedia import p5_multimedia_bp
 #create a Flask instance
 app = Flask(__name__)
 
