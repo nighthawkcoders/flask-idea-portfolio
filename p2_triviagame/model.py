@@ -1,6 +1,6 @@
 def nivu():
     name = "Nivu Rethnakar"
-    image = "Nivu.PNG"
+    image = "nivu.PNG"
     birthday = "July 29"
     mbti = "INTP"
     funfact = "I love amber scented candles!"
@@ -10,7 +10,7 @@ def nivu():
 
 def ida():
     name = "Ida Mobini"
-    image = "Ida.PNG"
+    image = "ida.PNG"
     birthday = "April 7"
     mbti = "ISTP"
     funfact = "I write poetry and short stories in my free time."
@@ -20,7 +20,7 @@ def ida():
 
 def crystal():
     name = "Crystal Widjaja"
-    image = "Crystal.PNG"
+    image = "crystal.PNG"
     birthday = "January 7"
     mbti = "ENFP"
     funfact = "I can play four instruments - piano, guitar, ukulele, and violin."
@@ -30,7 +30,7 @@ def crystal():
 
 def eva():
     name = "Eva Gravin"
-    image = "Eva.PNG"
+    image = "eva.PNG"
     birthday = "December 14"
     mbti = "ESFJ"
     funfact = "I am a former cross country and track star."
@@ -40,7 +40,7 @@ def eva():
 
 def dane():
     name = "Dane Vestal"
-    image = "Dane.jpg"
+    image = "dane.jpg"
     birthday = "July 15"
     mbti = "ESTP"
     funfact = "I'm a boy scout!"
