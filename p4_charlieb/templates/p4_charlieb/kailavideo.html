@@ -3,8 +3,8 @@
 {% block content %}
     <h3>Kaila's Video and Artifacts</h3>
         <div class="media">
-            <a href="/trivia">
-                <img src="{{ url_for('static', filename='images/trivia.png')}}" width="64" height="64" class="mr-3">
+            <a href={{url_for('.trivia')}}>
+                <img src="{{ url_for('p4_charlieb_bp.static', filename='images/trivia.png')}}" width="64" height="64" class="mr-3">
             </a>
             <div class="media-body">
                 <h5 class="mt-0">Trivia Game</h5>
