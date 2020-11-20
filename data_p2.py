@@ -16,7 +16,7 @@ def setup():
                                  "We use Ciphers and encrypt/decrypt messages.")
 
     p2_triviagame = model.Project("Website Portfolio", url_for("p2_triviagame_bp.index"), "/static/img/p2_arcade.png",
-                                  "Crystal's Team",
+                                  "Trivia Game",
                                   ["Crystal Widjaja", "Nivedita Rethnakar", "Ida Mobini", "Eva Gravin", "Dane Vestal"],
                                   "This is our website with minigames, our portfolio, and much more!")
 
