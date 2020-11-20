@@ -10,7 +10,7 @@ def setup():
                             "Visit a VANTA birds experience and learn how it is made.")
                             """
 
-    p5_calculus = model.Project("Calculus", "http://http://76.88.9.120/",
+    p5_calculus = model.Project("Calculus", "http://76.88.9.120/",
                                 "/static/img/AkaTeamCalculus.png", "calculus",
                                 ["Karam Alshaikh", "Akhilesh Genneri", "Akshit Prathipati", "Noya Hafiz",
                                  "Jien (Max) Wang"],
