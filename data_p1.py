@@ -20,15 +20,15 @@ def setup():
     p1_ilikeyacodeg = model.Project("I Like Ya Code G", url_for('p1_ilikeyacodeg_bp.index'), "/static/img/p1_I-like-ya-code-g.png", "I Like Ya Code G",
                                     ["Dhruv Kanetkar", "Tanay Shah", "Gautam Gupta", "Dhruv Sengupta"], "This is our Calculator Suite that allows the user to calculate a variety of things. "
                                                                                                         "It can do basic scientific calculation, convert units and binary values, sovle derivatives, and solve physics kinematic problems")
-    p1_mortos = model.Project("MortOS", url_for('p1_mortos_bp.index'), "/static/img/p1-mortos-examplepic.png", "MortOS",
+    p1_mortos = model.Project("MortOS", url_for('p1_mortos_bp.index'), "/static/img/p1-mortos-examplepic.PNG", "MortOS",
                              ["Nathaniel Cherian", "Benjamin Herrick", "Jett Kim", "Brendan Trinh", "Anthony Vo"],
                              "Our project was an exploration of different coding topics and concepts that's displayed through " +
                              "a variety of minigames. Try some of them out!")
-
-    p1_asciimenu = model.Project("ASCII Menu", url_for('p1_asciimenu_bp.index'), "/static/img/natm.png", "ASCII Menu",
-                                  ["Neil Sahai", "Eyaad Mir", "Andrew Pu", "Alex Titov", "Sean Rollins"],
-                                  "This project has many different games in a single program which can be played to earn money to buy functions in the store for the calculator or to deposit and withdraw in an ATM!")
-
-    projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos, p1_asciimenu]
+    p1_grocerystoresim = model.Project("Boomer Esports", url_for('p1_grocerystoresim_bp.index'), "/static/img/p1_grocery.png", "Grocery Store Sim",
+                             ["Kevin Hu", "Sean Tran", "Aditya Surapaneni", "Siddhant Ranka", "Jacob Rozenkrants"],
+                             "Tired of modern flashy video games and want a blast to the past? " +
+                             "Check out some of these classic games that are a nice break from the fast paced and stressful modern games.")
+    projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos, p1_grocerystoresim]
     period = model.Period("Period 1", "Computer Science A - Java", projects)
+
     return period
