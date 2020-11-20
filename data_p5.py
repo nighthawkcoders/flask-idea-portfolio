@@ -36,7 +36,7 @@ def setup():
                                  ["James Hunt", "Mackenzie Aboy", "Lucas Kaimer", "Sam Koenig", "Kira Liao"],
                                  "This website is all about places in the world. Visit to learn a few cool facts and play a guesser game!")
 
-    p5_multimedia = model.Project("Multimedia", "url_for('p5_multimedia_bp.index')", '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
+    p5_multimedia = model.Project("Multimedia", url_for('p5_multimedia_bp.index'), '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
    
 
 
