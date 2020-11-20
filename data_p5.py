@@ -10,11 +10,11 @@ def setup():
                             "Visit a VANTA birds experience and learn how it is made.")
                             """
 
-    p5_calculus = model.Project("Calculus", url_for('p5_calculus_bp.home'),
+    p5_calculus = model.Project("p5_calculus", "https://github.com/AkhileshLG/flaskportfolio-1",
                                 "/static/img/AkaTeamCalculus.png", "calculus",
                                 ["Karam Alshaikh", "Akhilesh Genneri", "Akshit Prathipati", "Noya Hafiz",
                                  "Jien (Max) Wang"],
-                                "This website is used for everything calculus and to spread our information about it!")
+                                "This website is used for everything calculus and to spread our information about it")
 
 
     p5_chessGame = model.Project("Chess Game", url_for('p5_chessGame_bp.home'),
@@ -36,7 +36,7 @@ def setup():
                                  ["James Hunt", "Mackenzie Aboy", "Lucas Kaimer", "Sam Koenig", "Kira Liao"],
                                  "This website is all about places in the world. Visit to learn a few cool facts and play a guesser game!")
 
-    p5_multimedia = model.Project("Multimedia", "http://rubinfamily.dyndns.org:5000/", '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
+    p5_multimedia = model.Project("Multimedia", "url_for('p5_multimedia_bp.index')", '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
    
 
 
