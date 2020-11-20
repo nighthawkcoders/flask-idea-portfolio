@@ -32,6 +32,9 @@ app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
 from p4_coderjoes import p4_coderjoes_bp
 app.register_blueprint(p4_coderjoes_bp, url_prefix='/p4_coderjoes')
 
+from p4_monkeymath import p4_monkeymath_bp
+app.register_blueprint(p4_monkeymath_bp, url_prefix='/p4_monkeymath')
+
 # Period 5
 from p5_supercool import p5_supercool_bp
 app.register_blueprint(p5_supercool_bp, url_prefix='/p5_supercool')
