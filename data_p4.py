@@ -37,7 +37,7 @@ def setup():
                                  "CoderJoes is a virtual store where you can find recipes, ideas, and descriptions, "
                                  "as well as a group portfolio of our work over the trimester.")
 
-    p4_monkeymath = model.Project("Games Website", url_for('p4_monkeymath_bp.monkey'), "/static/img/History of Games ("
+    p4_monkeymath = model.Project("Games Website", url_for('p4_monkeymath_bp.home'), "/static/img/History of Games ("
                                                                                       "1).png", "P4 MonkeyMath",
                                   ["Nathaniel Lee", "Ryan Luo", "Aiden Tung", "Luke Manning", "Jaideep Bollu"],
                                   "This project showcases the history of certain games and their impact on society. "
