@@ -6,6 +6,20 @@
     <meta charset="utf-8">
     <title>Title</title>
     <link href="style.css" rel="stylesheet" type="style/css" />
+
+    <style>
+
+      body {
+    margin-bottom: 60px; /* footer height */
+    }
+
+  .footer {
+      position: absolute;
+      bottom: 0;
+      height: 60px;
+  }
+
+    </style>
   </head>
 
   <body>
@@ -16,14 +30,15 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <a class="navbar-brand" href="/"> Back to DNHS Computer Science Principles</a>
 
         <div class="navbar-nav">
-          <a class="nav-link active" href={{url_for('.home')}}>Home Page</a>
-          <a class="nav-link code" style="color:red; margin:auto; text-align: center;" href="{{url_for('.chess_embed')}}">Click-Me: Play Chess</a>
+          <a class="nav-link active" href={{url_for('.index')}}>Home Page</a>
+          <!--<a class="nav-link code" style="color:red; margin:auto; text-align: center;" href="{{url_for('.chess_embed')}}">Click-Me: Play Chess</a>-->
           <!--<a class="nav-link active" href="https://repl.it/@colinszeto/Group-Portfolio#templates/home.html">Coding Area </a>-->
 
-          <a class="nav-link" href={{url_for('.chessJS')}}>Chess with JS</a>
-          <a class="nav-link" href={{url_for('.journals')}}>Journals</a>
+          <a class="nav-link" href={{url_for('.chessJS')}}>Rev 2</a>
+          <!--<a class="nav-link" href={{url_for('.journals')}}>Journals</a>-->
           <!--<a class="nav-link" href={{url_for('.chessPush')}}>Chess Final Push</a>-->
           <!-- <a class="nav-link" href={{url_for('.addition')}}>Addition</a>-->
 
@@ -35,5 +50,8 @@
       </div>
     </nav>
     {% block content %}{% endblock %}
+
+
   </body>
-</html>
+
+
