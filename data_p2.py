@@ -40,8 +40,11 @@ def setup():
                                 "Mustafa Sharaf"],
                                "This is our out of this world website which will tell you about a multitude of things "
                                "such as our group and Del Norte!")
+    p2_newbiecoders = model.Project("Travel Website", "Http://75.80.119.252", "https://lh3.googleusercontent.com/yGFa3i6X522UOjW3cBZKBUnwOqwzfc9-TxZOL0K0inWDCD65TdBvfKAXRrfy9XUOUhWAsA=s170", "Newbiecoders",
+                             ["Diego Krenz", "Ethan Sun", "Wesley Chen", "Andrea Abed", "Naweid Hassanzadeh"],
+                             "Learn all about cities in Europe and plan your next trip!")
 
-    projects = [cyphercrypto, p2_triviagame,  p2_rappers, p2_anime, p2_dinos, p2_einsteins, p2_rappers]
+    projects = [cyphercrypto, p2_triviagame,  p2_rappers, p2_anime, p2_dinos, p2_einsteins, p2_rappers, p2_newbiecoders]
     # projects = [cyphercrypto, p2_triviagame, p2_anime]
     period = model.Period("Period 2", "AP Principles of Computer Science - Python", projects)
     return period
