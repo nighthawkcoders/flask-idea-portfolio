@@ -32,10 +32,15 @@ def setup():
                                  ["Allen Xu", "Marc Humeau", "Jacob Nguyen", "Dadyar Khalili Samani", "Jason Francisco"],
                                  "A website that reviews wonderful places located in San Diego")
 
-   
+    p5_supercool = model.Project("Geo-guessr", "http://76.176.107.1/", "/static/img/p5_supercool.jpg", "Super Cool",
+                                 ["James Hunt", "Mackenzie Aboy", "Lucas Kaimer", "Sam Koenig", "Kira Liao"],
+                                 "This website is all about places in the world. Visit to learn a few cool facts and play a guesser game!")
+
     p5_multimedia = model.Project("Multimedia", "http://rubinfamily.dyndns.org:5000/", '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
    
-    projects = [p5_calculus, p5_gorillas ,p5_chessGame, p5_multimedia, p5_monkeymen] # p5_monkeymen  p5_multimedia
+
+
+    projects = [p5_calculus, p5_gorillas ,p5_chessGame, p5_multimedia, p5_monkeymen, p5_supercool] # p5_monkeymen  p5_multimedia
 
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period
