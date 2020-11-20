@@ -50,3 +50,6 @@ app.register_blueprint(p5_supercool_bp, url_prefix='/p5_supercool')
 
 from p5_alethianews import p5_alethianews_bp
 app.register_blueprint(p5_alethianews_bp, url_prefix='/p5_alethianews')
+
+from p5_monkeymen import p5_monkeymen_bp
+app.register_blueprint(p5_monkeymen_bp, url_prefix='/p5_monkeymens')
