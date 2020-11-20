@@ -23,7 +23,7 @@ def setup():
                                "as a music section including three different genres of music with multiple examples "
                                "and descriptions of each.")
 
-    p4_fruitycoders = model.Project("Photography Website", "google.com", "/static/img/p4_fruitycoders.png",
+    p4_fruitycoders = model.Project("Photography Website", "google.com", "/static/img/cat2.png",
                                     "P4 fruitycoders",
                                     ["Sophie Lee", "Linda Long", "Maggie Killada", "Adam Holbel", "Wenshi Bao"],
                                     "Our website (Fruity Photos) features the history of photography, as well as the "

@@ -18,17 +18,17 @@ def setup():
 
 
     p5_chessGame = model.Project("Chess Game", "https://www.youtube.com/channel/UC59JU4vWL8l0eQrixwds_3A",
-                                 "/static/img/p5chessGame.jpg", "Chess Game",
+                                 "/static/img/cat1.jpg", "Chess Game",
                                  ["Colin Szeto", "Devam Shrivastava", "Shekar Krishnamoorthy", "Kyle Myint",
                                   "David Kim"],
                                  "Vist Chess Game to play through our chess game!")
 
     p5_gorillas = model.Project("Gorillas", "http://70.95.189.45:5000/",
-                                "/static/img/p5_gorillas.png", "Gorillas",
+                                "/static/img/cat3.jpg", "Gorillas",
                                 ["Pedro de Medeiros", "Jagroop Vij", "Arul Salaniwal", "Manuel Villa-Hernandez", "Colin Tran"],
                                 "Here you find the repositories for all our projects; our journals, where we document coding progress; and Individual pages with personal information and our coding experiences. Explore!!")
 
-    p5_monkeymen = model.Project("San Diego Travel Website", url_for('p5_monkeymen_bp.index'), "/static/img/p5_monkeymen.jpg", "Monkey Men",
+    p5_monkeymen = model.Project("San Diego Travel Website", url_for('p5_monkeymen_bp.index'), "/static/img/cat2.png", "Monkey Men",
                                  ["Allen Xu", "Marc Humeau", "Jacob Nguyen", "Dadyar Khalili Samani", "Jason Francisco"],
                                  "A website that reviews wonderful places located in San Diego")
 
