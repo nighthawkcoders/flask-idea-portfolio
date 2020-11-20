@@ -24,13 +24,14 @@ def setup():
                                "as a music section including three different genres of music with multiple examples "
                                "and descriptions of each.")
 
-    p4_fruitycoders = model.Project("Photography Website", url_for('p4_fruitycoders_bp.index'), "/static/img/p4_fruitycoders.png",
+    p4_fruitycoders = model.Project("Photography Website", "url_for('p4_fruitycoders_bp.index')", "/static/img/p4_fruitycoders.png",
                                     "P4 fruitycoders",
                                     ["Sophie Lee", "Linda Long", "Maggie Killada", "Adam Holbel", "Wenshi Bao"],
                                     "Our website (Fruity Photos) features the history of photography, as well as the "
                                     "works "
                                     "and biographies of several famous photographers, such as Ansel Adams and Annie "
                                     "Leibovitz.")
+
 
     p4_coderjoes = model.Project("CoderJoes Store", url_for('p4_coderjoes_bp.index'), "/static/img/p4_coderjoes.png",
                                  "P4 Guessers",
@@ -51,6 +52,6 @@ def setup():
 
 
 
-    projects = [p4_slackbots, p4_hangman, p4_fruitycoders, p4_coderjoes, p4_monkeymath, p4_charlieb]
+    projects = [p4_slackbots, p4_hangman, p4_coderjoes, p4_monkeymath, p4_charlieb]
     period = model.Period("Period 4", "AP Principles of Computer Science - Python", projects)
     return period

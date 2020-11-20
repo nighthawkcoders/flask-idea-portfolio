@@ -1,6 +1,6 @@
 from p4_fruitycoders import p4_fruitycoders
 from flask import Flask, render_template
-import data
+import .model
 
 app = Flask(__name__)
 
