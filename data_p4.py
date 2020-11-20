@@ -52,6 +52,6 @@ def setup():
 
 
 
-    projects = [p4_slackbots, p4_hangman, p4_coderjoes, p4_monkeymath, p4_charlieb]
+    projects = [p4_hangman, p4_charlieb, p4_slackbots, p4_coderjoes, p4_monkeymath]
     period = model.Period("Period 4", "AP Principles of Computer Science - Python", projects)
     return period
