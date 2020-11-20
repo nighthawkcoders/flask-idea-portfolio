@@ -44,8 +44,12 @@ def setup():
                                   "It also has a tab for our Hello Series project and a creators tab that showcases "
                                   "all of our journals.")
 
+    p4_charlieb = model.Project("Gaming Website", url_for('p4_charlieb_bp.home'), "/static/img/p4_charlieb.png", "P4 CharlieB",
+                                ["Kaila Manangan", "Eshaan Parlikar", "Brent Arcinue", "Calvin Ni"],
+                                "Our website, along with portfolio information, includes minigames for your entertainment!")
 
 
-    projects = [p4_slackbots, p4_hangman, p4_fruitycoders, p4_coderjoes, p4_monkeymath]
+
+    projects = [p4_slackbots, p4_hangman, p4_fruitycoders, p4_coderjoes, p4_monkeymath, p4_charlieb]
     period = model.Period("Period 4", "AP Principles of Computer Science - Python", projects)
     return period

@@ -1,0 +1,78 @@
+{% extends "p4_charlieb/base.html" %}
+{% block title %}P4 Charlie B Gaming Website{% endblock %}
+{% block content %}
+<image src="{{ url_for('p4_charlieb_bp.static', filename='images/borderthree.png')}}"></image>
+  <h1 class="text-center">Welcome to P4 Charlie B's Website!</h1>
+ <div class="media">
+  <a href={{url_for('.trivia')}}>
+   <img src="{{ url_for('p4_charlieb_bp.static', filename='images/trivia.png')}}" width="64" height="64" class="mr-3">
+  </a>
+  <div class="media-body">
+   <h5 class="mt-0">Trivia Game</h5>
+   Play a computer science based trivia game!
+ </div>
+  <div class="media">
+   <a href={{url_for('.randomnum')}}>
+    <img src="{{ url_for('p4_charlieb_bp.static', filename='images/randomnumbers.png')}}" width="64" height="64" class="mr-3"></a>
+   </a>
+   <div class="media-body">
+    <h5 class="mt-0">Random Game</h5>
+    Play a guess the number game with a computer!
+   </div>
+   <div class="media">
+    <a href={{url_for('.battleship')}}>
+     <img src="{{ url_for('p4_charlieb_bp.static', filename='images/battleship.png')}}" width="64" height="64" class="mr-3">
+    </a>
+    <div class="media-body">
+     <h5 class="mt-0">Battleship</h5>
+     Play battleship with a computer!
+    </div>
+    <div class="media">
+     <a href={{url_for('.rocks')}}>
+      <img src="{{ url_for('p4_charlieb_bp.static', filename='images/rock.png')}}" width="64" height="64" class="mr-3">
+     </a>
+    </div>
+     <div class="media-body">
+      <h5 class="mt-0">Rock Paper Scissors</h5>
+      Play rock paper scissors with a computer!
+     </div>
+   </div>
+  </div>
+ </div>
+      <div class="media">
+       <a href={{url_for('.pong')}}>
+        <img src="{{ url_for('p4_charlieb_bp.static', filename='images/pong.png')}}" width="64" height="64" class="mr-3">
+       </a>
+       <div class="media-body">
+        <h5 class="mt-0">Pong!</h5>
+        Play a classic game from the 70's!
+       </div>
+       <div class="media">
+       <a href={{url_for('.pacman')}}>
+        <img src="{{ url_for('p4_charlieb_bp.static', filename='images/pacman.png')}}" width="64" height="64" class="mr-3">
+       </a>
+      <div class="media-body">
+       <h5 class="mt-0">Pac Man</h5>
+       Play a classic game of pacman: eat all the circles and avoid ghosts!
+      </div>
+       <div class="media">
+        <a href={{url_for('.tics')}}>
+         <img src="{{ url_for('p4_charlieb_bp.static', filename='images/tics.png')}}" width="64" height="64" class="mr-3">
+        </a>
+        <div class="media-body">
+         <h5 class="mt-0">Tic Tac Toe</h5>
+         X's and O's, get three in a row!
+        </div>
+        <div class="media">
+         <a href={{url_for('.snake')}}>
+          <img src="{{ url_for('p4_charlieb_bp.static', filename='images/snake.png')}}" width="64" height="64" class="mr-3">
+         </a>
+         <div class="media-body">
+          <h5 class="mt-0">Snake</h5>
+          Play a game of snake!
+         </div>
+        </div>
+       </div>
+      </div>
+      </div>
+{% endblock %}
