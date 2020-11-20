@@ -31,10 +31,10 @@ def setup():
                                  ["Allen Xu", "Marc Humeau", "Jacob Nguyen", "Dadyar Khalili Samani", "Jason Francisco"],
                                  "A website that reviews wonderful places located in San Diego")"""
 
-    """
-    p5_multimedia = model.Project("Multimedia", url_for("p5_multimedia_bp.index"), '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
-    """
-    projects = [p5_calculus, p5_gorillas ,p5_chessGame, EXAMPLE] # p5_monkeymen  p5_multimedia
+   
+    p5_multimedia = model.Project("Multimedia", "http://rubinfamily.dyndns.org:5000/", '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
+   
+    projects = [p5_calculus, p5_gorillas ,p5_chessGame, EXAMPLE, p5_multimedia] # p5_monkeymen  p5_multimedia
 
     period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
     return period
