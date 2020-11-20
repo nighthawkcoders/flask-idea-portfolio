@@ -25,6 +25,9 @@ app.register_blueprint(p1_hexpass_bp, url_prefix='/p1_hexpass')
 from p2_cyphercrypto import cyphercrypto_bp
 app.register_blueprint(cyphercrypto_bp, url_prefix='/p2_cyphercrypto')
 
+from p2_dinos import p2_dinos_bp
+app.register_blueprint(p2_dinos_bp, url_prefix='/p2_dinos')
+
 # Period 4
 from p4_slackbots import p4_slackbots_bp
 app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
