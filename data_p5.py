@@ -40,7 +40,7 @@ def setup():
    
 
 
-    projects = [p5_calculus, p5_gorillas ,p5_chessGame, p5_multimedia, p5_monkeymen, p5_supercool] # p5_monkeymen  p5_multimedia
+    projects = [p5_monkeymen, p5_gorillas ,p5_multimedia, p5_chessGame, p5_calculus, p5_supercool] # p5_monkeymen  p5_multimedia
 
-    period = model.Period("Period 5", "Some really smart people study apcsp here", projects)
+    period = model.Period("Period 5", "Some really smart people study APCSP here", projects)
     return period
