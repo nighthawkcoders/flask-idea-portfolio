@@ -32,7 +32,7 @@ def setup():
                               ["Aidan Rosen", "Andrew Hale", "Andrew Joseph", "Alex Hu", "Atharva Kudrimoti"], 
                                "This project is a combination of a password manager, vector calculator and graphing calculator")
     
-    p1_asciiimenu = model.Project("CSA Portfolio", url_for('p1_asciimenu_bp.index'), "/static/img/natm.PNG", "CSA Portfolio",
+    p1_asciimenu = model.Project("CSA Portfolio", url_for('p1_asciimenu_bp.index'), "/static/img/natm.PNG", "CSA Portfolio",
                                        ["Neil Sahai", "Eyaad Mir", "Andrew Pu", "Alex Titov", "Sean Rollins"],
                                        "Play some games and get money to buy Calculator Functions" +
                                        "Try out some of these engaging games and remember to save some money in the ATM!")
