@@ -22,7 +22,7 @@ from p1_hexpass import p1_hexpass_bp
 app.register_blueprint(p1_hexpass_bp, url_prefix='/p1_hexpass')
 
 from p1_asciimenu import p1_asciimenu_bp
-app.register_blueprint(p1_asciimenu_bp, url_prefix='/p1_hexpass')
+app.register_blueprint(p1_asciimenu_bp, url_prefix='/p1_asciimenu')
 
 # Period 2
 from p2_cyphercrypto import cyphercrypto_bp
@@ -40,6 +40,9 @@ app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
 
 from p4_hangman import p4_hangman_bp
 app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
+
+from p4_fruitycoders import p4_fruitycoders_bp
+app.register_blueprint(p4_fruitycoders_bp, url_prefix='/p4_fruitycoders')
 
 from p4_coderjoes import p4_coderjoes_bp
 app.register_blueprint(p4_coderjoes_bp, url_prefix='/p4_coderjoes')
