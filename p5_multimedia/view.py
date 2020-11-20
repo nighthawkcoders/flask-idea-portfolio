@@ -25,9 +25,6 @@ def home():
   a = open("products.txt", "r").read()
   popular = a.split("\n")
   return render_template('home.html', projects=setup(), popular=popular)
-
-  return render_template("home.html", projects=projects.setup(), popular=popular)
-
     
 @p5_multimedia_bp.route('/youtube/', methods=['GET', 'POST'])
 def youtube():
