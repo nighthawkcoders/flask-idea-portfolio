@@ -7,7 +7,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FCF3DE;">
-      <a class="navbar-brand" href="/home">Directory</a>
+      <a class="navbar-brand" href={{url_for('.home')}}>Directory</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -15,7 +15,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/home">Home Screen<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{url_for('.home')}}>Home Screen<span class="sr-only">(current)</span></a>
           </li>
           </li>
           <li class="nav-item dropdown">
@@ -23,9 +23,9 @@
               October 23th Requirements
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/github">Github</a>
-              <a class="dropdown-item" href="/themes">Project Themes</a>
-              <a class="dropdown-item" href="/playgrounds">Playgrounds (include Jinja and Bootstrap)</a>
+              <a class="dropdown-item" href={{url_for('.github')}}>Github</a>
+              <a class="dropdown-item" href={{url_for('.themes')}}>Project Themes</a>
+              <a class="dropdown-item" href={{url_for('.playgrounds')}}>Playgrounds (include Jinja and Bootstrap)</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -33,10 +33,10 @@
               October 30th Requirements
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/brentgoals">Brent's Goals</a>
-              <a class="dropdown-item" href="/kailasgoals">Kaila's Goals</a>
-              <a class="dropdown-item" href="/calvingoals">Calvin's Goals</a>
-              <a class="dropdown-item" href="/eshaangoals">Eshaan's Goals</a>
+              <a class="dropdown-item" href={{url_for('.brentgoals')}}>Brent's Goals</a>
+              <a class="dropdown-item" href={{url_for('.kailasgoals')}}>Kaila's Goals</a>
+              <a class="dropdown-item" href={{url_for('.calvingoals')}}>Calvin's Goals</a>
+              <a class="dropdown-item" href={{url_for('.eshaangoals')}}>Eshaan's Goals</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -44,20 +44,20 @@
               November 6th Requirements
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/brentvideo">Brent's Video and Artifacts</a>
-              <a class="dropdown-item" href="/kailavideo">Kaila's Video and Artifacts</a>
-              <a class="dropdown-item" href="/calvinvideo">Calvin's Video and Artifacts</a>
-              <a class="dropdown-item" href="/eshaanvideo">Eshaan's Video and Artifacts</a>
+              <a class="dropdown-item" href={{url_for('.brentvideo')}}>Brent's Video and Artifacts</a>
+              <a class="dropdown-item" href={{url_for('.kailavideo')}}>Kaila's Video and Artifacts</a>
+              <a class="dropdown-item" href={{url_for('.calvinvideo')}}>Calvin's Video and Artifacts</a>
+              <a class="dropdown-item" href={{url_for('.eshaanvideo')}}>Eshaan's Video and Artifacts</a>
             </div>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Portfolio
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/helloseries">Hello Series Project</a>
-              <a class="dropdown-item" href="/flask">Flask Project</a>
-              <a class="dropdown-item" href="/selfgrading">Self Grading</a>
-              <a class="dropdown-item" href="/journals">Journals</a>
+              <a class="dropdown-item" href={{url_for('.helloseries')}}>Hello Series Project</a>
+              <a class="dropdown-item" href={{url_for('.flask')}}>Flask Project</a>
+              <a class="dropdown-item" href={{url_for('.selfgrading')}}>Self Grading</a>
+              <a class="dropdown-item" href={{url_for('.journals')}}>Journals</a>
             </div>
           </li>
         </ul>

@@ -1,10 +1,10 @@
-{% extends "base.html" %}
+{% extends "p4_charlieb/base.html" %}
 {% block title %}P4 Charlie B Gaming Website{% endblock %}
 {% block content %}
 <image src="{{ url_for('static', filename='images/borderthree.png')}}"></image>
   <h1 class="text-center">Welcome to P4 Charlie B's Website!</h1>
  <div class="media">
-  <a href="/trivia">
+  <a href={{url_for('.trivia')}}>
    <img src="{{ url_for('static', filename='images/trivia.png')}}" width="64" height="64" class="mr-3">
   </a>
   <div class="media-body">
@@ -12,7 +12,7 @@
    Play a computer science based trivia game!
  </div>
   <div class="media">
-   <a href="/randomnum">
+   <a href={{url_for('.randomnum')}}>
     <img src="{{ url_for('static', filename='images/randomnumbers.png')}}" width="64" height="64" class="mr-3"></a>
    </a>
    <div class="media-body">
@@ -20,7 +20,7 @@
     Play a guess the number game with a computer!
    </div>
    <div class="media">
-    <a href="/battleship">
+    <a href={{url_for('.battleship')}}>
      <img src="{{ url_for('static', filename='images/battleship.png')}}" width="64" height="64" class="mr-3">
     </a>
     <div class="media-body">
@@ -28,7 +28,7 @@
      Play battleship with a computer!
     </div>
     <div class="media">
-     <a href="/rocks">
+     <a href={{url_for('.rocks')}}>
       <img src="{{ url_for('static', filename='images/rock.png')}}" width="64" height="64" class="mr-3">
      </a>
     </div>
@@ -40,7 +40,7 @@
   </div>
  </div>
       <div class="media">
-       <a href="/pong">
+       <a href={{url_for('.pong')}}>
         <img src="{{ url_for('static', filename='images/pong.png')}}" width="64" height="64" class="mr-3">
        </a>
        <div class="media-body">
@@ -48,7 +48,7 @@
         Play a classic game from the 70's!
        </div>
        <div class="media">
-       <a href="/pacman">
+       <a href={{url_for('.pacman')}}>
         <img src="{{ url_for('static', filename='images/pacman.png')}}" width="64" height="64" class="mr-3">
        </a>
       <div class="media-body">
@@ -56,7 +56,7 @@
        Play a classic game of pacman: eat all the circles and avoid ghosts!
       </div>
        <div class="media">
-        <a href="/tics">
+        <a href={{url_for('.tics')}}>
          <img src="{{ url_for('static', filename='images/tics.png')}}" width="64" height="64" class="mr-3">
         </a>
         <div class="media-body">
@@ -64,7 +64,7 @@
          X's and O's, get three in a row!
         </div>
         <div class="media">
-         <a href="/snake">
+         <a href={{url_for('.snake')}}>
           <img src="{{ url_for('static', filename='images/snake.png')}}" width="64" height="64" class="mr-3">
          </a>
          <div class="media-body">

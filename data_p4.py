@@ -23,7 +23,7 @@ def setup():
                                ["Sophie Lee", "Linda Long", "Maggie Killada", "Adam Holbel", "Wenshi Bao"],
                                "Our website (Fruity Photos) features the history of photography, as well as the works and biographies of several famous photographers, such as Ansel Adams and Annie Leibovitz.")
 
-    p4_charlieb = model.Project("Gaming Website", "http://104.63.255.27/home", "/static/img/p4_charlieb.png", "P4 CharlieB",
+    p4_charlieb = model.Project("Gaming Website", url_for('p4_charlieb_bp.home'), "/static/img/p4_charlieb.png", "P4 CharlieB",
                                     ["Kaila Manangan", "Eshaan Parlikar", "Brent Arcinue", "Calvin Ni"],
                                     "Our website, along with portfolio information, includes minigames for your entertainment!")
 
