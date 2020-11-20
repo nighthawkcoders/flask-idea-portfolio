@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "aboutus.html" %}
+<title> Sophie's Page</title>
+</head>
+<body>
+
+<p>Here are my embedded files and info about my work.</p>
+
+        <h6>If you want to look through my work, scroll through the file below.</h6>
+    </div>
+
+    </div>
+
+
+
+{% for sophie in sophies%}
+<h2>{{sophie.name}}</h2>
+{% endfor %}
+
+{% block individual %}
+<h2>{{greeting}}</h2>
+<h2>{{name}}</h2>
+<h4>{{grade}}</h4>
+<h4>{{about}}</h4>
+<h4>{{contributions}}</h4>
+<iframe src="https://drive.google.com/file/d/1aPs9lQhpCIU5fsdyok4UNpW2F4g8GB3O/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1lm0PG7ULxYFIRa-nVSuMBmJpHCX_6rRi/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1on3VPLGCs6Ix6bWCYTzsbDHDjUnNFCua/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1iS2YXfuTfgz9kpm6hTxz4HgZv_bRt9CX/preview" width="640" height="480"></iframe>
+<script src="https://gist.github.com/sophiebulkin/d0ff62b2cd672a23d06dceb84948c4dd.js"></script>
+<script src="https://gist.github.com/sophiebulkin/b2f7fd136dea54b807fc4380700d845d.js"></script>
+<script src="https://gist.github.com/sophiebulkin/ac1f5102b3ba82bb1881810af8ed9d1a.js"></script>
+<script src="https://gist.github.com/sophiebulkin/76a53ff9f27c94038f3f55f1355631f3.js"></script>
+<iframe src="https://drive.google.com/file/d/1y30KSsp10ndNTB7vQMugcN1pTAfkLnhe/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1TU3XPPfy7djEe4k4xT8-JJxOOulREsMD/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/10zTWDWXPq5e7pFK0-jvpp6mnEnCbXBs1/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1QszASUNk2-P9-8DKK9rzHhtj665w16Pw/preview" width="640" height="480"></iframe>
+{% endblock %}
+
+
+</body>
+</html>
