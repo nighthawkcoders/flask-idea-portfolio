@@ -1,11 +1,6 @@
 from flask import Flask, redirect, url_for, render_template
 
-from .model import kevin
-from .model import abhijay
-from .model import paul
-from .model import travis
-from .model import gavin
-from .model import groupdata
+from .model import kevin, abhijay, paul, travis, gavin, groupdata
 
 from p4_slackbots import p4_slackbots_bp
 
@@ -13,65 +8,65 @@ from p4_slackbots import p4_slackbots_bp
 #def landing():
 #	return render_template("landing.html")
 
-@p4_slackbots_bp.route("/")
+@p4_slackbots_bp.route('/')
 def index():
-	return render_template("apcoxgg.html")
+	return render_template("p4_slackbots/apcoxgg.html")
 
 #@p4_slackbots_bp.route("/home")
 
 
-@p4_slackbots_bp.route("/slackbots")
+@p4_slackbots_bp.route('/slackbots/')
 def slackbots():
-	return render_template("about.html", groupdatalist=groupdata())
+	return render_template("p4_slackbots/about.html", groupdatalist=groupdata())
 
-@p4_slackbots_bp.route("/kevin")
+@p4_slackbots_bp.route('/kevin/')
 def kevin():
-	return render_template("indivabout.html", data=kevin())
+	return render_template("p4_slackbots/indivabout.html", data=kevin())
 
-@p4_slackbots_bp.route("/abhijay")
+@p4_slackbots_bp.route('/abhijay/')
 def abhijay():
-	return render_template("indivabout.html", data=abhijay())
+	return render_template("p4_slackbots/indivabout.html", data=abhijay())
 
-@p4_slackbots_bp.route("/paul")
+@p4_slackbots_bp.route('/paul/')
 def paul():
-	return render_template("indivabout.html", data=paul())
+	return render_template("p4_slackbots/indivabout.htm", data=paul())
 
-@p4_slackbots_bp.route("/travis")
+@p4_slackbots_bp.route('/travis/')
 def travis():
-	return render_template("indivabout.html", data=travis())
+	return render_template("p4_slackbots/indivabout.html", data=travis())
 
-@p4_slackbots_bp.route("/gavin")
+@p4_slackbots_bp.route('/gavin/')
 def gavin():
-	return render_template("indivabout.html", data=gavin())
+	return render_template("p4_slackbots/indivabout.html", data=gavin())
 
-@p4_slackbots_bp.route("/baseview")
+@p4_slackbots_bp.route('/baseview/')
 def baseview():
-	return render_template("base-productview.html")
+	return render_template("p4_slackbots/base-productview.html")
 
-@p4_slackbots_bp.route("/shoebaseview")
+@p4_slackbots_bp.route('/shoebaseview/')
 def shoebaseview():
-	return render_template("base-productview-shoe.html")
+	return render_template("p4_slackbots/base-productview-shoe.html")
 
-@p4_slackbots_bp.route("/APCOFluid")
+@p4_slackbots_bp.route('/APCOFluid/')
 def APCOFluid():
-	return render_template("apco-fluid.html")
+	return render_template("p4_slackbots/apco-fluid.html")
 
-@p4_slackbots_bp.route("/APCOSuperstar")
+@p4_slackbots_bp.route('/APCOSuperstar/')
 def APCOSuperstar():
-	return render_template("apco-superstar.html")
+	return render_template("p4_slackbots/apco-superstar.html")
 
-@p4_slackbots_bp.route("/GGFireworks")
+@p4_slackbots_bp.route('/GGFireworks/')
 def GGFireworks():
-	return render_template("gg-fireworks.html")
+	return render_template("p4_slackbots/gg-fireworks.html")
 
-@p4_slackbots_bp.route("/GGSuperstar")
+@p4_slackbots_bp.route('/GGSuperstar/')
 def GGSuperstar():
-	return render_template("gg-superstar.html")
+	return render_template("p4_slackbots/gg-superstar.html")
 
-@p4_slackbots_bp.route("/Products")
+@p4_slackbots_bp.route('/Products/')
 def Products():
-	return render_template("products.html")
+	return render_template("p4_slackbots/products.html")
 
-@p4_slackbots_bp.route("/Cart")
+@p4_slackbots_bp.route('/Cart/')
 def Cart():
-	return render_template("cart.html")
+	return render_template("p4_slackbots/cart.html")

@@ -3,13 +3,14 @@
 import model  # projects definitions are placed in different file
 from flask import url_for
 
+# "http://76.176.109.127:6969/"
 
 def setup():
     """EXAMPLE = model.Project("Example", url_for('teacher_bp.index'), "/static/img/teacher.png", "Team Teacher",
                             ["John Mortensen", "Classroom of 40"],
                             "Visit a VANTA birds experience and see how it is made.")"""
 
-    p4_slackbots = model.Project("Merch Website", "http://76.176.109.127:6969/", "/static/img/cat3.jpg",
+    p4_slackbots = model.Project("Merch Website", url_for('p4_slackbots_bp.index'), "/static/img/p4_slackbots.PNG",
                                  "P4Slackbots",
                                  ["Abhijay Deevi", "Kevin Do", "Travis Medley", "Paul Bokelman", "Gavin Theriault"],
                                  "This project is a merch website that we created for our Youtube channels, "
@@ -23,7 +24,7 @@ def setup():
                                "as a music section including three different genres of music with multiple examples "
                                "and descriptions of each.")
 
-    p4_fruitycoders = model.Project("Photography Website", "google.com", "/static/img/fruitycoders.png",
+    p4_fruitycoders = model.Project("Photography Website", url_for('p4_fruitycoders_bp.index'), "/static/img/cat2.png",
                                     "P4 fruitycoders",
                                     ["Sophie Lee", "Linda Long", "Maggie Killada", "Adam Holbel", "Wenshi Bao"],
                                     "Our website (Fruity Photos) features the history of photography, as well as the "
