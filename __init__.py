@@ -6,6 +6,9 @@ app = Flask(__name__)
 from p1_dataminers import p1_dataminers_bp
 app.register_blueprint(p1_dataminers_bp, url_prefix='/p1_dataminers')
 
+from p1_grocerystoresim import p1_grocerystoresim_bp
+app.register_blueprint(p1_grocerystoresim_bp, url_prefix='/p1_grocerystoresim')
+
 from p1_ilikeyacodeg import p1_ilikeyacodeg_bp
 app.register_blueprint(p1_ilikeyacodeg_bp, url_prefix='/p1_ilikeyacodeg')
 
