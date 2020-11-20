@@ -18,6 +18,9 @@ app.register_blueprint(p1_mortos_bp, url_prefix='/p1_mortos')
 from p1_robotmania import p1_robotmania_bp
 app.register_blueprint(p1_robotmania_bp, url_prefix='/p1_robotmania')
 
+from p1_hexpass import p1_hexpass_bp
+app.register_blueprint(p1_hexpass_bp, url_prefix='/p1_hexpass')
+
 # Period 2
 from p2_cyphercrypto import cyphercrypto_bp
 app.register_blueprint(cyphercrypto_bp, url_prefix='/p2_cyphercrypto')
