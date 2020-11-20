@@ -16,11 +16,11 @@ def setup():
                                  "We use Ciphers and encrypt/decrypt messages.")
 
     p2_triviagame = model.Project("Website Portfolio", url_for("p2_triviagame_bp.index"), "/static/img/p2_arcade.png",
-                                  "Crystal's Team",
+                                  "Trivia Game",
                                   ["Crystal Widjaja", "Nivedita Rethnakar", "Ida Mobini", "Eva Gravin", "Dane Vestal"],
                                   "This is our website with minigames, our portfolio, and much more!")
 
-    p2_einsteins = model.Project("Project Page", "http://76.176.59.167/", "/static/img/p2_einsteins.png",
+    p2_einsteins = model.Project("Project Page", url_for('p2_einsteins_bp.index'), "/static/img/p2_einsteins.png",
                                  "Einsteins",
                                  ["Pragadeesh Raj", "Ayman Kazi", "Brandon Truong", "Navodit Maheshwari", "Ali Saad"],
                                  "Welcome to the world of ASCII games, intuitive text-based calculators, journal, "
