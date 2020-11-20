@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <style>
+    * { margin:0;padding:0;box-sizing:border-box; }
+
+    @-webkit-keyframes fadein {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    @-moz-keyframes fadein {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    @keyframes fadein {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    a {text-decoration:none;color:#333;transition:0.15s ease-in;}
+    a:hover {color:#aaa;}
+    b,strong {color:#333;}
+
+    body {
+    background:#fff;
+    font-family:'Georgia',serif;
+    font-size:20px;
+    line-height:175%;
+    font-weight:300;
+    color:#767676;
+    -webkit-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    animation: fadein 1s;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    }
+
+    section {
+    margin-top:300px;
+    margin-bottom:300px;;
+    margin-right: 500px;
+    margin-left:400px;
+    width:600px;
+    height:10px;
+    }
+
+
+    h1,h2 {
+    font-weight:400;
+    color:#333;
+    margin-bottom:5px;
+    }
+
+    h1 { font-size:28px; }
+    h2 { font-size:24px; }
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+}
+
+.dropdown-content a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+ </style>
+
+{% endblock %}
+
+
+
+{% block title %} <h1>{{title}}</h1> {% endblock %}
+{% block content %}  welcome to our photography website! learn more about the history of photography and the lives of some famous photographers whose works have influenced today's society! {% endblock %}

@@ -35,6 +35,10 @@ def index():
 def index():
     return render_template("p5_chessGame/chessEmbed.html")
 
+@p5_chessGame_bp.route("/project/embedChess/")
+def chess_embed():
+    return render_template("p5_chessGame/chessEmbed.html")
+
 @p5_chessGame_bp.route("/project/add/", methods=['GET','POST'],)#for the dragable chess file
 def addition():
     if request.method == 'POST':

@@ -60,11 +60,12 @@ app.register_blueprint(p5_alethianews_bp, url_prefix='/p5_alethianews')
 from p5_monkeymen import p5_monkeymen_bp
 app.register_blueprint(p5_monkeymen_bp, url_prefix='/p5_monkeymens')
 
-
-
+from p5_chessGame import p5_chessGame_bp
+app.register_blueprint(p5_chessGame_bp, url_prefix='/p5_chessGame')
 
 from p2_einsteins import p2_einsteins_bp
 app.register_blueprint(p2_einsteins_bp, url_prefix='/p2_einsteins')
 
 from p2_rappers import p2_rappers_bp
 app.register_blueprint(p2_rappers_bp, url_prefix='/p2_rappers')
+

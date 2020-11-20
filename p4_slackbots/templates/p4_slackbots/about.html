@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('p4_slackbots_bp.static', filename='css/styles.css')}}" type="text/css">
+</head>
+
+<style>
+
+</style>
+<html>
+{% extends "p4_slackbots/base1.html" %}
+<body>
+
+{% block about %}
+    <center>
+
+        <div class="dropShadow"> <!-- banner -->
+            <img style="margin-top:100px;min-width:100%;width:100%;height:auto"src="{{url_for('p4_slackbots_bp.static', filename='images/apcoxggbannercrop.jpg')}}" alt="channel art" width=relative>
+        </div>
+
+    </center>
+
+
+    <center>
+        <div style="margin-top:0em" class="Header">
+            <h1 class="products" style="font-size:4em;">About Us</h1>
+            <p style="font-size:2em" class="Paragraph">Meet the P4 Slackbots!</p>
+        </div>
+    </center>
+<!-- Loop for data list - sets variables -->
+    {% for data in groupdatalist: %}
+    {% set name = data["name"] %}
+    {% set emoji = data["emoji"] %}
+    {% set hellojournal = data["hellojournal"] %}
+    {% set helloplan = data["helloplan"] %}
+    {% set flaskjournal = data["flaskjournal"] %}
+    {% set flaskplan = data["flaskplan"] %}
+
+    <div style="margin-left:10%;width=30%;float:left" class="justify-content-center">
+        <p class="Titles"><a class="aboutlinks" href={{emoji}}>{{name}}:</a></p>
+    <ul class="Paragraph aboutlists">
+        <b>Hello Series</b>
+        <li class="about{{emoji}}"><a class="aboutlinks" target="blank" href={{hellojournal}}>Hello Series Journal</a></li>
+        <li class="about{{emoji}}"><a class="aboutlinks" target="blank" href={{helloplan}}>Hello Series Plan</a></li>
+        <li class="about{{emoji}}"><a class="aboutlinks" target="blank" href="https://repl.it/@AbhijayDeevi/TableOfContents">Repl.it</a></li>
+        <b>Flask Series</b>
+        <li class="about{{emoji}}"><a class="aboutlinks" target="blank" href={{flaskjournal}}>Flask Series Journal</a></li>
+        <li class="about{{emoji}}"><a class="aboutlinks" target="blank" href={{flaskplan}}>Flask Series Plan</a></li>
+        <li class="about{{emoji}}"><a class="aboutlinks" target="blank" href="https://github.com/Dubshott/gg-x-ac">Github</a></li>
+    </ul>
+    </div>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>
