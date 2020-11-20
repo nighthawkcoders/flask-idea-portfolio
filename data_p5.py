@@ -10,11 +10,11 @@ def setup():
                             "Visit a VANTA birds experience and learn how it is made.")
                             """
 
-    p5_calculus = model.Project("Calculus", "http://76.88.9.120/",
+    p5_calculus = model.Project("Calculus", url_for('p5_calculus_bp.home'),
                                 "/static/img/AkaTeamCalculus.png", "calculus",
                                 ["Karam Alshaikh", "Akhilesh Genneri", "Akshit Prathipati", "Noya Hafiz",
                                  "Jien (Max) Wang"],
-                                "This website is used for everything calculus and to spread our information about it")
+                                "This website is used for everything calculus and to spread our information about it!")
 
 
     p5_chessGame = model.Project("Chess Game", url_for('p5_chessGame_bp.home'),
