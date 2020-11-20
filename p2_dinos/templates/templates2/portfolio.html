@@ -1,0 +1,17 @@
+{% extends "templates2/base.html" %}
+
+{% block heading %}Portfolio: Small Projects{% endblock %}
+
+{% block body %}
+
+<p class="red space"> We will edit this page as we add small projects to our portfolio </p>
+<br>
+
+{% for x in range(portfolioprojects.__len__()) %}
+
+<a class = "red tab" href="{{ portfolioprojects[x].repl }}">{{portfolioprojects[x].projectname}}</a>
+<br>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "p4_monkeymath/base.html" %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+<body>
+    {% for model in modellist: %}
+        {% set embed = model["embed"] %}
+        {% set greeting = model["greeting"] %}
+        {% set name = model["name"] %}
+        {% set dob = model["dob"] %}
+        {% set job = model["job"] %}
+        {% set story = model["story"] %}
+        <ol>
+        <H1>"{{greeting}} my name is <span style='color:orangered;'>{{name}}</span>"</H1>
+        <li>"{{greeting}} my birthday is <span style='color:orangered;'>{{dob}}</span>"</li>
+        <li>"{{greeting}} my job is a <span style='color:orangered;'>{{job}}</span>"</li>
+        <li><span style='color:midnightblue;'>{{story}}</span></p></html></li>
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" src={{embed}} style="width:940px;height:600px;"></iframe>
+            </div>
+        </ol>
+    {% endfor %}
+</body>
+{% endblock %}
