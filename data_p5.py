@@ -10,7 +10,7 @@ def setup():
                             "Visit a VANTA birds experience and see how it is made.")
                             """
 
-    p5_calculus = model.Project("p5_calculus", "https://github.com/AkhileshLG/flaskportfolio-1",
+    p5_calculus = model.Project("Calculus", "http://http://76.88.9.120/",
                                 "/static/img/AkaTeamCalculus.png", "calculus",
                                 ["Karam Alshaikh", "Akhilesh Genneri", "Akshit Prathipati", "Noya Hafiz",
                                  "Jien (Max) Wang"],
