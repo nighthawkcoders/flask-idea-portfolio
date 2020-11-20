@@ -7,7 +7,7 @@ from flask import url_for
 def setup():
     """EXAMPLE = model.Project("Example", url_for('teacher_bp.index'), "/static/img/teacher.png", "Team Teacher",
                             ["John Mortensen", "Classroom of 40"],
-                            "Visit a VANTA birds experience and see how it is made.")
+                            "Visit a VANTA birds experience and learn how it is made.")
                             """
 
     p5_calculus = model.Project("p5_calculus", "https://github.com/AkhileshLG/flaskportfolio-1",
