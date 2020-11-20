@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, render_template
-import Data, scraping
+from p5_supercool import Data, scraping
 from p5_supercool import p5_supercool_bp
 app = Flask(__name__)
 
