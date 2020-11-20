@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% include 'nav.html' %}
+<html lang="en">
+
+<style>
+    body {
+  background-image: url('https://ctl.s6img.com/society6/img/iGUzYBMhjHANuOzc4DPvtB-RfOI/w_1500/duvet-covers/swatch/~artwork,fw_6000,fh_6000,iw_6000,ih_6000/s6-original-art-uploads/society6/uploads/misc/e70479257eed41ebac69133614097863/~~/80s-arcade-carpet988407-duvet-covers.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+
+<body style="background-color: #82E0AA;">
+
+        {% for all_games in all_page: %}
+        {% set title = all_games["title"] %}
+        {% set embed = all_games["embed"] %}
+        <ol>
+            <h4><span style="color: #FFFFFF; background-color: #000000;">{{title}}</span></h4>
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" src={{embed}}></iframe>
+            </div>
+        </ol>
+    {% endfor %}
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</html>

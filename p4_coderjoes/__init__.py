@@ -7,5 +7,4 @@ p4_coderjoes_bp = Blueprint(
     template_folder='templates',
     static_folder='static'
 )
-
 from . import view

@@ -1,0 +1,26 @@
+{% extends "p5_chessGame/base.html" %}
+
+{%block content %}
+
+<form method="post">
+    <table>
+        <tr>
+            <td> First Number: </td> <td> <input type="text" name="numOne" required/></td>
+        </tr>
+        <tr>
+            <td> Second Number: </td> <td> <input type="text" name="numTwo" required/></td>
+        </tr>
+    </table>
+        <br>
+    <input class="button" type ="submit" formaction="/add" value="Add Them!" />
+</form>
+
+<!--<p> {{ display }}<p>-->
+
+{% for your_list_element in your_list %}
+<p>{{ your_list_element }} </p>
+{% endfor %}
+
+<div style="clear:both;"></div>
+
+{% endblock %}

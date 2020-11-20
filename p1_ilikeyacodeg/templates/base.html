@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Setting up variable used in template
+  "projects" is python object
+-->
+{% set source = projects.get_source() %} <!-- source of project dict -->
+{% set name = source["name"] %}
+{% set github = source["github"] %}
+{% set linkedin = source["linkedin"] %}
+{% set twitter = source["twitter"] %}
+{% set youtube = source["youtube"] %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <!-- Drop down for selecting from navigation support, only works on 1st element -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Style used to support Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Extender should define Title Block -->
+    {% block head %}
+    <title></title>
+    {% endblock %}
+</head>
+
+{% block body %}
+<body>
+    <!-- Navigation Bar from bootstrap with dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">{{name}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Look for href (root) and associated names  -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href={{url_for('.hello_route')}}>Hello Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={{url_for('.flask_route')}}>Flask Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={{url_for('.about_route')}}>About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row justify-content-end" style="padding-top: 2%; padding-bottom: 2%;">
+            <div class="col-2" style="text-align: right;">
+                {% block info %}
+                <!-- notice jinja style variables used in href's -->
+                <h5>{{name}}</h5>
+                <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
+                <!-- <a href={{linkedin}} target="_blank"><i class="fa fa-linkedin" ></i></a> -->
+                <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
+                <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
+                {% endblock %}
+            </div>
+        </div>
+
+        <div class="product" style="margin-top: 2%;">
+            <div class="row" style="padding-top: 10%; padding-bottom: 5%;">
+
+                <div class="col-8" >
+                    {% block title %}
+                    {% endblock %}
+                </div>
+
+            </div>
+
+            <div class="row" style="padding-left: 10%;">
+                <div class="col-4">
+                    {% block link1 %}
+                    {% endblock %}
+                </div>
+
+                <div class="col-4">
+                    {% block link2 %}
+                    {% endblock %}
+                </div>
+
+                <div class="col-4">
+                    {% block link3 %}
+                    {% endblock %}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+{% endblock %}
+
+{% block script %}
+<script src="https://threejs.org/build/three.js"></script>
+<script src="{{ url_for('teacher_bp.static', filename='vanta.birds.min.js') }}"></script>
+<script>
+
+    VANTA.BIRDS({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        wingSpan: 40.0
+    })
+</script>
+{% endblock %}
+
+{% block style %}
+<style>
+    html, body {
+        margin: 0;
+        height: 100%;
+        color: white;
+    }
+
+    h1{
+        font-size: 5em;
+    }
+
+    .fa{
+        font-size: 3em;
+        letter-spacing: 1em;
+        transition: all .2s;
+        color: white;
+    }
+
+    .fa:hover{
+        transform: translateY(10px);
+    }
+
+    .fa-youtube-play:hover{
+        color: #cc0000;
+    }
+
+    .fa-twitter:hover{
+        color: #1da1f2;
+    }
+
+    .fa-github:hover{
+        color: #000000;
+    }
+
+    .btn:link,
+    .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: absolute;
+        color: white;
+        font-size: 2.5em;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+    }
+</style>
+{% endblock %}
+
+</html>

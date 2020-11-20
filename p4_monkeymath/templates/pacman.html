@@ -1,0 +1,75 @@
+{% set embed = model["embed"] %}
+{% set greeting = model["greeting"] %}
+{% set name = model["name"] %}
+{% set doa = model["doa"] %}
+{% set job = model["job"] %}
+{% set embed = model["embed"] %}
+{% set gist = model["gist"] %}
+
+
+{% extends "p4_monkeymath/base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Pac Man</h1>
+    <p class="important">
+      The History of Pacman
+    </p>
+    
+    <p class="important">
+     Pac-Man[a] is a maze arcade game developed and released by Namco in 1980. The original Japanese title of Puck Man was changed to Pac-Man for international releases as a preventative measure against defacement of the arcade machines by changing the P to an F.[2] Outside Japan, the game was published by Midway Games as part of its licensing agreement with Namco America (Wikipedia).
+    </p>
+
+   <p class="important">
+     The development of the game began in early 1979, directed by Toru Iwatani with a nine-man team. Iwatani wanted to create a game that could appeal to women as well as men, because most video games of the time had themes of war or sports (Wikipedia).
+    </p>
+
+   <p class="important">
+     Pac-Man was a widespread critical and commercial success, and it has an enduring commercial and cultural legacy. The game is considered important and influential, and it is commonly listed as one of the greatest video games of all time. The success of the game led to several sequels, merchandise, and two television series, as well as a hit single by Buckner and Garcia (Wikipedia).
+    </p>
+
+    <h1>Gameplay</h1>
+     
+    <p class="important">  
+     The player controls Pac-Man, who must eat all the dots inside an enclosed maze while avoiding four colored ghosts. Eating large flashing dots called "energizers" causes the ghosts to turn blue, allowing Pac-Man to eat them for bonus points (Wikipedia).
+    </p>
+
+    <p class="important">
+      <img src=https://i.guim.co.uk/img/media/8152f8ea7f06fd8ef5c68a3a594e6ac35dfd774b/0_342_800_480/master/800.jpg?width=1920&quality=85&auto=format&fit=max&s=989401500260b06366a76d9c6a1602bc 
+     alt="W3Schools.com" style="width:400px;height:240px;">
+    </p>
+
+ <h1>Interesting Facts</h1>
+  <p class="important">
+      1. PAC-MAN DESIGNER TORU IWATANI HAD NO TRAINING AS A DESIGNER OR PROGRAMMER (Metal Floss).
+  </p>
+  <p class="important">
+      2. PAC-MAN'S GAMEPLAY AND GHOSTS WERE INSPIRED BY COMIC BOOK CHARACTERS (Mental Floss).
+  </p>
+  <p class="important">
+      3. IT WAS ONE OF THE FIRST GAMES TO INTRODUCE CUT-SCENES (Mental FLoss).
+  </p>
+  <p class="important">
+      4. THE GAME WASN'T EXPECTED TO BE A HIT (Mental Floss).
+  </p>
+  <p class="important">
+      5. IT WAS ONE OF THE MOST SUCCESSFUL ARCADE GAMES OF ALL TIME, YET ITS CREATOR DIDN'T GET RICH FROM IT (Mental Floss).
+  </p>
+  <p class="important">
+      6. THE HIGHEST SCORE POSSIBLE IS 3,333,360 POINTS (Mental Floss).
+  </p>
+
+  <p class="important">
+      <img src=https://cdn.cnn.com/cnnnext/dam/assets/200518114838-05-pac-man-40.jpg alt="W3Schools.com" style="width:400px;height:500px;">
+  </p>
+
+  <div class="embed-responsive embed-responsive-4by3">
+    <iframe class="embed-responsive-item" src={{embed}} style="width:640px;height:500px;"></iframe>
+  </div>
+
+{% endblock %}
