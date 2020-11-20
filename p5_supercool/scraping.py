@@ -1,8 +1,10 @@
-import requests
+#import requests
 import json
 import threading
 import time
 from json import dumps
+
+from pip._vendor import requests
 
 API_KEY = "tXLFRVKRTvdA"
 PROJECT_TOKEN = "toq7r-OTLXNj"
