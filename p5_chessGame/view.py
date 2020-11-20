@@ -17,23 +17,23 @@ app = Flask(__name__)
 def home():
     #function uses Flask import (Jinga) to render HTML
     #model is passed as a parameter
-    return render_template("home.html")#home has to be under templates
+    return render_template("p5_chessGame/home.html")#home has to be under templates
 
 @p5_chessGame_bp.route("/project/chessJs/")#for the dragable chess file
 def chessJS():
-  return render_template("chessJs.html")
+  return render_template("p5_chessGame/chessJs.html")
 
 @p5_chessGame_bp.route("/project/chessPush/")#for the print chess board from dictonaries
 def chessPush():
-    return render_template("chessPush.html", displayBoard=board)
+    return render_template("p5_chessGame/chessPush.html", displayBoard=board)
 
 """@p5_chessGame_bp.route("/project/index/")#for the dragable chess file
 def index():
-    return render_template("index.html", display="")"""
+    return render_template("p5_chessGame/index.html", display="")"""
 
 @p5_chessGame_bp.route("/project/index/")#for the dragable chess file
 def index():
-    return render_template("chessEmbed.html")
+    return render_template("p5_chessGame/chessEmbed.html")
 
 @p5_chessGame_bp.route("/project/add/", methods=['GET','POST'],)#for the dragable chess file
 def addition():
@@ -42,9 +42,9 @@ def addition():
         numberOne = int(form['numOne'])
         numberTwo = int(form['numTwo'])
         calc = numberOne + numberTwo
-        return render_template("index.html", your_list = model.answersdata(calc))#model.playlist()
+        return render_template("p5_chessGame/index.html", your_list = model.answersdata(calc))#model.playlist()
 
-    return redirect("/index")
+    return redirect("p5_chessGame/index")
 
 
 @p5_chessGame_bp.route("/project/yourName/", methods=['GET','POST'],)#for the dragable chess file
@@ -52,17 +52,17 @@ def yourName():
     if request.method == 'POST':
         form = request.form
         name = int(form['name'])
-        return render_template("index.html", name = name)
-    return redirect("/nameBack")
+        return render_template("p5_chessGame/index.html", name = name)
+    return redirect("p5_chessGame/nameBack")
 
 
 @p5_chessGame_bp.route("/project/journals/")#for storing all the links to the webpage
 def journals():
-  return render_template("journals.html")#,repl="repl of website", website ="link to personal website")#allows to define the text that is hyperlinked on the the personal journals
+  return render_template("p5_chessGame/journals.html")#,repl="repl of website", website ="link to personal website")#allows to define the text that is hyperlinked on the the personal journals
 
 @p5_chessGame_bp.route("/project/chessEmbed/")
 def chessEmbed():
-    return render_template("chessEmbed.html")
+    return render_template("p5_chessGame/chessEmbed.html")
 
 
 """
