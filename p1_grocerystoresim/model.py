@@ -1,4 +1,4 @@
-"""Model in MVC has responsibilty of managing data or database"""
+
 def runtime():
     greeting = "P1 GroceryStoreSim"
     name = "Boomer Esports"

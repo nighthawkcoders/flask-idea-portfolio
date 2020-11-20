@@ -7,7 +7,7 @@ from p1_robotmania import p1_robotmania_bp
 from .model import p1robotmania
 
 
-# connects default URL of server to render home.html
+# connects default URL of server to render plan.html
 @p1_robotmania_bp.route('/')
 def index():
     return render_template("robotmaniarun.html", data=p1robotmania())
