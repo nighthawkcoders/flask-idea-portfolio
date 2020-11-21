@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    <title>fruity photos</title>
+
+    <style type="text/css">
+
+* { margin:0;padding:0;box-sizing:border-box; }
+
+@-webkit-keyframes fadein {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-moz-keyframes fadein {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadein {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+a {text-decoration:none;color:#333;transition:0.15s ease-in;}
+a:hover {color:#aaa;}
+b,strong {color:#333;}
+
+body {
+  background:#fff;
+  font-family:'Georgia',serif;
+  font-size:12px;
+  line-height:175%;
+  font-weight:300;
+  color:#767676;
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  animation: fadein 1s;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+}
+
+section {
+  margin-top:50px;
+  margin-bottom:300px;;
+  margin-right: 300px;
+  margin-left:400px;
+  width:500px;
+  height:10px;
+}
+
+h1,h2 {
+  font-weight:400;
+  color:#333;
+  margin-bottom:5px;
+}
+
+h1 { font-size:20px; }
+h2 { font-size:16px; }
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 10
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 150px;
+}
+
+.dropdown-content a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+</style>
+</head>
+<body>
+
+<section>
+    <header>
+        <h1>Ansel Adams</h1>
+
+        landscape photographer | california | (1902-1984)
+
+        <nav>
+            <a href="/p4_fruitycoders">home</a> .
+            <a href="p4_fruitycoders/history">history</a> .
+            <a href="p4_fruitycoders/biographies">biographies</a> .
+            <div class="dropdown">
+                gallery .
+                <div class="dropdown-content">
+                    <a href="/p4_fruitycoders/wong">Russel Wong</a>
+                    <a href="/p4_fruitycoders/shabazz">Jamel Shabazz</a>
+                    <a href="/p4_fruitycoders/adams">Ansel Adams</a>
+                    <a href="/p4_fruitycoders/pretty">Adam Pretty</a>
+                    <a href="/p4_fruitycoders/leibovitz">Annie Leibovitz</a>
+                    <a href="/p4_fruitycoders/mccurry">Steve McCurry</a>
+                    <a href="/p4_fruitycoders/bourke">Margaret Bourke-White</a>
+                    <a href="/p4_fruitycoders/goldin">Nan Goldin</a>
+                    <a href="/p4_fruitycoders/newman">Arnold Newman</a>
+                    <a href="/p4_fruitycoders/mann">Sally Mann</a>
+                </div>
+            </div>
+            <a href="/p4_fruitycoders/aboutus">about us</a> .
+            <a href="https://github.com/fruitycoders/photography" target="_blank">project repo</a>
+        </nav>
+
+        <br>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://www.christies.com/img/LotImages/2015/NYR/2015_NYR_03726_0224_000(ansel_adams_monolith_the_face_of_half_dome_1927).jpg" style="width:100%">
+                <div class="text">Monolith: The Face of Half Dome</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="https://cdn.shopify.com/s/files/1/0114/3154/2848/products/1701130107Zoom_540x.jpg?v=1596216767" style="width:100%">
+                <div class="text">Mount Wynne, Kings Canyon National Park, California</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://cdn.shopify.com/s/files/1/0114/3154/2848/products/1701042111Zoom_540x.jpg?v=1585848512" style="width:100%">
+                <div class="text">Dunes, Oceano, California</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://cdn.shopify.com/s/files/1/0114/3154/2848/products/nevadafallearly_540x.jpg?v=1596585338" style="width:100%">
+                <div class="text">New Acquisition</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+    </header>
+
+    <script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+</script>
+
+</section>
+</body>
+</html>

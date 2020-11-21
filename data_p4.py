@@ -24,10 +24,10 @@ def setup():
                                "as a music section including three different genres of music with multiple examples "
                                "and descriptions of each.")
 
-    p4_fruitycoders = model.Project("Photography Website", "url_for('p4_fruitycoders_bp.index')", "/static/img/p4_fruitycoders.png",
+    p4_fruitycoders = model.Project("Photography Website", url_for('p4_fruitycoders_bp.index'), "/static/img/p4_fruitycoders.png",
                                     "P4 fruitycoders",
                                     ["Sophie Lee", "Linda Long", "Maggie Killada", "Adam Holbel", "Wenshi Bao"],
-                                    "Our website (Fruity Photos) features the history of photography, as well as the "
+                                    "This clean, minimalist website features the history of photography, as well as the "
                                     "works "
                                     "and biographies of several famous photographers, such as Ansel Adams and Annie "
                                     "Leibovitz.")

@@ -1,0 +1,245 @@
+{% extends "p4_fruitycoders/base.html" %}
+
+{% block head %}
+{{ super() }}
+    <style type="text/css">
+
+    * { margin:0;padding:0;box-sizing:border-box; }
+
+    @-webkit-keyframes fadein {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    @-moz-keyframes fadein {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    @keyframes fadein {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+    }
+
+    a {text-decoration:none;color:#333;transition:0.15s ease-in;}
+    a:hover {color:#aaa;}
+    b,strong {color:#333;}
+
+    body {
+    background:#fff;
+    font-family:'Georgia',serif;
+    font-size:12px;
+    line-height:175%;
+    font-weight:300;
+    color:#767676;
+    -webkit-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    animation: fadein 1s;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    }
+
+    section {
+    margin-top:150px;
+    margin-bottom:300px;;
+    margin-right: 300px;
+    margin-left:400px;
+    width:500px;
+    height:10px;
+    }
+
+    h1,h2 {
+    font-weight:400;
+    color:#333;
+    margin-bottom:5px;
+    }
+
+    h1 { font-size:20px; }
+    h2 { font-size:16px; }
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 100px;
+}
+
+.dropdown-content a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+article {
+  margin-top:40px;
+  padding-top:40px;
+  border-top:1px solid #eee;
+  display:block;
+  min-height:140px;
+}
+
+article img {
+  width:100px;
+  height:100px;
+  border-radius:100%;
+  float:left;
+  margin-right:40px;
+}
+
+nav { margin-top:5px; }
+.content { width:460px; margin-left:140px; }
+
+</style>
+{% endblock %}
+
+{% block title %} <h1>biographies</h1> {% endblock %}
+{% block content %} learn about some photographers whose works influenced the world {% endblock %}
+
+{% block footer %}
+    <article>
+        <img src="https://miro.medium.com/max/4000/1*0gafhxNyRdo_b-hwKkoR3g.jpeg"/>
+        <div class="content">
+            <h2>Russel Wong</h2>
+
+            Russel Wong (1961) is one of the most notable fashion and portrait photographers in Singapore and Asia. He is the first Singaporean to break into the notoriously difficult Hollywood movie industry. Wong has taken more than fifteen covers for the Time magazine and has created images for publicity on many acclaimed movies. He has captured portraits of Jackie Chan, Tom Cruise, Cindy Crawford, Michelle Yeoh, and Anthony Bourdain. Although known for his portraits of celebrities, his works also include still-lifes, architecture shots, landscapes, nude photography, and conceptual pieces.
+
+            <nav>
+                <a href="/wong">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://s3.amazonaws.com/files.collageplatform.com.prod/image_cache/1000x1000_fit/548b3beaaa921a8b5be4cbcc/82186c28160286c80156d3786cea9096.jpeg"/>
+        <div class="content">
+            <h2>Jamel Shabazz</h2>
+
+            Jamel Shabazz (1960) is a Brooklyn-born African American documentary and street style photographer. His photographs captured the daily lives of young people of color in New York City. Many of his subjects had their own unique styles that diverged from the mainstream looks of the eighties. Shabazz has had over two dozen exhibitions, which have been displayed all over the world. The various aspects of life that his photographs captured have also inspired the younger generations in the field of photography and social responsibility.
+
+            <nav>
+                <a href="/shabazz">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ansel_Adams_and_camera.jpg"/>
+        <div class="content">
+            <h2>Ansel Adams</h2>
+
+            Ansel Adams (1902 - 1984) the famous landscape photographer, was well known for his black and white photos of the American west. He had been a huge inspiration for environmentalists and used his photos to be a reminder of how we should protect nature. He had been inducted into the photographer hall of fame in 1984 for his passion and dedication to photography and advancing it any way possible. He had received countless awards before and after his death due to his true inspiration. He is known for his famous photos of Yosemite and the American west and perhaps his most famous photo, the Monolith.
+
+            <nav>
+                <a href="/adams">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://pbs.twimg.com/profile_images/2421568066/photo.JPG"/>
+        <div class="content">
+            <h2>Adam Pretty</h2>
+
+            Adam Pretty is a famous sports photographer from Sydney, Australia. Pretty had been the key photographer for multiple Olympics games. Some of the years he had worked for the Olympics include:  2000 Summer Olympics in Sydney, the 2002 Winter Olympics in Salt Lake City, 2004 Summer Olympics in Athens and the 2012 Olympic Games in London. He has also done many freelancing jobs in the Los Angeles area.
+
+            <nav>
+                <a href="/pretty">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://cdn.jwa.org/sites/default/files/styles/scale_width_300px/public/mediaobjects/annie-leibovitz-by-robert-scoble.jpg?itok=vd3r_6H-"/>
+        <div class="content">
+            <h2>Annie Leibovitz</h2>
+
+            Annie Leibovitz (1949) is a portrait photographer. In 1970, Annie Leibovitz found a job at Rolling Stone and that's where she started her career, she created a different search for ebook as leader photographer. She started working for Vanity Fair's entertainment magazine in 1983, continuing to create photographs that would be considered iconic and provocative. Having also worked on high-profile promotional campaigns, in many books and major exhibits around the world, Leibovitz's photographs were displayed.
+            <nav>
+                <a href="/leibovitz">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://www.biennale.coop/wp-content/uploads/2018/10/Steve-McCurry-quadrato.jpg"/>
+        <div class="content">
+            <h2>Steve McCurry</h2>
+
+            Steve McCurry (1950) is well known for his evocative color images that document human struggles as well as happiness. McCurry has photographed warzones, burning oil fields, refugee camps, ship-breaking yards, and monsoons all over the world since traveling the globe for over thirty years. Since 1986, as a part of Magnum Photos, many of his photographs have become modern icons.
+
+            <nav>
+                <a href="/mccurry">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://journal.alabamachanin.com/wp-content/uploads/2018/06/ALABAMA-CHANIN-WOMEN-WHO-INSPIRE-MARGARET-BOURKE-WHITE-PHOTO-CREDIT-TIME-MAGAZINE-1.jpg"/>
+        <div class="content">
+            <h2>Margaret Bourke-White</h2>
+
+            Margaret Bourke-White (1904-1971) is remembered for her iconic images of the Great Depression, World War II, Buchenwald concentration camp survivors, and Gandhi at his spinning wheel. In addition to being the first woman war photographer, she was the first woman photographer who was allowed to accompany a combat mission.
+
+            <nav>
+                <a href="/bourke">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Nan_Goldin_2.jpg"/>
+        <div class="content">
+            <h2>Nan Goldin</h2>
+
+            Nan Goldin (1953): her work often includes members of the LGBT community, moments of intimacy, candid portraiture, the HIV/AIDS crisis, and the opioid epidemic. One of her most notable works is The Ballad of Sexual Dependency, which documents the post-Stonewall riots gay subculture along with Goldin's family and friends.
+
+            <nav>
+                <a href="/goldin">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://ginagenis.files.wordpress.com/2012/08/arnold-newman.jpg"/>
+        <div class="content">
+            <h2>Arnold Newman</h2>
+
+            Arnold Newman (1918-2006) was born in New York in 1918. He is known for still life and abstract photography and was a photographer in the 20th century. He worked on experimental portraiture and gained attention from his exhibit in the Philadelphia Museum of Art called “Artists Look Like This.” He participated in the Makers of Photographic History program and was a contributor to Vanity Fair, LIFE, Harper’s Bazaar, New York Times magazine, and others. His work is displayed at many museums such as the Metropolitan Museum of Art, Museum of Modern Art, and the Chicago Art Institute.
+
+            <nav>
+                <a href="/newman">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+    <article>
+        <img src="https://indyweek.com/downloads/13658/download/18_art_sally-mann_photoby-liz-liguori.jpe?cb=f4c957f9e7b68350f76f7ccc0e4b2b20"/>
+        <div class="content">
+            <h2>Sally Mann</h2>
+
+            Sally Mann (1951) was born in Virginia and she wrote many books. She was named “America’s Best Photographer” by Time Magazine. Her documentary was nominated for an Emmy Award and her work is featured at the Institute of Contemporary Art, the Metropolitan Museum of Art and many other places. Most of her photos are in black and white and she experiments with antique cameras technology such as an 8 x 10 bellows camera. She is most known for her resonant landscape work and still life pictures.
+
+            <nav>
+                <a href="/mann">check out their works!</a>
+            </nav>
+        </div>
+    </article>
+
+{% endblock %}
