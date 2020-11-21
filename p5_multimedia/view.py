@@ -13,16 +13,16 @@ def index():
   if(request.method == 'POST'):
     form = request.form
     product = form['product']  
-    open("products.txt", "a").write("\n" + product)
-    a = open("products.txt", "r").read()
+    open("./products.txt", "a").write("\n" + product)
+    a = open("./products.txt", "r").read()
     popular = a.split("\n")
     if(len(popular) > 7):
       popular.pop(0)
       seperator = '\n'
       newContent = seperator.join(popular)
-      open("products.txt", "w").write(newContent)
+      open("p5_multimedia/products.txt", "w").write(newContent)
     return redirect("https://www.amazon.com/s?k=" + product +"&ref=nb_sb_noss")
-  a = open("products.txt", "r").read()
+  a = open("p5_multimedia/products.txt", "r").read()
   popular = a.split("\n")
   return render_template('home.html', projects=setup(), popular=popular)
     
