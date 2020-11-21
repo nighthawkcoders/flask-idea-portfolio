@@ -1,0 +1,308 @@
+<!doctype html>
+
+<!--
+  Setting up variable used in template
+  "projects" is python object 
+-->
+{% set source = projects.get_source() %} <!-- source of project dict -->
+{% set projects = projects.get_projects() %} <!-- projects data -->
+{% set name = source["name"] %}
+{% set github = source["github"] %}
+{% set linkedin = source["linkedin"] %}
+{% set twitter = source["twitter"] %}
+{% set youtube = source["youtube"] %}
+
+
+<!DOCTYPE html>
+<html>
+<title>Pokemon Game</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+<!-- Navbar - Aiden -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Starters</a>
+  <a href="/pokedex" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Pokedex</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+     <a href="https://padlet.com/dayitar55247/tz0mxud5i694r1f2"  target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Project Padlet</a>
+      <a href="https://github.com/largecodeman1/Pokemon-Game/commits/master"  target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GitHub</a>
+     <a href="https://repl.it/@zachajoseph/Our-Python-Web-Portfolio#README.md"  target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Web portfolio</a>
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens - Aiden -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Image Header - Aiden -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="https://i.pinimg.com/originals/1c/a6/e1/1ca6e1c35e2d884230242cc0326dbf28.jpg" alt="boat" style="width:100%;min-height:800px;max-height:1080px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">Pokemon Game</button>
+  </div>
+</div>
+
+
+<!-- Team Container - Dayita -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>Pokemon Game</h2>
+<p>Meet your pokemon starters!</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="https://pixy.org/src/120/1207107.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Charmander</h3>
+  <p>Type: Fire</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="https://miro.medium.com/max/604/1*KuSu6ZTyLAcRDwOsI9ZzZA.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Squirtle</h3>
+  <p>Type: Water</p>
+</div>
+
+
+<div class="w3-quarter">
+  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c26a16a3-7d13-409c-83ed-ad60a37b79e7/dwtcda-8ee07361-214c-4346-998b-2bd16377d02a.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYzI2YTE2YTMtN2QxMy00MDljLTgzZWQtYWQ2MGEzN2I3OWU3XC9kd3RjZGEtOGVlMDczNjEtMjE0Yy00MzQ2LTk5OGItMmJkMTYzNzdkMDJhLmpwZyJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl19.36kdXpqvIixR53Km9F50biOLSqgx1f1NohH-ns0urCU" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Bulbasaur</h3>
+  <p>Type: Grass</p>
+
+	
+</div>
+
+
+
+</div>
+
+<iframe height="800px" width="100%" src="https://repl.it/@zachajoseph/Pokemon-core-game-engine-final?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</div>
+
+<!-- Work Row - Aiden and Dayita -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Main Characters
+<p></p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-03-19-16-23/ash-ketchum-voice-actress-explains-how-pokemon-dubs-work-and-its-surprisingly-tricky-1584635027978.jpg/EG11/resize/1200x-1/ash-ketchum-voice-actress-explains-how-pokemon-dubs-work-and-its-surprisingly-tricky-1584635027978.jpg" alt="Snow" style="width:100%">
+
+  <div class="w3-container">
+  <h3>Ash</h3>
+  <h4>Partner: Pikachu</h4>
+  <p>Age: 10</p>
+  <p>Town: Pallet Town</p>
+  <p>Region: Kanto</p>
+  <p>Trainer Class: Trainer, Champion</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="https://static.tvtropes.org/pmwiki/pub/images/misty_14.jpg">
+  <h3> Misty</h3>
+  <h4> Partner: Togepi</h4>
+  <p> Age: 10</p>
+  <p> Town: Cerulean City</p>
+  <p> Region: Kanto</p>
+  <p> Trainer Class: Trainer, Gym Leader</p>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="https://vignette.wikia.nocookie.net/cartooncharacters/images/e/ee/Brock.jpg/revision/latest?cb=20100428215750">
+  <h3>Brock</h3>
+  <h4>Partner: Steelix</h4>
+  <p>Age: 15</p>
+  <p>Town: Pewter City</p>
+  <p>Region: Kanto</p>
+  <p>Trainer Class: Trainer, Gym Leader, Breeder, Doctor</p>
+  </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Container - Aiden -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+<!-- Pricing Row - Aiden -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <h2>Regions</h2>
+    <p>Pick a place to explore</p><br>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Kanto</p>
+          <img
+          src="https://i.pinimg.com/474x/6a/6a/74/6a6a74115bff16e96b7d196702797ee1.jpg"
+        </li>
+        <li class="w3-padding-16"><b>Professor</b> Oak</li>
+        <li class="w3-padding-16"><b>Starters:</b> Charmander, Squirtle, Bulbasaur</li>
+        <li class="w3-padding-16"><b>Villains:</b> Team Rocket</li>
+        <li class="w3-padding-16"><b>Pokemon League:</b> Indigo League</li>
+        <li class="w3-padding-16"><b>League Location:</b> Indigo Plateau</li>
+          <h2 class="w3-wide"><i class="fa fa-"></i> </h2>
+          <span class="w3-opacity"></span>
+        </li>
+        <form>
+          <input type="button" onclick="window.location.href='https://bulbapedia.bulbagarden.net/wiki/Kanto#:~:text=The%20Kanto%20region%20(Japanese%3A%20%E3%82%AB%E3%83%B3%E3%83%88%E3%83%BC,is%20located%20south%20of%20Sinnoh.&text=It%20is%20based%20on%20and,the%20barrier%22)%20in%20Japan.';" value="Go there!" />
+        </form>
+ 
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme-l2">
+          <p class="w3-xlarge">Johto</p>
+          <img
+          src="https://cdn.bulbagarden.net/upload/thumb/c/c6/Johto_Anime.png/321px-Johto_Anime.png"
+        </li>
+        <li class="w3-padding-16"><b>Professors</b> </li>
+        <li class="w3-padding-16"><b>Starters:</b> Cyndaquil, Totodile, Chikorita </li>
+        <li class="w3-padding-16"><b>Villains:</b> Team Rocket</li>
+        <li class="w3-padding-16"><b>Pokemon League:</b> Johto League</li>
+        <li class="w3-padding-16"><b>League Location:</b> Silver Town</li>
+          <h2 class="w3-wide"><i class="fa fa-"></i> </h2>
+          <span class="w3-opacity"></span>
+        </li>
+        <form>
+          <input type="button" onclick="window.location.href='https://bulbapedia.bulbagarden.net/wiki/Johto#:~:text=The%20Johto%20region%20(Japanese%3A%20%E3%82%B8%E3%83%A7%E3%82%A6%E3%83%88,Crystal%2C%20HeartGold%2C%20and%20SoulSilver.';" value="Go there!" />
+        </form>
+
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Hoenn</p>
+          <img
+          src="https://i.pinimg.com/474x/6a/6a/74/6a6a74115bff16e96b7d196702797ee1.jpg"
+        </li>
+        <li class="w3-padding-16"><b>Professors</b> </li>
+        <li class="w3-padding-16"><b>Starters:</b> Torchic, Mudkip, Treecko</li>
+        <li class="w3-padding-16"><b>Villains:</b> Team Aqua</li>
+        <li class="w3-padding-16"><b>Pokemon League</b> Hoenn League</li>
+        <li class="w3-padding-16"><b>League Location:</b> Ever Grande City</li>
+          <h2 class="w3-wide"><i class="fa fa-"></i> </h2>
+          <span class="w3-opacity"></span>
+        </li>
+                <form>
+          <input type="button" onclick="window.location.href='https://bulbapedia.bulbagarden.net/wiki/Hoenn';" value="Go there!" />
+        </form>
+
+        </li>
+      </ul>
+    </div>
+</div>
+
+<!-- Contact Container - Aiden -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">The Mortensens Fanclub</span></div>
+      <h3>16601 Nighthawk Ln, San Diego, CA 92127</h3>
+      <p>Tell our scrum leader how much you enjoyed it!!!</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Kansas, US</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +1 6199421800</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  zacharyajoseph@gmail.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email/Phone Number</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Love It!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map - Aiden -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
+<!-- Footer - Aiden -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation - aiden
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation - Aiden
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button - Aiden
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
