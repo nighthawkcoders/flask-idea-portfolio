@@ -43,8 +43,11 @@ def setup():
     p2_newbiecoders = model.Project("Travel Website", "Http://75.80.119.252", "https://lh3.googleusercontent.com/yGFa3i6X522UOjW3cBZKBUnwOqwzfc9-TxZOL0K0inWDCD65TdBvfKAXRrfy9XUOUhWAsA=s170", "Newbiecoders",
                              ["Diego Krenz", "Ethan Sun", "Wesley Chen", "Andrea Abed", "Naweid Hassanzadeh"],
                              "Learn all about cities in Europe and plan your next trip!")
+    p2_sshlogin = model.Project("SSH Login", "Http://104.2.84.172:80", "/static/img/sshlogin.png", "SSH Login",
+                                ["Ahmad Nasim", "Andrew Crisostomo", "Tanmay Marwah", "Max Vukovich", "Luca Pinto", "Cody Peng"],
+                                "We have created an SSH Login system thaf displays users system info using arrays, we also created a forum posting for data on our website.")
 
-    projects = [cyphercrypto, p2_triviagame,  p2_rappers, p2_anime, p2_dinos, p2_einsteins, p2_rappers, p2_newbiecoders]
+    projects = [cyphercrypto, p2_triviagame,  p2_rappers, p2_anime, p2_dinos, p2_einsteins, p2_rappers, p2_newbiecoders, p2_sshlogin]
     # projects = [cyphercrypto, p2_triviagame, p2_anime]
     period = model.Period("Period 2", "AP Principles of Computer Science - Python", projects)
     return period
