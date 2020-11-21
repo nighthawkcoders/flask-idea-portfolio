@@ -36,8 +36,13 @@ def setup():
                                        ["Neil Sahai", "Eyaad Mir", "Andrew Pu", "Alex Titov", "Sean Rollins"],
                                        "Play some games and get money to buy Calculator Functions" +
                                        "Try out some of these engaging games and remember to save some money in the ATM!")
+
+    p1_thecoders = model.Project("CSA Portfolio The Coders", url_for('p1_thecoders_bp.index'), "/static/img/login.PNG", "CSA Portfolio The Coders",
+                                 ["Praveen N", "Pranav K", "Arnav S", "Aryan A"],
+                                 "Play some games! checkout our store too!" +
+                                 "This is a combination of all we learned during the tri")
     
-    projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos, p1_grocerystoresim, p1_hexpass, p1_asciimenu] #, p1_grocerystoresim
+    projects = [p1_robotmania, p1_dataminers, p1_ilikeyacodeg, p1_mortos, p1_grocerystoresim, p1_hexpass, p1_asciimenu, p1_thecoders] #, p1_grocerystoresim
     period = model.Period("Period 1", "Computer Science A - Java", projects)
 
     return period

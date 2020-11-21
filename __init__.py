@@ -24,6 +24,9 @@ app.register_blueprint(p1_hexpass_bp, url_prefix='/p1_hexpass')
 from p1_asciimenu import p1_asciimenu_bp
 app.register_blueprint(p1_asciimenu_bp, url_prefix='/p1_asciimenu')
 
+from p1_thecoders import p1_thecoders_bp
+app.register_blueprint(p1_thecoders_bp, url_prefix='/p1_thecoders')
+
 # Period 2
 from p2_cyphercrypto import cyphercrypto_bp
 app.register_blueprint(cyphercrypto_bp, url_prefix='/p2_cyphercrypto')
@@ -81,5 +84,5 @@ app.register_blueprint(p2_rappers_bp, url_prefix='/p2_rappers')
 from p5_multimedia import p5_multimedia_bp
 app.register_blueprint(p5_multimedia_bp, url_prefix='/p5_multimedia')
 
-from p5_pokemon import p5_pokemon_bp
-app.register_blueprint(p5_pokemon_bp, url_prefix='/p5_pokemon')
+#from p5_pokemon import p5_pokemon_bp
+#app.register_blueprint(p5_pokemon_bp, url_prefix='/p5_pokemon')
