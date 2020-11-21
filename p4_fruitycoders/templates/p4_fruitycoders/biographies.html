@@ -1,34 +1,39 @@
-{% extends "p4_fruitycoders/base.html" %}
+<!DOCTYPE html>
 
-{% block head %}
-{{ super() }}
+<head>
+
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    <title>fruity coders</title>
+
     <style type="text/css">
 
-    * { margin:0;padding:0;box-sizing:border-box; }
+* { margin:0;padding:0;box-sizing:border-box; }
 
-    @-webkit-keyframes fadein {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-    }
+@-webkit-keyframes fadein {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
 
-    @-moz-keyframes fadein {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-    }
+@-moz-keyframes fadein {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
 
-    @keyframes fadein {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-    }
+@keyframes fadein {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
 
-    a {text-decoration:none;color:#333;transition:0.15s ease-in;}
-    a:hover {color:#aaa;}
-    b,strong {color:#333;}
+a {text-decoration:none;color:#333;transition:0.15s ease-in;}
+a:hover {color:#aaa;}
+b,strong {color:#333;}
 
-    body {
+ body {
     background:#fff;
     font-family:'Georgia',serif;
-    font-size:12px;
+    font-size:20px;
     line-height:175%;
     font-weight:300;
     color:#767676;
@@ -40,26 +45,27 @@
     font-smoothing:antialiased;
     }
 
-    section {
-    margin-top:150px;
+ section {
+    margin-top:100px;
     margin-bottom:300px;;
-    margin-right: 300px;
+    margin-right: 500px;
     margin-left:400px;
-    width:500px;
+    width:600px;
     height:10px;
     }
 
-    h1,h2 {
+
+ h1,h2 {
     font-weight:400;
     color:#333;
     margin-bottom:5px;
     }
 
-    h1 { font-size:20px; }
-    h2 { font-size:16px; }
+ h1 { font-size:28px; }
+ h2 { font-size:24px; }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 .dropbtn {
   background-color: #4CAF50;
   color: white;
@@ -107,12 +113,21 @@ nav { margin-top:5px; }
 .content { width:460px; margin-left:140px; }
 
 </style>
-{% endblock %}
+</head>
+<body>
 
-{% block title %} <h1>biographies</h1> {% endblock %}
-{% block content %} learn about some photographers whose works influenced the world {% endblock %}
+<section>
+    <header>
+        <h1>biographies</h1>
 
-{% block footer %}
+        learn about some photographers whose works influenced the world
+
+        <nav>
+            <a href="/p4_fruitycoders">go back home</a>
+        </nav>
+
+    </header>
+
     <article>
         <img src="https://miro.medium.com/max/4000/1*0gafhxNyRdo_b-hwKkoR3g.jpeg"/>
         <div class="content">
@@ -121,7 +136,7 @@ nav { margin-top:5px; }
             Russel Wong (1961) is one of the most notable fashion and portrait photographers in Singapore and Asia. He is the first Singaporean to break into the notoriously difficult Hollywood movie industry. Wong has taken more than fifteen covers for the Time magazine and has created images for publicity on many acclaimed movies. He has captured portraits of Jackie Chan, Tom Cruise, Cindy Crawford, Michelle Yeoh, and Anthony Bourdain. Although known for his portraits of celebrities, his works also include still-lifes, architecture shots, landscapes, nude photography, and conceptual pieces.
 
             <nav>
-                <a href="/wong">check out their works!</a>
+                <a href="/p4_fruitycoders/wong">check out his works!</a>
             </nav>
         </div>
     </article>
@@ -134,7 +149,7 @@ nav { margin-top:5px; }
             Jamel Shabazz (1960) is a Brooklyn-born African American documentary and street style photographer. His photographs captured the daily lives of young people of color in New York City. Many of his subjects had their own unique styles that diverged from the mainstream looks of the eighties. Shabazz has had over two dozen exhibitions, which have been displayed all over the world. The various aspects of life that his photographs captured have also inspired the younger generations in the field of photography and social responsibility.
 
             <nav>
-                <a href="/shabazz">check out their works!</a>
+                <a href="/p4_fruitycoders/shabazz">check out his works!</a>
             </nav>
         </div>
     </article>
@@ -147,7 +162,7 @@ nav { margin-top:5px; }
             Ansel Adams (1902 - 1984) the famous landscape photographer, was well known for his black and white photos of the American west. He had been a huge inspiration for environmentalists and used his photos to be a reminder of how we should protect nature. He had been inducted into the photographer hall of fame in 1984 for his passion and dedication to photography and advancing it any way possible. He had received countless awards before and after his death due to his true inspiration. He is known for his famous photos of Yosemite and the American west and perhaps his most famous photo, the Monolith.
 
             <nav>
-                <a href="/adams">check out their works!</a>
+                <a href="/p4_fruitycoders/adams">check out his works!</a>
             </nav>
         </div>
     </article>
@@ -160,7 +175,7 @@ nav { margin-top:5px; }
             Adam Pretty is a famous sports photographer from Sydney, Australia. Pretty had been the key photographer for multiple Olympics games. Some of the years he had worked for the Olympics include:  2000 Summer Olympics in Sydney, the 2002 Winter Olympics in Salt Lake City, 2004 Summer Olympics in Athens and the 2012 Olympic Games in London. He has also done many freelancing jobs in the Los Angeles area.
 
             <nav>
-                <a href="/pretty">check out their works!</a>
+                <a href="/p4_fruitycoders/pretty">check out his works!</a>
             </nav>
         </div>
     </article>
@@ -172,7 +187,7 @@ nav { margin-top:5px; }
 
             Annie Leibovitz (1949) is a portrait photographer. In 1970, Annie Leibovitz found a job at Rolling Stone and that's where she started her career, she created a different search for ebook as leader photographer. She started working for Vanity Fair's entertainment magazine in 1983, continuing to create photographs that would be considered iconic and provocative. Having also worked on high-profile promotional campaigns, in many books and major exhibits around the world, Leibovitz's photographs were displayed.
             <nav>
-                <a href="/leibovitz">check out their works!</a>
+                <a href="/p4_fruitycoders/leibovitz">check out her works!</a>
             </nav>
         </div>
     </article>
@@ -185,7 +200,7 @@ nav { margin-top:5px; }
             Steve McCurry (1950) is well known for his evocative color images that document human struggles as well as happiness. McCurry has photographed warzones, burning oil fields, refugee camps, ship-breaking yards, and monsoons all over the world since traveling the globe for over thirty years. Since 1986, as a part of Magnum Photos, many of his photographs have become modern icons.
 
             <nav>
-                <a href="/mccurry">check out their works!</a>
+                <a href="/p4_fruitycoders/mccurry">check out his works!</a>
             </nav>
         </div>
     </article>
@@ -198,7 +213,7 @@ nav { margin-top:5px; }
             Margaret Bourke-White (1904-1971) is remembered for her iconic images of the Great Depression, World War II, Buchenwald concentration camp survivors, and Gandhi at his spinning wheel. In addition to being the first woman war photographer, she was the first woman photographer who was allowed to accompany a combat mission.
 
             <nav>
-                <a href="/bourke">check out their works!</a>
+                <a href="/p4_fruitycoders/bourke">check out her works!</a>
             </nav>
         </div>
     </article>
@@ -211,7 +226,7 @@ nav { margin-top:5px; }
             Nan Goldin (1953): her work often includes members of the LGBT community, moments of intimacy, candid portraiture, the HIV/AIDS crisis, and the opioid epidemic. One of her most notable works is The Ballad of Sexual Dependency, which documents the post-Stonewall riots gay subculture along with Goldin's family and friends.
 
             <nav>
-                <a href="/goldin">check out their works!</a>
+                <a href="/p4_fruitycoders/goldin">check out her works!</a>
             </nav>
         </div>
     </article>
@@ -224,7 +239,7 @@ nav { margin-top:5px; }
             Arnold Newman (1918-2006) was born in New York in 1918. He is known for still life and abstract photography and was a photographer in the 20th century. He worked on experimental portraiture and gained attention from his exhibit in the Philadelphia Museum of Art called “Artists Look Like This.” He participated in the Makers of Photographic History program and was a contributor to Vanity Fair, LIFE, Harper’s Bazaar, New York Times magazine, and others. His work is displayed at many museums such as the Metropolitan Museum of Art, Museum of Modern Art, and the Chicago Art Institute.
 
             <nav>
-                <a href="/newman">check out their works!</a>
+                <a href="/p4_fruitycoders/newman">check out his works!</a>
             </nav>
         </div>
     </article>
@@ -237,9 +252,13 @@ nav { margin-top:5px; }
             Sally Mann (1951) was born in Virginia and she wrote many books. She was named “America’s Best Photographer” by Time Magazine. Her documentary was nominated for an Emmy Award and her work is featured at the Institute of Contemporary Art, the Metropolitan Museum of Art and many other places. Most of her photos are in black and white and she experiments with antique cameras technology such as an 8 x 10 bellows camera. She is most known for her resonant landscape work and still life pictures.
 
             <nav>
-                <a href="/mann">check out their works!</a>
+                <a href="/p4_fruitycoders/mann">check out her works!</a>
             </nav>
         </div>
     </article>
 
-{% endblock %}
+</br>
+
+</section>
+</body>
+</html> 

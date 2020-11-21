@@ -1,7 +1,11 @@
-{% extends "p4_fruitycoders/base.html" %}
+<!DOCTYPE html>
+<head>
 
-{% block head %}
-{{ super() }}
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    <title>fruity photos</title>
+
     <style type="text/css">
 
 * { margin:0;padding:0;box-sizing:border-box; }
@@ -25,34 +29,39 @@ a {text-decoration:none;color:#333;transition:0.15s ease-in;}
 a:hover {color:#aaa;}
 b,strong {color:#333;}
 
-body {
-  background:#fff;
-  font-family:'Georgia',serif;
-  font-size:12px;
-  line-height:175%;
-  font-weight:300;
-  color:#767676;
-  -webkit-animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  animation: fadein 1s;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-font-smoothing:antialiased;
-  font-smoothing:antialiased;
-}
+ body {
+    background:#fff;
+    font-family:'Georgia',serif;
+    font-size:20px;
+    line-height:175%;
+    font-weight:300;
+    color:#767676;
+    -webkit-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    animation: fadein 1s;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    }
 
-section {
-  margin:150px;
-  width:600px;
-}
+ section {
+    margin-top:100px;
+    margin-bottom:300px;;
+    margin-right: 500px;
+    margin-left:400px;
+    width:600px;
+    height:10px;
+    }
 
-h1,h2 {
-  font-weight:400;
-  color:#333;
-  margin-bottom:5px;
-}
 
-h1 { font-size:20px; }
-h2 { font-size:16px; }
+ h1,h2 {
+    font-weight:400;
+    color:#333;
+    margin-bottom:5px;
+    }
+
+ h1 { font-size:28px; }
+ h2 { font-size:24px; }
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -103,14 +112,23 @@ nav { margin-top:5px; }
 .content { width:460px; margin-left:140px; }
 
 </style>
-{% endblock %}
+</head>
+<body>
 
-{% block title %} <h1>about us</h1> {% endblock %}
-{% block content %} hello! we are the creators of fruity photos!  <a href="https://portfolio.fruitycoders.repl.co">click here to visit our portfolio website.</a> {% endblock %}
+<section>
+    <header>
+        <h1>about us</h1>
 
-{% block footer %}
+        hello! we are the creators of fruity photos! |
+        <a href="https://portfolio.fruitycoders.repl.co" target="_blank">portfolio site on repl</a>
 
-<article>
+        <nav>
+            <a href="/p4_fruitycoders">go back home</a>
+        </nav>
+
+    </header>
+
+    <article>
         <img src="https://www.flaticon.com/svg/static/icons/svg/2358/2358252.svg"/>
         <div class="content">
             <h2>sophie lee</h2>
@@ -154,4 +172,8 @@ nav { margin-top:5px; }
 
         </div>
     </article>
-{% endblock %}
+
+</br>
+
+</section>
+</body> 
