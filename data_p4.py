@@ -50,8 +50,13 @@ def setup():
                                 ["Kaila Manangan", "Eshaan Parlikar", "Brent Arcinue", "Calvin Ni"],
                                 "Our website, along with portfolio information, includes minigames for your entertainment!")
 
+    p4_comedy = model.Project("Comedy Website", "url_for('p4_comedy_bp.home_route')", "/static/img/p4_comedy.PNG", "P4 Comedy",
+                              ["Ava Brooks", "Iniyaa Mohanraj", "Ketki Chakradeo", "Lucas Bruner"],
+                              "This is our comedy website. It has jokes that are simply hilarious along with some other fun comedy facts!!")
 
 
-    projects = [p4_hangman, p4_charlieb, p4_slackbots, p4_coderjoes, p4_monkeymath]
+
+
+    projects = [p4_hangman, p4_charlieb, p4_slackbots, p4_coderjoes, p4_monkeymath, p4_comedy]
     period = model.Period("Period 4", "AP Principles of Computer Science - Python", projects)
     return period
