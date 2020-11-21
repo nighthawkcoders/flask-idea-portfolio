@@ -36,11 +36,16 @@ def setup():
                                  ["James Hunt", "Mackenzie Aboy", "Lucas Kaimer", "Sam Koenig", "Kira Liao"],
                                  "This website is all about places in the world. Visit to learn a few cool facts and play a guesser game!")
 
+    p5_pokemon = model.Project("Pokemon Game", "http://24.255.211.218:3000/",
+                               "/static/img/p5_pokemon.jpg", "Gorillas",
+                               ["Zachary Joseph", "Dayita Ray", "Adhithi NarayanaMurthy", "Aiden Cizek"],
+                               "Explore the world of Pokemon, with our game and pokedex. Travel to each region to go on a journey. Battle different pokemon in our 1-2 player game.")
+
     p5_multimedia = model.Project("Multimedia", url_for('p5_multimedia_bp.index'), '/static/img/p5_multimedia.png', "multimedia", ["Komay Sugiyama", "Christopher Rubin", "Ridhima Inukurti", "Kian Kishimito", "Megan Corrigan"], "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
    
 
 
-    projects = [p5_monkeymen, p5_gorillas ,p5_multimedia, p5_chessGame, p5_calculus, p5_supercool] # p5_monkeymen  p5_multimedia
+    projects = [p5_monkeymen, p5_gorillas ,p5_multimedia, p5_chessGame, p5_calculus, p5_supercool, p5_pokemon] # p5_monkeymen  p5_multimedia
 
     period = model.Period("Period 5", "Some really smart people study APCSP here", projects)
     return period
