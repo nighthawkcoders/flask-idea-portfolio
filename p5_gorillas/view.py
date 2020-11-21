@@ -1,9 +1,9 @@
 from p5_gorillas import model
-from flask import render_template
+from flask import render_template, Flask
 from p5_gorillas import p5_gorillas_bp
 
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
 
 @p5_gorillas_bp.route('/')

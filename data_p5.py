@@ -23,7 +23,7 @@ def setup():
                                   "David Kim"],
                                  "Vist Chess Game to play through our chess game!")
 
-    p5_gorillas = model.Project("Gorillas", 'p5_gorillas_bp.home',
+    p5_gorillas = model.Project("Gorillas", url_for('http://70.95.189.45:5000/'),
                                 "/static/img/p5_gorillas.png", "Gorillas",
                                 ["Pedro de Medeiros", "Jagroop Vij", "Arul Salaniwal", "Manuel Villa-Hernandez", "Colin Tran"],
                                 "Here you find the repositories for all our projects; our journals, where we document coding progress; and Individual pages with personal information and our coding experiences. Explore!!")
