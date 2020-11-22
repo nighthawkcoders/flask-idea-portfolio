@@ -56,8 +56,8 @@ app.register_blueprint(p4_monkeymath_bp, url_prefix='/p4_monkeymath')
 from p4_charlieb import p4_charlieb_bp
 app.register_blueprint(p4_charlieb_bp, url_prefix='/p4_charlieb')
 
-#from p4_comedy import p4_comedy_bp
-#app.register_blueprint(p4_comedy_bp, urlprefix='/p4_comedy')
+from p4_comedy import p4_comedy_bp
+app.register_blueprint(p4_comedy_bp, url_prefix='/p4_comedy')
 
 # Period 5
 # from p5_supercool import p5_supercool_bp

@@ -30,21 +30,21 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-              <a class="nav-link" href="/historyofcomedy">History of Comedy</a>
-              <a class="nav-link" href="/comediandecades">Comedians Through The Decades</a>
-              <a class="nav-link" href="/knock">Jokes</a>
-                <a class="nav-link" href="/submit">Submit A Joke</a>
+              <a class="nav-link active" href={{url_for('.index')}}>Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href={{url_for('.historyofcomedy_route')}}>History of Comedy</a>
+              <a class="nav-link" href={{url_for('.comediandecades_route')}}>Comedians Through The Decades</a>
+              <a class="nav-link" href={{url_for('.knock_route')}}>Jokes</a>
+                <a class="nav-link" href={{url_for('.submit_route')}}>Submit A Joke</a>
         <!--code from bootstrap: drop down menu-->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               About Us
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/iniyaa">Iniyaa</a>
-              <a class="dropdown-item" href="/ketki">Ketki</a>
-              <a class="dropdown-item" href="/ava">Ava</a>
-              <a class="dropdown-item" href="/lucas">Lucas</a>
+              <a class="dropdown-item" href={{url_for('.iniyaa_route')}}>Iniyaa</a>
+              <a class="dropdown-item" href={{url_for('.ketki_route')}}>Ketki</a>
+              <a class="dropdown-item" href={{url_for('.ava_route')}}>Ava</a>
+              <a class="dropdown-item" href={{url_for('.lucas_route')}}>Lucas</a>
             <!--div class="dropdown-divider"></div--!>
               <!---a class="dropdown-item" href="#">The Class</a---!>
             </div>

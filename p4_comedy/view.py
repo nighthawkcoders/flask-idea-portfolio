@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 #connects default URL of server to render home.html
 @p4_comedy_bp.route('/')
-def home_route():
+def index():
   return render_template("p4_comedy/home.html", projects=setup())
 
 #connects /hello path of server to render comediandecades.html
