@@ -4,7 +4,7 @@
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="p4_slackbots/static/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('p4_slackbots_bp.static', filename='css/styles.css') }}" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
@@ -24,266 +24,6 @@
         }
 
 
-    html {
-      scroll-behavior: smooth;
-     }
-
-    .Header {
-    padding: 2em;
-    position: relative;
-    width:100%;
-    margin-bottom: 30px;
-    background-image: linear-gradient(to right,#ff458a,#171717,#00a5f8 );;
-    text-align: center;
-    font-family: Staatliches;
-    color: white;
-    box-shadow: 0px 5px 5px #171717;
-  }
-
-    .Subtitle {
-    margin-top: 5px;
-    text-align: center;
-    font-family: Inter;
-    padding: 5px;
-    text-shadow: 1px 1px 5px black;
-    color: white;
-  }
-  .Names {
-    margin-top: 5px;
-    margin-bottom: 0px;
-    font-family: Bitter;
-    padding: 5px;
-    text-shadow: 1px 1px 5px black;
-    color: white;
-    font-size:1.2em;
-  }
-  .Paragraph {
-    margin-top: 0em;
-    font-family: Bitter;
-    padding: 0px;
-    text-shadow: 1px 1px 5px black;
-    color: white;
-    font-size:1em;
-  }
-  .Titles {
-    font-family: Bitter;
-    text-shadow: 1px 1px 5px black;
-    color: white;
-    font-size:1.5em;
-  }
-  .dropShadow {
-    box-shadow: 0px 5px 5px #171717;
-  }
-
-  .merchImages {
-    width:22%;
-    height:22%;
-    box-shadow: 0px 5px 5px #171717;
-  }
-
-  a.submitButton:hover{
-  box-shadow: 0px 5px 10px #171717;
-  }
-/* This is the cart button animation stuff */
-  a.cartButton {
-    background: linear-gradient(90deg, #00a5f8, #ff458a);
-    padding:5px;
-    border-radius:7px;
-    background-size: 400%;
-  }
-
-  a.cartButton:link, a.cartButton:visited {
-    text-decoration: none;
-    color: white;
-  }
-
-  a.cartButton:hover {
-    text-decoration: none;
-    color: white;
-  }
-
- a.cartButton:hover {
-    animation: cartanimation 8s linear infinite;
-  }
-
-  @keyframes cartanimation {
-    0% {background-position: 0%;}
-    100% {background-position: 400%;}
-  }
-
-  a.cartButton:before {
-    content: '';
-    z-index: -1;
-    background: linear-gradient(90deg, #00a5f8, #ff458a);
-    background-size: 400%;
-    opacity: 0;
-    transition: 0.5s;
-  }
-
-
-  a.cartButton:hover:before {
-    filter: blur(20px);
-    opacity: 1;
-    animation: animate 8s linear infinite;
-  }
-
-
-  @keyframes breatheAnimation {
-    0%   {background-color: #303030;}
-    25%   {background-color: #202020;}
-    50%  {background-color: #171717;}
-    75%   {background-color: #202020;}
-    100% {background-color: #303030;}
-  }
-
-  /* The element to apply the animation to */
-  .breathe {
-    height: 100%;
-
-    background-size: cover;
-    animation-name: breatheAnimation;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    animation-timing-function:linear;
-  }
-
-  .centerimg {
-    display: block;
-    margin-top: 15%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .active a{
-    color: #ff458a !important;
-  }
-
-
-  select {
-    background-color:#ff458a;
-    color:white;
-    font-size:20px;
-    transition-duration: 0.5s;
-    font-family: Bitter;
-    text-shadow: 1px 1px 5px black;
-    border-radius: 6px;
-  }
-
-
-  select:hover {
-  background-color:#00a5f8;
-
-  }
-
-  .fixed-footer {
-  overflow: hidden;
-  list-style: none;
-  background-color:#121212;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-a.aboutlinks:link, a.aboutlinks:visited {
-    text-decoration: none;
-    color:#ff458a;
-}
-
-a.aboutlinks:hover, a.aboutlinks:active {
-    text-decoration: none;
-    color:#00a5f8;
-}
-
-   .footer-icons-red {
-      margin-left: 8px;
-      color:#ff458a;
-      font-size:1em;
-      position:absolute;
-      top:4px;
-      transition-duration: 0.3s;
-    }
-
-   .footer-icons-red:hover {
-      color:#91274f;
-    }
-
-   .footer-icons-blue {
-      margin-right: 8px;
-      color:#00a5f8;
-      font-size:1em;
-      position:absolute;
-      top:4px;
-      transition-duration: 0.3s;
-    }
-
-   .footer-icons-blue:hover {
-      color:#0075b0;
-    }
-
-body::-webkit-scrollbar {
-  width: 19px; /* width of the entire scrollbar */
-
-}
-body::-webkit-scrollbar-track {
-  background: white; /* color of the track that the scrollbar moves on */
-}
-body::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(180deg,#00a5f8, #ff458a); /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb (the thing that moves) */
-  border: 3px solid white; /* creates a white border around scroll thumb */
-}
-        li.aboutkevin:before {
-        content: '\1F47D';
-        margin-left: -20px;
-        margin-right: 10px;
-        }
-
-        li.aboutabhijay:before {
-        content: '\1F92F';
-        margin-left: -20px;
-        margin-right: 10px;
-        }
-
-        li.aboutpaul:before {
-        content: '\1F30C';
-        margin-left: -20px;
-        margin-right: 10px;
-        }
-
-        li.abouttravis:before {
-        content: '\1F924';
-        margin-left: -20px;
-        margin-right: 10px;
-        }
-
-        li.aboutgavin:before {
-        content: '\1F4A6';
-        margin-left: -20px;
-        margin-right: 10px;
-        }
-
-        ul.aboutlists {
-        list-style-type: none;
-        }
-
-        iframe {
-        border: 0.2em solid #ff458a;
-        }
-.text-box {
-  width:30%;
-  padding-top:5px;
-  padding-left:4px;
-  padding-bottom:10px;
-  word-wrap: break-word;
-  float:right;
-  margin-right:10%;
-  top:89%;
-}
-
-.commentary {
-border: 0.2em solid #ff458a;
-}
-
     </style>
 </head>
 
@@ -298,12 +38,14 @@ border: 0.2em solid #ff458a;
         <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
             <ul class="navbar-nav mx-auto text-md-center text-left">
                 <li class="nav-item">
-                    <b><a style="margin-top:0.85em;font-size:1.25em;color:white;text-shadow: 0px 0px 10px black; position: fixed; left: 100px;" class="nav-link" href="home">HOME</a></b>
+                    <b><a style="margin-top:0.85em;font-size:1.25em;color:white;text-shadow: 0px 0px 10px black; position: fixed; left: 100px;" class="nav-link"
+                          href="{{url_for('.index')}}">HOME</a></b>
                 </li>
                 <li class="nav-item">
-                    <b><a style="margin-top:0.85em;font-size:1.25em;color:white;text-shadow: 0px 0px 10px black; position: fixed; left: 200px;" class="nav-link" href="Products">PRODUCTS</a></b>
+                    <b><a style="margin-top:0.85em;font-size:1.25em;color:white;text-shadow: 0px 0px 10px black; position: fixed; left: 200px;" class="nav-link"
+                          href="{{url_for('.products')}}">PRODUCTS</a></b>
                 </li>
-                <li class="nav-item dropdown" style="font-size:1.25em;margin-top:0.85em; position: fixed; left: 350px;">
+                <!--<li class="nav-item dropdown" style="font-size:1.25em;margin-top:0.85em; position: fixed; left: 350px;">
                     <a class="nav-link dropdown-toggle" style="color:white;text-shadow: 0px 0px 10px black;"
                        href="#"
                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -312,27 +54,29 @@ border: 0.2em solid #ff458a;
                     <div class="dropdown-menu dropdown-menu-left"  aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="slackbots"><b>P4 SLACKBOTS</b></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="kevin"><b>KEVIN</b></a>
-                        <a class="dropdown-item" href="abhijay"><b>ABHIJAY</b></a>
-                        <a class="dropdown-item" href="paul"><b>PAUL</b></a>
-                        <a class="dropdown-item" href="travis"><b>TRAVIS</b></a>
-                        <a class="dropdown-item" href="gavin"><b>GAVIN</b></a>
+                        <a class="dropdown-item" href="{{url_for('.kevin')}}"><b>KEVIN</b></a>
+                        <a class="dropdown-item" href="{{url_for('.abhijay')}}"><b>ABHIJAY</b></a>
+                        <a class="dropdown-item" href="{{url_for('.paul')}}"><b>PAUL</b></a>
+                        <a class="dropdown-item" href="{{url_for('.travis')}}"><b>TRAVIS</b></a>
+                        <a class="dropdown-item" href="{{url_for('.gavin')}}"><b>GAVIN</b></a>
                     </div>
-                </li>
-                <li class="nav-item dropdown" style="font-size:1.25em;margin-top:0.85em; position: fixed; left: 475px;">
+                </li>-->
+                <li class="nav-item dropdown" style="font-size:1.25em;margin-top:0.85em; position: fixed; left: 350px;">
                     <a class="nav-link dropdown-toggle" style="color:white;text-shadow: 0px 0px 10px black;"
                        href="#"
-                       id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <b>PROJECTS</b>
                     </a>
                     <div class="dropdown-menu dropdown-menu-left"  aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" target="blank" href="https://repl.it/@AbhijayDeevi/TableOfContents#README.md"><b>HELLO SERIES</b></a>
                         <a class="dropdown-item" href="#"><b>WEB PORTFOLIO</b></a>
-                        <a class="dropdown-item" href="home"><b>MERCHANDISE</b></a>
+                        <a class="dropdown-item" href="{{url_for('.index')}}"><b>MERCHANDISE</b></a>
                     </div>
                 </li>
                <li class="nav-item my-auto">
-                    <a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="home"><img style="margin-top:0.5em" src="{{url_for('static', filename='images/apcoxgg.png')}}" width=127.625px height=75.75px></a>
+                    <a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="{{url_for('.index')}}"><img style="margin-top:0.5em"
+                                                                                              src="{{ url_for('p4_slackbots_bp.static', filename='/images/apcoxgg.png') }}"
+                                                                                              width=127.625px height=75.75px></a>
                 </li>
                 <li class="nav-item">
                     <a href="Cart"><i style="margin-top:0.75em;font-size:2em;color:white;text-shadow: 0px 0px 10px black;  position: fixed; right: 100px;" class="nav-link fa fa-shopping-cart"></i></a>
@@ -357,7 +101,9 @@ border: 0.2em solid #ff458a;
         <a class="footer-icons-red" href="https://youtube.com/albertpanicompaniYT"><i class="fa fa-youtube-play"></i></a>
         <a class="footer-icons-red" style="left: 20px;" href="https://instagram.com/_kevintdo_"><i class="fa fa-instagram"></i></a>
         <a class="footer-icons-red" style="left: 40px;" href="https://github.com/kevin-dough"><i class="fa fa-github"></i></a>
-        <center><a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="home"><img style="margin-bottom:0px" src="{{url_for('static', filename='images/apcoxgg.png')}}" width=60px height=35px></a></center>
+        <center><a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="{{url_for('.index')}}"><img style="margin-bottom:0px"
+                                                                                          src="{{url_for('p4_slackbots_bp.static', filename='images/apcoxgg.png')}}"
+                                                                                          width=60px height=35px></a></center>
         <a class="footer-icons-blue" style="left: 1880px; "href="https://youtube.com/godlygoats"><i class="fa fa-youtube-play"></i></a>
         <a class="footer-icons-blue" style="left: 1860px; "href="https://instagram.com/dv_a_bee"><i class="fa fa-instagram"></i></a>
         <a class="footer-icons-blue" style="left: 1840px; "href="https://github.com/Dubshott"><i class="fa fa-github"></i></a>

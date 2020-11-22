@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    {% block head %}
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <title>fruity photos</title>
+    {% endblock %}
+</head>
+<body>
+{% block section %}
+    <section>
+        <header>
+          {% block title %} {% endblock %}
+          {% block content %} {% endblock %}
+        {% block nav %}
+        <nav>
+            <a href="/p4_fruitycoders">home</a> .
+            <a href="p4_fruitycoders/history">history</a> .
+            <a href="p4_fruitycoders/biographies">biographies</a> .
+            <div class="dropdown">
+                gallery .
+                <div class="dropdown-content">
+                    <a href="/p4_fruitycoders/wong">Russel Wong</a>
+                    <a href="/p4_fruitycoders/shabazz">Jamel Shabazz</a>
+                    <a href="/p4_fruitycoders/adams">Ansel Adams</a>
+                    <a href="/p4_fruitycoders/pretty">Adam Pretty</a>
+                    <a href="/p4_fruitycoders/leibovitz">Annie Leibovitz</a>
+                    <a href="/p4_fruitycoders/mccurry">Steve McCurry</a>
+                    <a href="/p4_fruitycoders/bourke">Margaret Bourke-White</a>
+                    <a href="/p4_fruitycoders/goldin">Nan Goldin</a>
+                    <a href="/p4_fruitycoders/newman">Arnold Newman</a>
+                    <a href="/p4_fruitycoders/mann">Sally Mann</a>
+                </div>
+            </div>
+            <a href="p4_fruitycoders/aboutus">about us</a> .
+            <a href="https://github.com/fruitycoders/photography" target="_blank">project repo</a>
+        </nav>
+        {% endblock %}
+        </header>
+
+    {% block footer %}   {% endblock %}
+    </section>
+{% endblock %}
+
+ </body>
+</html>

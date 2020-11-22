@@ -24,10 +24,10 @@ def setup():
                                "as a music section including three different genres of music with multiple examples "
                                "and descriptions of each.")
 
-    p4_fruitycoders = model.Project("Photography Website", "url_for('p4_fruitycoders_bp.index')", "/static/img/p4_fruitycoders.png",
+    p4_fruitycoders = model.Project("Photography Website", url_for('p4_fruitycoders_bp.index'), "/static/img/p4_fruitycoders.png",
                                     "P4 fruitycoders",
                                     ["Sophie Lee", "Linda Long", "Maggie Killada", "Adam Holbel", "Wenshi Bao"],
-                                    "Our website (Fruity Photos) features the history of photography, as well as the "
+                                    "This clean, minimalist website features the history of photography, as well as the "
                                     "works "
                                     "and biographies of several famous photographers, such as Ansel Adams and Annie "
                                     "Leibovitz.")
@@ -50,8 +50,19 @@ def setup():
                                 ["Kaila Manangan", "Eshaan Parlikar", "Brent Arcinue", "Calvin Ni"],
                                 "Our website, along with portfolio information, includes minigames for your entertainment!")
 
+    p4_comedy = model.Project("Comedy Website", url_for('p4_comedy_bp.index'), "/static/img/p4_comedy.PNG", "P4 Comedy",
+                          ["Ava Brooks", "Iniyaa Mohanraj", "Ketki Chakradeo", "Lucas Bruner"],
+                          "This is our comedy website. It has jokes that are simply hilarious along with some other fun comedy facts!!")
+    """
+
+    p4_comedy = model.Project("Comedy Website", "http://kilacomedy.tk/", "/static/img/p4_comedy.PNG", "P4 Comedy",
+                              ["Ava Brooks", "Iniyaa Mohanraj", "Ketki Chakradeo", "Lucas Bruner"],
+                              "This is our comedy website. It has jokes that are simply hilarious along with some other fun comedy facts!!")
+    """
 
 
-    projects = [p4_hangman, p4_charlieb, p4_slackbots, p4_coderjoes, p4_monkeymath]
+
+
+    projects = [p4_hangman, p4_charlieb, p4_slackbots, p4_coderjoes, p4_monkeymath, p4_comedy]
     period = model.Period("Period 4", "AP Principles of Computer Science - Python", projects)
     return period

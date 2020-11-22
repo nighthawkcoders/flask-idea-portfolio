@@ -22,7 +22,10 @@ from p1_hexpass import p1_hexpass_bp
 app.register_blueprint(p1_hexpass_bp, url_prefix='/p1_hexpass')
 
 from p1_asciimenu import p1_asciimenu_bp
-app.register_blueprint(p1_asciimenu_bp, url_prefix='/p1_hexpass')
+app.register_blueprint(p1_asciimenu_bp, url_prefix='/p1_asciimenu')
+
+from p1_thecoders import p1_thecoders_bp
+app.register_blueprint(p1_thecoders_bp, url_prefix='/p1_thecoders')
 
 # Period 2
 from p2_cyphercrypto import cyphercrypto_bp
@@ -34,12 +37,18 @@ app.register_blueprint(p2_dinos_bp, url_prefix='/p2_dinos')
 from p2_triviagame import p2_triviagame_bp
 app.register_blueprint(p2_triviagame_bp, url_prefix='/p2_triviagame')
 
+from p2_sshlogin import p2_sshlogin_bp
+app.register_blueprint(p2_sshlogin_bp, url_prefix='/p2_sshlogin')
+
 # Period 4
 from p4_slackbots import p4_slackbots_bp
 app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
 
 from p4_hangman import p4_hangman_bp
 app.register_blueprint(p4_hangman_bp, url_prefix='/p4_hangman')
+
+from p4_fruitycoders import p4_fruitycoders_bp
+app.register_blueprint(p4_fruitycoders_bp, url_prefix='/p4_fruitycoders')
 
 from p4_coderjoes import p4_coderjoes_bp
 app.register_blueprint(p4_coderjoes_bp, url_prefix='/p4_coderjoes')
@@ -50,9 +59,12 @@ app.register_blueprint(p4_monkeymath_bp, url_prefix='/p4_monkeymath')
 from p4_charlieb import p4_charlieb_bp
 app.register_blueprint(p4_charlieb_bp, url_prefix='/p4_charlieb')
 
+from p4_comedy import p4_comedy_bp
+app.register_blueprint(p4_comedy_bp, url_prefix='/p4_comedy')
+
 # Period 5
-from p5_supercool import p5_supercool_bp
-app.register_blueprint(p5_supercool_bp, url_prefix='/p5_supercool')
+# from p5_supercool import p5_supercool_bp
+# app.register_blueprint(p5_supercool_bp, url_prefix='/p5_supercool')
 
 from p5_alethianews import p5_alethianews_bp
 app.register_blueprint(p5_alethianews_bp, url_prefix='/p5_alethianews')
@@ -60,8 +72,14 @@ app.register_blueprint(p5_alethianews_bp, url_prefix='/p5_alethianews')
 from p5_monkeymen import p5_monkeymen_bp
 app.register_blueprint(p5_monkeymen_bp, url_prefix='/p5_monkeymens')
 
+from p5_calculus import p5_calculus_bp
+app.register_blueprint(p5_calculus_bp, url_prefix='/p5_calculus')
 
+from p5_gorillas import p5_gorillas_bp
+app.register_blueprint(p5_gorillas_bp, url_prefix='/p5_gorillas')
 
+from p5_chessGame import p5_chessGame_bp
+app.register_blueprint(p5_chessGame_bp, url_prefix='/p5_chessGame')
 
 from p2_einsteins import p2_einsteins_bp
 app.register_blueprint(p2_einsteins_bp, url_prefix='/p2_einsteins')
@@ -69,3 +87,8 @@ app.register_blueprint(p2_einsteins_bp, url_prefix='/p2_einsteins')
 from p2_rappers import p2_rappers_bp
 app.register_blueprint(p2_rappers_bp, url_prefix='/p2_rappers')
 
+from p5_multimedia import p5_multimedia_bp
+app.register_blueprint(p5_multimedia_bp, url_prefix='/p5_multimedia')
+
+#from p5_pokemon import p5_pokemon_bp
+#app.register_blueprint(p5_pokemon_bp, url_prefix='/p5_pokemon')
