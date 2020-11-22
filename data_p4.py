@@ -50,7 +50,13 @@ def setup():
                                 ["Kaila Manangan", "Eshaan Parlikar", "Brent Arcinue", "Calvin Ni"],
                                 "Our website, along with portfolio information, includes minigames for your entertainment!")
 
-    p4_comedy = model.Project("Comedy Website", "url_for('p4_comedy_bp.home_route')", "/static/img/p4_comedy.PNG", "P4 Comedy",
+"""
+    p4_comedy = model.Project("Comedy Website", url_for('p4_comedy_bp.home_route'), "/static/img/p4_comedy.PNG", "P4 Comedy",
+                          ["Ava Brooks", "Iniyaa Mohanraj", "Ketki Chakradeo", "Lucas Bruner"],
+                          "This is our comedy website. It has jokes that are simply hilarious along with some other fun comedy facts!!")
+"""
+
+    p4_comedy = model.Project("Comedy Website", "http://kilacomedy.tk/", "/static/img/p4_comedy.PNG", "P4 Comedy",
                               ["Ava Brooks", "Iniyaa Mohanraj", "Ketki Chakradeo", "Lucas Bruner"],
                               "This is our comedy website. It has jokes that are simply hilarious along with some other fun comedy facts!!")
 
