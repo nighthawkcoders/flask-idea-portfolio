@@ -40,10 +40,12 @@ def setup():
                                 "Mustafa Sharaf"],
                                "This is our out of this world website which will tell you about a multitude of things "
                                "such as our group and Del Norte!")
+
     p2_newbiecoders = model.Project("Travel Website", "Http://75.80.119.252", "https://lh3.googleusercontent.com/yGFa3i6X522UOjW3cBZKBUnwOqwzfc9-TxZOL0K0inWDCD65TdBvfKAXRrfy9XUOUhWAsA=s170", "Newbiecoders",
                              ["Diego Krenz", "Ethan Sun", "Wesley Chen", "Andrea Abed", "Naweid Hassanzadeh"],
                              "Learn all about cities in Europe and plan your next trip!")
-    p2_sshlogin = model.Project("SSH Login", "Http://104.2.84.172:80", "/static/img/sshlogin.png", "SSH Login",
+
+    p2_sshlogin = model.Project("SSH Login", "http://104.2.84.172:80", "/static/img/sshlogin.png", "SSH Login",
                                 ["Ahmad Nasim", "Andrew Crisostomo", "Tanmay Marwah", "Max Vukovich", "Luca Pinto", "Cody Peng"],
                                 "We have created an SSH Login system thaf displays users system info using arrays, we also created a forum posting for data on our website.")
 

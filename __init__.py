@@ -37,6 +37,9 @@ app.register_blueprint(p2_dinos_bp, url_prefix='/p2_dinos')
 from p2_triviagame import p2_triviagame_bp
 app.register_blueprint(p2_triviagame_bp, url_prefix='/p2_triviagame')
 
+from p2_sshlogin import p2_sshlogin_bp
+app.register_blueprint(p2_sshlogin_bp, url_prefix='/p2_sshlogin')
+
 # Period 4
 from p4_slackbots import p4_slackbots_bp
 app.register_blueprint(p4_slackbots_bp, url_prefix='/p4_slackbots')
