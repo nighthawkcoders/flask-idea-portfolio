@@ -5,7 +5,7 @@ p5_supercool_bp = Blueprint(
     'p5_supercool_bp',
     __name__,
     template_folder='templates',
-    static_folder='static'
+    static_folder='static',
 )
 
 from . import view

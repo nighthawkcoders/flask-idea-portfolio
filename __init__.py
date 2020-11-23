@@ -90,5 +90,8 @@ app.register_blueprint(p2_rappers_bp, url_prefix='/p2_rappers')
 from p5_multimedia import p5_multimedia_bp
 app.register_blueprint(p5_multimedia_bp, url_prefix='/p5_multimedia')
 
+from p5_supercool import p5_supercool_bp
+app.register_blueprint(p5_supercool_bp, url_prefix='/p5_supercool')
+
 #from p5_pokemon import p5_pokemon_bp
 #app.register_blueprint(p5_pokemon_bp, url_prefix='/p5_pokemon')
