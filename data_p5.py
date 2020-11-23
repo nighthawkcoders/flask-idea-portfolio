@@ -49,7 +49,7 @@ def setup():
                                    "Megan Corrigan"],
                                   "Search amazon, show off your youtube videos, and share your spotify playlists on this multimedia page!")
 
-    p5_alethianews = model.Project("Alethia News Website", url_for('p5_alethianews_bp.index'),
+    p5_alethianews = model.Project("Alethia News Website", url_for('p5_alethianews.index'),
                                    "/static/img/p5_alethianews.jpg", "Alethia News",
                                    ["Anthony Wilson", "Ryan Shay"],
                                    "A news website that provides facts with no bias to allow society to develop their own based opinions.")
