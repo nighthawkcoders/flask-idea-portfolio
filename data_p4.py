@@ -39,8 +39,8 @@ def setup():
                                  "CoderJoes is a virtual store where you can find recipes, ideas, and descriptions, "
                                  "as well as a group portfolio of our work over the trimester.")
 
-    p4_monkeymath = model.Project("Games Website", url_for('p4_monkeymath_bp.home'), "/static/img/p4_gamingsite.png ("
-                                                                                      "1).png", "P4 MonkeyMath",
+    p4_monkeymath = model.Project("Games Website", url_for('p4_monkeymath_bp.home'), "/static/img/p4_gamingsite.png",
+                                 "P4 MonkeyMath",
                                   ["Nathaniel Lee", "Ryan Luo", "Aiden Tung", "Luke Manning", "Jaideep Bollu"],
                                   "This project showcases the history of certain games and their impact on society. "
                                   "It also has a tab for our Hello Series project and a creators tab that showcases "
@@ -53,16 +53,8 @@ def setup():
     p4_comedy = model.Project("Comedy Website", url_for('p4_comedy_bp.index'), "/static/img/p4_comedy.PNG", "P4 Comedy",
                           ["Ava Brooks", "Iniyaa Mohanraj", "Ketki Chakradeo", "Lucas Bruner"],
                           "This is our comedy website. It has jokes that are simply hilarious along with some other fun comedy facts!!")
-    """
-
-    p4_comedy = model.Project("Comedy Website", "http://kilacomedy.tk/", "/static/img/p4_comedy.PNG", "P4 Comedy",
-                              ["Ava Brooks", "Iniyaa Mohanraj", "Ketki Chakradeo", "Lucas Bruner"],
-                              "This is our comedy website. It has jokes that are simply hilarious along with some other fun comedy facts!!")
-    """
 
 
-
-
-    projects = [p4_hangman, p4_charlieb, p4_slackbots, p4_coderjoes, p4_monkeymath, p4_comedy]
+    projects = [p4_monkeymath, p4_slackbots, p4_charlieb, p4_hangman, p4_coderjoes, p4_comedy]
     period = model.Period("Period 4", "AP Principles of Computer Science - Python", projects)
     return period

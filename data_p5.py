@@ -54,8 +54,8 @@ def setup():
                                    ["Anthony Wilson", "Ryan Shay"],
                                    "A news website that provides facts with no bias to allow society to develop their own based opinions.")
 
-    projects = [p5_monkeymen, p5_gorillas, p5_multimedia, p5_chessGame, p5_calculus, p5_supercool, p5_pokemon,
-                p5_alethianews]  # p5_monkeymen  p5_multimedia
+    projects = [p5_monkeymen, p5_supercool, p5_chessGame, p5_pokemon, p5_gorillas, p5_calculus,
+                p5_alethianews, p5_multimedia]  # p5_monkeymen  p5_multimedia
 
     period = model.Period("Period 5", "Some really smart people study APCSP here", projects)
     return period
