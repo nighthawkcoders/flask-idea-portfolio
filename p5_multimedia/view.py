@@ -24,7 +24,7 @@ def index():
     return redirect("https://www.amazon.com/s?k=" + product +"&ref=nb_sb_noss")
   a = open("p5_multimedia/products.txt", "r").read()
   popular = a.split("\n")
-  return render_template('home.html', projects=setup(), popular=popular)
+  return render_template('p5_multimedia/home.html', projects=setup(), popular=popular)
     
 @p5_multimedia_bp.route('/youtube/', methods=['GET', 'POST'])
 def youtube():
@@ -38,7 +38,7 @@ def youtube():
       open("youtube.txt", "a").write("\n" + link + '?controls=0')
   a = open("youtube.txt", "r").read()
   links = a.split("\n")
-  return render_template("youtube.html", projects=setup(), links=links)
+  return render_template("p5_multimedia/youtube.html", projects=setup(), links=links)
 
   
 @p5_multimedia_bp.route('/spotify/', methods=['GET', 'POST'])
@@ -53,44 +53,44 @@ def spotify():
       open("spotify.txt", "a").write("\n" +  link)
   a = open("spotify.txt", "r").read()
   links = a.split("\n")
-  return render_template("spotify.html", projects=setup(), links=links)
+  return render_template("p5_multimedia/spotify.html", projects=setup(), links=links)
 
 
 @p5_multimedia_bp.route('/flask/')
 def flask():
     #Flask import uses Jinga to render HTML
-    return render_template("fseries.html", projects=setup())
+    return render_template("p5_multimedia/fseries.html", projects=setup())
 
 
 @p5_multimedia_bp.route('/hello/')
 def hello():
     #Flask import uses Jinga to render HTML
-    return render_template("hseries.html", projects=setup())
+    return render_template("p5_multimedia/hseries.html", projects=setup())
 
 
 @p5_multimedia_bp.route('/template1/')
 def testing():
-    return render_template("template1.html", projects=setup())
+    return render_template("p5_multimedia/template1.html", projects=setup())
 
 
 @p5_multimedia_bp.route('/selfgrade/')
 def selfgrade():
-    return render_template("selfgrade.html", projects=setup())
+    return render_template("p5_multimedia/selfgrade.html", projects=setup())
 
 
 @p5_multimedia_bp.route('/videos/')
 def videos():
-    return render_template('videos.html', projects=setup())
+    return render_template('p5_multimedia/videos.html', projects=setup())
 
 
 @p5_multimedia_bp.route('/products/')
 def products():
-  return render_template('products.html')
+  return render_template('p5_multimedia/products.html')
 
 
 @p5_multimedia_bp.route('/popular-items/')
 def popularitems():
   a = open("products.txt", "r").read()
   popular = a.split("\n")
-  return render_template("popularitem.html", projects=setup(), popular=popular)
+  return render_template("p5_multimedia/popularitem.html", projects=setup(), popular=popular)
 
