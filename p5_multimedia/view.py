@@ -35,8 +35,8 @@ def youtube():
       
       return render_template_string('<h1>please enter a valid link<br><p>If you have a "www." make sure to remove it</p><iframe frameborder="0" width="666px" height="375px" src="https://owo.whats-th.is/ARRGFC3.gif"</iframe>')
     else:
-      open("youtube.txt", "a").write("\n" + link + '?controls=0')
-  a = open("youtube.txt", "r").read()
+      open("p5_multimedia/youtube.txt", "a").write("\n" + link + '?controls=0')
+  a = open("p5_multimedia/youtube.txt", "r").read()
   links = a.split("\n")
   return render_template("p5_multimedia/youtube.html", projects=setup(), links=links)
 
@@ -50,8 +50,8 @@ def spotify():
       return render_template_string("<h1>Please enter a valid spotify playlist url</h1><br><p>Did you add the /embed between /playlist/ and the playlist id?</p>")
       return
     else:
-      open("spotify.txt", "a").write("\n" +  link)
-  a = open("spotify.txt", "r").read()
+      open("p5_multimedia/spotify.txt", "a").write("\n" +  link)
+  a = open("p5_multimedia/spotify.txt", "r").read()
   links = a.split("\n")
   return render_template("p5_multimedia/spotify.html", projects=setup(), links=links)
 

@@ -192,8 +192,8 @@
     <div class="navbar">
       <div class="row justify-content-center">
             <a href="/">E-Commerce</a>
-            <a href="/youtube/">Share Youtube Videos</a>
-            <a href="/spotify/">Share Spotify Playlists</a>
+            <a href={{url_for('.youtube')}}>Share Youtube Videos</a>
+            <a href={{url_for('.spotify')}}>Share Spotify Playlists</a>
       </div>
       <div class="row justify-content-center">
         <div class="dropdown">
@@ -201,8 +201,8 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" id="myDropdown">
-              <a href="/hello/">Hello Series</a>
-              <a href="/flask/">Flask Series</a>
+              <a href={{url_for('.hello')}}>Hello Series</a>
+              <a href={{url_for('.flask')}}>Flask Series</a>
             </div>
         </div>
       </div>
