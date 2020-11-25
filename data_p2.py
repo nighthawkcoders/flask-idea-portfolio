@@ -10,7 +10,7 @@ def setup():
                             ["John Mortensen", "Classroom of 40"],
                             "Visit a VANTA birds experience and see how it is made.")'''
 
-    cyphercrypto = model.Project("CypherCrypto", url_for('cyphercrypto_bp.index'), "/static/img/bgdeer.jpg",
+    cyphercrypto = model.Project("CypherCrypto", url_for('cyphercrypto_bp.index'), "/static/img/p2_cyphercrypto.jpg",
                                  "Cryptomaniacs",
                                  ["Nihar Marar", "Tyler Cloutier", "Dylan Roman", "Anthony Giustiniano", "Cherry Ding"],
                                  "We use Ciphers and encrypt/decrypt messages.")

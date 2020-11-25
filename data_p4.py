@@ -17,7 +17,7 @@ def setup():
                                  "GodlyGoats and "
                                  "Albertpani Compani. We have a lot of merch you can buy and other information.")
 
-    p4_hangman = model.Project("Music Website", url_for('p4_hangman_bp.index'), "/static/img/p4hangman.png",
+    p4_hangman = model.Project("Music Website", url_for('p4_hangman_bp.index'), "/static/img/p4_hangman.png",
                                "P4 Hangman",
                                ["Charlie Zhu", "Rohan Nallapati", "Rivan Nayak", "Sarah Xie", "Noah Pidding"],
                                "This website includes a portfolio of our projects we worked on this trimester as well "
@@ -39,7 +39,7 @@ def setup():
                                  "CoderJoes is a virtual store where you can find recipes, ideas, and descriptions, "
                                  "as well as a group portfolio of our work over the trimester.")
 
-    p4_monkeymath = model.Project("Games Website", url_for('p4_monkeymath_bp.home'), "/static/img/History of Games ("
+    p4_monkeymath = model.Project("Games Website", url_for('p4_monkeymath_bp.home'), "/static/img/p4_gamingsite.png ("
                                                                                       "1).png", "P4 MonkeyMath",
                                   ["Nathaniel Lee", "Ryan Luo", "Aiden Tung", "Luke Manning", "Jaideep Bollu"],
                                   "This project showcases the history of certain games and their impact on society. "
