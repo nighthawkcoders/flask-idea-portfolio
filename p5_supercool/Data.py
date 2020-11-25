@@ -12,10 +12,10 @@ def inputdata2():  # Second test to see if multiple datas woild would work
     dictionary1 = {"test2": test1}
     return dictionary1
 
-
+#"{{ url_for('p5_supercool_bp.static', filename='2.jpg' ) }}"
 def picran():  # /static/ + random number + .jpg so it would call a random jpg file because I named them all number.jpg and thet are in the static folder
     picture = int(randrange(6))
-    picture2 = "/static/" + str(picture) + ".jpg"
+    picture2 = "{{url_for('p5_supercool_bp.static', filename='" + str(picture) + ".jpg')}}"
     if picture == 1:
         repel1 = "https://repl.it/@jhunt11111/picture1website1?lite=true"
     elif picture == 5:

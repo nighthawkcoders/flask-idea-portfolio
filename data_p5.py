@@ -34,7 +34,7 @@ def setup():
                                   "Jason Francisco"],
                                  "A website that reviews wonderful places located in San Diego")
 
-    p5_supercool = model.Project("Geo-guessr", "http://76.176.107.1/", "/static/img/p5_supercool.jpg", "Super Cool",
+    p5_supercool = model.Project("Geo-guessr", url_for('p5_supercool_bp.landing'), "/static/img/p5_supercool.jpg", "Super Cool",
                                  ["James Hunt", "Mackenzie Aboy", "Lucas Kaimer", "Sam Koenig", "Kira Liao"],
                                  "This website is all about places in the world. Visit to learn a few cool facts and play a guesser game!")
 
